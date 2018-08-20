@@ -1,3 +1,9 @@
+* **Políticas**
+  * [Branches](https://github.com/Desenho2018-2/Main/wiki/Branches)
+  * [Commits](https://github.com/Desenho2018-2/Main/wiki/Commits)
+  * [Issue](https://github.com/Desenho2018-2/Main/wiki/Issues)
+  * [Pull Request](https://github.com/Desenho2018-2/Main/wiki/Pull-Request)
+
 * **Elicitação**
   * [Entrevista]()
   * [Questionário]()
