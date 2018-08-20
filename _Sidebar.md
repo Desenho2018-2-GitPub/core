@@ -4,6 +4,9 @@
   * [Issue](https://github.com/Desenho2018-2/Main/wiki/Issues)
   * [Pull Request](https://github.com/Desenho2018-2/Main/wiki/Pull-Request)
 
+* **Pré-Rastreabilidade**
+  * [Argumentação]()
+
 * **Elicitação**
   * [Entrevista]()
   * [Questionário]()
