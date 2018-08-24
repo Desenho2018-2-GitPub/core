@@ -37,7 +37,7 @@ e aflições por parte dos membros
 
 
 
-##----------------------- User History Template ----------------------
+##----------------------- User Story Template ----------------------
 
 # US X - Título da Issue
 ---
