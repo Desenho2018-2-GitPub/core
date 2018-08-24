@@ -6,7 +6,7 @@
   * [Pull Request](https://github.com/Desenho2018-2/Main/wiki/Pull-Request)
 
 * **Pré-Rastreabilidade**
-  * [Argumentação]()
+  * [Argumentação](https://github.com/Desenho2018-2/Main/wiki/Argumentação)
 
 * **Elicitação**
   * [Entrevista]()
