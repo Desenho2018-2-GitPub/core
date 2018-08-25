@@ -1,4 +1,4 @@
-# Main
+# :file_folder: Main
 
 ## About the Project
 
