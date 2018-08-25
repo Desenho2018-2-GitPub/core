@@ -2,6 +2,7 @@
 |:------:|:------:|:-----:|:-----:|
 |23/08/2018|0.1|Criação do documento|Gabriel Ziegler|
 |23/08/2018|0.2|Adição do conteúdo do estilo|Gabriel Ziegler|
+|25/08/2018|0.3|Adição de exemplos de código python|Gabriel Ziegler|
 
 # Folha de estilo do Django
 
@@ -78,7 +79,7 @@ Não use:
 {{foo}}
 ```
 
-* View: o primeiro parâmetro de uma`View` deve ser chamado **request**
+* View: o primeiro parâmetro de uma `View` deve ser chamado **request**
 ```Python
 def my_view(request, foo):
     # ...
