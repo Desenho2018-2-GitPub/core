@@ -1,12 +1,12 @@
 [(Cavalcante, A. C. A., 2014)]: http://bdm.unb.br/bitstream/10483/9267/1/2014_AndreCruzAlvesCavalcante.pdf
-[Arthur Diniz]: (https://github.com/arthurbdiniz)
-[João Carlos]: (https://github.com/joao4018)
+[Arthur Diniz]: https://github.com/arthurbdiniz
+[João Carlos]: https://github.com/joao4018
 ### Histórico de Revisões
 
 | Data       | Versão | Descrição            |         Autor             |
 |:----------:|:------:|:--------------------:|:-------------------------:|
-| 22/08/2018 | 0.1 | Criação do Documento com Adição da Argumentação  | [João Carlos]|
-| 26/08/2018 | 0.2 | Adição da Introdução e Atualização da Argumentação  |[João Carlos], [Arthur Diniz]|
+| 22/08/2018 | 0.1 | Criação do Documento com Adição da Argumentação  | [João Carlos] |
+| 26/08/2018 | 0.2 | Adição da Introdução e Atualização da Argumentação  |[João Carlos], [Arthur Diniz] |
 
 
 # Índice
