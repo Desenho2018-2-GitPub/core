@@ -19,3 +19,7 @@
 
 #### Exemplo
 ![exemplo](https://user-images.githubusercontent.com/18387694/32692537-a32ae5fa-c700-11e7-9622-76032d2191e8.png)
+
+
+## Versão 1
+![richpicture](https://user-images.githubusercontent.com/18387694/44638207-0a697880-a98c-11e8-9f63-7c4182bd9bdb.jpg)
