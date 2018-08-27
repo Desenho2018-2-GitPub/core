@@ -6,6 +6,21 @@ Repository x is an web application developed by Software Engineering students of
 The application consists of a repository for projects that are developed in the course of the disciplines of the UnB and that most of the time are lost for lack of an appropriate place to expose what has been developed by the students and as a result the University loses the opportunity to own a portfolio with quality projects.
 The repository will be connected with the platforms of source code hosting with version control GitHub And GitLab.
 
+## Installation
+
+OS X & Linux:
+
+It is required to have Python 3 and Django installed.
+Navigate to the project folder, run migrations and then the server.
+
+```
+cd GitPub/
+python3 ./manage.py migrate
+python3 ./manage.py runserver 0.0.0.0:8000
+```
+
+Docker:
+
 ## Main functionalities
 
 - View Disciplines / Semesters / Projects
