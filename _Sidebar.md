@@ -21,7 +21,7 @@
 * [5W2H]()
 * [Rich Picture](https://github.com/Desenho2018-2/Main/wiki/Richpicture)
 * [Protótipo Baixa Fidelidade](https://github.com/Desenho2018-2/Main/wiki/Prototipo-Baixa-Fidelidade)
-* [Plano de Elicitação de Requisitos](https://github.com/Desenho2018-2/Main/wiki/Plano-Elicitacao-Requistos)
+* [Plano de Elicitação de Requisitos](https://github.com/Desenho2018-2/Main/wiki/Plano-Elicitacao-Requisitos)
 * [Diagrama Causa-Efeito]()
 * [Mapa Mental]()
 * [Requisitos]()
