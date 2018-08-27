@@ -27,3 +27,4 @@
 * [Requisitos]()
 * [Estimativas]()
 * [Cenários e Léxicos]()
+* [Priorização-Documentos]()
