@@ -20,6 +20,7 @@
 
 * [5W2H]()
 * [Rich Picture](https://github.com/Desenho2018-2/Main/wiki/Richpicture)
+* [Protótipo Baixa Fidelidade](https://github.com/Desenho2018-2/Main/wiki/Prototipo-Baixa-Fidelidade)
 * [Diagrama Causa-Efeito]()
 * [Mapa Mental]()
 * [Requisitos]()
