@@ -10,7 +10,7 @@
 
 * **Elicitação**
   * [Entrevista]()
-  * [Questionário]()
+  * [Questionário](https://github.com/Desenho2018-2/Main/wiki/Questionario)
   * [Observação]()
   * [Introspecção]()
   * [Storytelling](https://github.com/Desenho2018-2/Main/wiki/Storytelling)
