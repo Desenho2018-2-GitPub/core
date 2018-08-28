@@ -14,8 +14,8 @@
 
 [1. Introdução](#1-introdução)<br/>
 [2. Argumentação](#2-argumentação)
-- [2.1.(Tema,Linguagem, Framework)](##2.1-(Tema,-Linguagem,-Framework))
-- [2.2.(Escolha da daily)](##2.2-(Escolha-da-daily))
+- [2.1. (Tema,Linguagem, Framework)](#tema)
+- [2.2. (Escolha da daily)](#daily)
 
 
 # 1. Introdução
@@ -50,6 +50,9 @@ dois ou mais vértices do grafo. [(Cavalcante, A. C. A., 2014)]
 
 # 2. Argumentação
 
+<a name="tema">
+</a>
+
 ## 2.1 (Tema, Linguagem, Framework)
 - **i(P1)** -  É necessário definir um tema, para ser desenvolvido um projeto, onde seja possível aplicar padrões de projeto com facilidade.
 - **i(P2)** -  Desenvolver um Web Service focado nos alunos e professores de Engenharia de Software onde eles possam postar trabalhos desenvolvidos nas disciplinas.
@@ -68,14 +71,17 @@ dois ou mais vértices do grafo. [(Cavalcante, A. C. A., 2014)]
 
 [![Argumentação(Tema, Linguagem, Framework](https://user-images.githubusercontent.com/29952415/44628192-9ee2c500-a911-11e8-8370-14dbdaf29196.jpg)](https://user-images.githubusercontent.com/29952415/44628192-9ee2c500-a911-11e8-8370-14dbdaf29196.jpg)
 
+<a name="daily">
+</a>
+
 ## 2.2 (Escolha da daily)
 
-- **i(P1)** - Daily do sábado teve apenas um membro presente.
+- **i(P1)** - Daily do sábado teve apenas um membro presente, deve-se rever a metologia.
 - **i(P2)** - Cancelamento de dailies nos fins de semana.
 - **i(P3)** - Dailies em desenho de software é overhead.
-- **i(P4)** - Dailies devem ser de segunda à quinta.
-- **C1(i(P2), i(P4))** - Sexta-feira também é um dia com baixa adesão da daily meeting.
+- **i(P4)** - Dailies devem ser de segunda à quinta, fica tranquilo para todos os membros participarem.
+- **C1(i(P2), i(P4))** - Sexta-feira também é um dia com baixa adesão da daily meeting, deve-se retirar também.
 - **i(P5)** - Dailies com timebox aumentado para 1 hora, de segunda a quinta.
-- **i(P6)** - Dailies de segunda a sexta na parte da manhã.
+- **i(P6)** - Já que as dailies terão 1 hora de timebox da para os membros participarem das dailies de segunda a sexta na parte da manhã.
 
 [![Argumentação(Escolha da daily)](https://user-images.githubusercontent.com/18370133/44695572-33504300-aa4a-11e8-84bb-a3c6e55cb11a.jpg)](https://user-images.githubusercontent.com/18370133/44695572-33504300-aa4a-11e8-84bb-a3c6e55cb11a.jpg)
