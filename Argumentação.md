@@ -1,18 +1,22 @@
 [(Cavalcante, A. C. A., 2014)]: http://bdm.unb.br/bitstream/10483/9267/1/2014_AndreCruzAlvesCavalcante.pdf
 [Arthur Diniz]: https://github.com/arthurbdiniz
 [João Carlos]: https://github.com/joao4018
+[Gabriel Ziegler]: https://github.com/gabrielziegler3
 ### Histórico de Revisões
 
 | Data       | Versão | Descrição            |         Autor             |
 |:----------:|:------:|:--------------------:|:-------------------------:|
 | 22/08/2018 | 0.1 | Criação do Documento com Adição da Argumentação  | [João Carlos] |
 | 26/08/2018 | 0.2 | Adição da Introdução e Atualização da Argumentação  |[João Carlos], [Arthur Diniz] |
-
+| 27/08/2018 | 0.3 | Adição de Argumentação da Daily |[Gabriel Ziegler], [João Carlos] |
 
 # Índice
 
 [1. Introdução](#1-introdução)<br/>
 [2. Argumentação](#2-argumentação)
+- [2.1. (Tema,Linguagem, Framework)](#tema)
+- [2.2. (Escolha da daily)](#daily)
+
 
 # 1. Introdução
 
@@ -46,6 +50,9 @@ dois ou mais vértices do grafo. [(Cavalcante, A. C. A., 2014)]
 
 # 2. Argumentação
 
+<a name="tema">
+</a>
+
 ## 2.1 (Tema, Linguagem, Framework)
 - **i(P1)** -  É necessário definir um tema, para ser desenvolvido um projeto, onde seja possível aplicar padrões de projeto com facilidade.
 - **i(P2)** -  Desenvolver um Web Service focado nos alunos e professores de Engenharia de Software onde eles possam postar trabalhos desenvolvidos nas disciplinas.
@@ -63,3 +70,18 @@ dois ou mais vértices do grafo. [(Cavalcante, A. C. A., 2014)]
 - **P4** -  A maioria do grupo não gostou da ideia de ter a facilidade do Ruby on Rails porque não teriam ganhos de aprendizado além de que aplicar padrões utilizando Django seria mais interessante.
 
 [![Argumentação(Tema, Linguagem, Framework](https://user-images.githubusercontent.com/29952415/44628192-9ee2c500-a911-11e8-8370-14dbdaf29196.jpg)](https://user-images.githubusercontent.com/29952415/44628192-9ee2c500-a911-11e8-8370-14dbdaf29196.jpg)
+
+<a name="daily">
+</a>
+
+## 2.2 (Escolha da daily)
+
+- **i(P1)** - Daily do sábado teve apenas um membro presente, deve-se rever a metologia.
+- **i(P2)** - Cancelamento de dailies nos fins de semana.
+- **i(P3)** - Dailies em desenho de software é overhead.
+- **i(P4)** - Dailies devem ser de segunda à quinta, fica tranquilo para todos os membros participarem.
+- **C1(i(P2), i(P4))** - Sexta-feira também é um dia com baixa adesão da daily meeting, deve-se retirar também.
+- **i(P5)** - Dailies com timebox aumentado para 1 hora, de segunda a quinta.
+- **i(P6)** - Já que as dailies terão 1 hora de timebox da para os membros participarem das dailies de segunda a sexta na parte da manhã.
+
+[![Argumentação(Escolha da daily)](https://user-images.githubusercontent.com/18370133/44695572-33504300-aa4a-11e8-84bb-a3c6e55cb11a.jpg)](https://user-images.githubusercontent.com/18370133/44695572-33504300-aa4a-11e8-84bb-a3c6e55cb11a.jpg)
