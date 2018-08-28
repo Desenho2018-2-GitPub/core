@@ -14,6 +14,9 @@
 
 [1. Introdução](#1-introdução)<br/>
 [2. Argumentação](#2-argumentação)
+- [2.1.(Tema,Linguagem, Framework)](##2.1-(Tema,-Linguagem,-Framework))
+- [2.2.(Escolha da daily)](##2.2-(Escolha-da-daily))
+
 
 # 1. Introdução
 
