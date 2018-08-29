@@ -1,3 +1,10 @@
+## Versionamento
+
+Data|Versão|Descrição|Autor
+-|-|-|-
+29/08/2018|1.0.0| Criação e adição de perguntas | Vitor Falcão
+29/08/2018|1.0.1| Adição de perguntas | Romeu Antunes
+
 ## Questionário
 
 ### Qual seu nível de interesse em um sistema que mantenha diversos projetos de várias disciplinas de maneira centralizada?
