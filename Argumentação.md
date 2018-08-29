@@ -9,6 +9,8 @@
 | 22/08/2018 | 0.1 | Criação do Documento com Adição da Argumentação  | [João Carlos] |
 | 26/08/2018 | 0.2 | Adição da Introdução e Atualização da Argumentação  |[João Carlos], [Arthur Diniz] |
 | 27/08/2018 | 0.3 | Adição de Argumentação da Daily |[Gabriel Ziegler], [João Carlos] |
+| 28/08/2018 | 0.4 | Adição de Argumentação do Nome | [João Carlos] |
+
 
 # Índice
 
@@ -16,6 +18,7 @@
 [2. Argumentação](#2-argumentação)
 - [2.1. (Tema,Linguagem, Framework)](#tema)
 - [2.2. (Escolha da daily)](#daily)
+- [2.3. (Escolha do nome)](#nome)
 
 
 # 1. Introdução
@@ -85,3 +88,24 @@ dois ou mais vértices do grafo. [(Cavalcante, A. C. A., 2014)]
 - **i(P6)** - Já que as dailies terão 1 hora de timebox da para os membros participarem das dailies de segunda a sexta na parte da manhã.
 
 [![Argumentação(Escolha da daily)](https://user-images.githubusercontent.com/18370133/44695572-33504300-aa4a-11e8-84bb-a3c6e55cb11a.jpg)](https://user-images.githubusercontent.com/18370133/44695572-33504300-aa4a-11e8-84bb-a3c6e55cb11a.jpg)
+
+
+<a name="nome">
+</a>
+
+## 2.2 (Escolha do nome)
+
+- **i(P1)** - Deve-se entrar na [issue](../../issues/23) decisão de nome e ver a mais votada.
+- **i(P2)** - Quase nem um membro votou, não dá para escolher desta forma.
+- **P1** -  O grupo não entrou em acordo para escolher nomes colocados nas issues por aprensetar pouca quantidade de votos e nomes para escolha.
+- **i(P3)** - Deve-se fazer um brainstorm para facilitar a decisão do nome.
+- **i(P4)** - O nome em latim é uma boa opção, basta escolher um nome que faça sentido para o projeto e passar para latim como Recon abreviação de Reconditorium de repositório.
+- **i(P5)** - Deve as siglas da Faculdade do Gama(FGA), já que nosso projeto é focado para pessoas da faculdade.
+- **i(P6)** - Não é necessário utilizar FGA, já que podemos expandir esse projeto no futuro.
+- **P2** - O time concordou que não é necessário utilizar FGA no nome.
+- **i(P7)** - Boa sugestão em utilizar latim existem outra opções como Spatium de espaço, Ipsum de muito.
+- **i(P8)** - Não tem o porque de se prender a escolha de nome em latim, é bem melhor que nós escolhamos algo relacionado a nossa proposta, é opção nossa utilizarmos um nome como boteco, já que as pessoas se reúnem nesses estabelecimentos para conversar, trocar ideias e opiniões, como nosso projeto envolve em trocas de conhecimento em projetos faz muito sentido.
+- **P3** - O time preferiu o argumento sobre o nome de boteco já que todos concordam com tais afirmações.
+- **i(P9)** - Vamos fazer uma analogia ao git que tem a presença de uma característica nossa que é o compartilhamento de projetos e vamos usar o signifcado do boteco porém em outra língua, e utilizarmos o nome GitPub.
+
+[![definicaonome](https://user-images.githubusercontent.com/29952415/44757591-4de7f200-ab06-11e8-9f92-4352293bf9a1.jpg)](https://user-images.githubusercontent.com/29952415/44757591-4de7f200-ab06-11e8-9f92-4352293bf9a1.jpg)
