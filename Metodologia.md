@@ -2,6 +2,7 @@
 Data|Versão|Descrição|Autor
 -|-|-|-
 29/08/2018|1.0.0|Adição dos artefatos da metodologia aplicada | Arthur Diniz
+29/08/2018|1.0.1|Adição das nossas modificações em cima do SCRUM | Arthur Diniz
 
 
 ## Scrum
