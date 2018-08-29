@@ -4,6 +4,7 @@
 |:--:|:----:|:-------:|:---:|
 |27/08/2018|0.1|Criação do documento|Gabriel Ziegler|
 |28/08/2018|0.2|Adição da tabela do MoSCoW|Gabriel Ziegler|
+|28/08/2018|0.3|Atualização de documentos na tabela do MoSCoW|Gabriel Ziegler, João Carlos|
 
 # Priorização dos documentos
 
