@@ -2,6 +2,7 @@
 [Arthur Diniz]: https://github.com/arthurbdiniz
 [João Carlos]: https://github.com/joao4018
 [Gabriel Ziegler]: https://github.com/gabrielziegler3
+
 ### Histórico de Revisões
 
 | Data       | Versão | Descrição            |         Autor             |
@@ -9,17 +10,15 @@
 | 22/08/2018 | 0.1 | Criação do Documento com Adição da Argumentação  | [João Carlos] |
 | 26/08/2018 | 0.2 | Adição da Introdução e Atualização da Argumentação  |[João Carlos], [Arthur Diniz] |
 | 27/08/2018 | 0.3 | Adição de Argumentação da Daily |[Gabriel Ziegler], [João Carlos] |
-| 28/08/2018 | 0.4 | Adição de Argumentação do Nome | [João Carlos] |
-
+| 28/08/2018 | 0.4 | Adição de Argumentação do Nome do Projeto | [João Carlos] |
 
 # Índice
 
 [1. Introdução](#1-introdução)<br/>
 [2. Argumentação](#2-argumentação)
-- [2.1. (Tema,Linguagem, Framework)](#tema)
-- [2.2. (Escolha da daily)](#daily)
-- [2.3. (Escolha do nome)](#nome)
-
+- [2.1. (Tema,Linguagem, Framework)](#21-escolha-da-daily)
+- [2.2. (Escolha da daily)](#22-escolha-da-daily)
+- [2.3. (Escolha do nome)](#23-escolha-do-nome-do-projeto)
 
 # 1. Introdução
 
@@ -41,7 +40,6 @@ O framework é composto de uma linguagem para representar as informações extra
 de aceitabilidade para verificar a existência de consenso entre os participantes e
 procedimentos para checar a condição de aceitabilidade automaticamente.[(Cavalcante, A. C. A., 2014)]
 
-
 Os modelos de argumentação, gerados com base na linguagem contida no ACE,
 são grafos direcionados com rótulos. Os vértices são classificados com base em quatro
 rótulos: i, It, P e C. Os vértices com rótulo (i) representam vértices de informação que
@@ -53,10 +51,8 @@ dois ou mais vértices do grafo. [(Cavalcante, A. C. A., 2014)]
 
 # 2. Argumentação
 
-<a name="tema">
-</a>
-
 ## 2.1 (Tema, Linguagem, Framework)
+
 - **i(P1)** -  É necessário definir um tema, para ser desenvolvido um projeto, onde seja possível aplicar padrões de projeto com facilidade.
 - **i(P2)** -  Desenvolver um Web Service focado nos alunos e professores de Engenharia de Software onde eles possam postar trabalhos desenvolvidos nas disciplinas.
 - **i(P3)** -  Existem muitas disciplinas onde é possível desenvolver um Web Service, para a equipe aprender algo novo é melhor desenvolver um jogo em python, onde também teremos maior facilidade para aplicar padrões de projeto.
@@ -74,9 +70,6 @@ dois ou mais vértices do grafo. [(Cavalcante, A. C. A., 2014)]
 
 [![Argumentação(Tema, Linguagem, Framework](https://user-images.githubusercontent.com/29952415/44628192-9ee2c500-a911-11e8-8370-14dbdaf29196.jpg)](https://user-images.githubusercontent.com/29952415/44628192-9ee2c500-a911-11e8-8370-14dbdaf29196.jpg)
 
-<a name="daily">
-</a>
-
 ## 2.2 (Escolha da daily)
 
 - **i(P1)** - Daily do sábado teve apenas um membro presente, deve-se rever a metologia.
@@ -89,13 +82,9 @@ dois ou mais vértices do grafo. [(Cavalcante, A. C. A., 2014)]
 
 [![Argumentação(Escolha da daily)](https://user-images.githubusercontent.com/18370133/44695572-33504300-aa4a-11e8-84bb-a3c6e55cb11a.jpg)](https://user-images.githubusercontent.com/18370133/44695572-33504300-aa4a-11e8-84bb-a3c6e55cb11a.jpg)
 
+## 2.3 (Escolha do nome do projeto)
 
-<a name="nome">
-</a>
-
-## 2.2 (Escolha do nome)
-
-- **i(P1)** - Deve-se entrar na [issue](../../issues/23) decisão de nome e ver a mais votada.
+- **i(P1)** - Deve-se entrar na [issue](../issues/23) decisão de nome e ver a mais votada.
 - **i(P2)** - Quase nem um membro votou, não dá para escolher desta forma.
 - **P1** -  O grupo não entrou em acordo para escolher nomes colocados nas issues por aprensetar pouca quantidade de votos e nomes para escolha.
 - **i(P3)** - Deve-se fazer um brainstorm para facilitar a decisão do nome.
@@ -109,3 +98,5 @@ dois ou mais vértices do grafo. [(Cavalcante, A. C. A., 2014)]
 - **i(P9)** - Vamos fazer uma analogia ao git que tem a presença de uma característica nossa que é o compartilhamento de projetos e vamos usar o signifcado do boteco porém em outra língua, e utilizarmos o nome GitPub.
 
 [![definicaonome](https://user-images.githubusercontent.com/29952415/44757591-4de7f200-ab06-11e8-9f92-4352293bf9a1.jpg)](https://user-images.githubusercontent.com/29952415/44757591-4de7f200-ab06-11e8-9f92-4352293bf9a1.jpg)
+
+## 2.4 (Escolha )
