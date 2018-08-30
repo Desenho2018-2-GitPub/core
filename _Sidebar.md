@@ -10,14 +10,14 @@
 
 * **Elicitação**
   * [Entrevista]()
-  * [Questionário]()
+  * [Questionário](https://github.com/Desenho2018-2/Main/wiki/Questionario)
   * [Observação]()
   * [Introspecção]()
   * [Storytelling](https://github.com/Desenho2018-2/Main/wiki/Storytelling)
 * **Modelagem**
   * [NRF]()
   * [Especificação Suplementar]()
-
+* [Metodologia](https://github.com/Desenho2018-2/Main/wiki/Metodologia)
 * [5W2H]()
 * [Rich Picture](https://github.com/Desenho2018-2/Main/wiki/Richpicture)
 * [Protótipo Baixa Fidelidade](https://github.com/Desenho2018-2/Main/wiki/Prototipo-Baixa-Fidelidade)
