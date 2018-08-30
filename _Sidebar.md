@@ -28,3 +28,4 @@
 * [Estimativas]()
 * [Cenários e Léxicos]()
 * [Priorização Documentos](Priorizacao-Documentos)
+* [iStar](Strategic-Dependency)
