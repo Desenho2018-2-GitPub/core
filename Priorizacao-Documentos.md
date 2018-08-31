@@ -20,15 +20,15 @@ A sigla MoSCoW significa:
 * **W**on’t Have this time
 
 |Documento|Must|Should|Could|Won't|
-|---------|----|------|-----|-----|
+|---------|:----:|:------:|:-----:|:-----:|
 |RichPicture| X | - | - | - |
 |Argumentação| - | X | - | - |
 |Brainstorm| - | - | - | X |
 |Storytelling| - | X | - | - |
 |Questionário| X | - | - | - |
 |Introspecção| - | - | X| - |
-|Observação participativa| - | - | - | - |
-|Análise de protocolo| - | - | - | - |
+|Observação participativa| - | - | X | - |
+|Análise de protocolo| - | - | X | - |
 |First things first| - | - | - | X |
 |MoSCoW| X | - | - | - |
 |Léxico| X | - | - | - |
