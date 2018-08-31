@@ -86,7 +86,7 @@ dois ou mais vértices do grafo. [(Cavalcante, A. C. A., 2014)]
 
 - **i(P1)** - Deve-se entrar na [issue](../issues/23) decisão de nome e ver a mais votada.
 - **i(P2)** - Quase nem um membro votou, não dá para escolher desta forma.
-- **P1** -  O grupo não entrou em acordo para escolher nomes colocados nas issues por aprensetar pouca quantidade de votos e nomes para escolha.
+- **P1** -  O grupo não entrou em acordo para escolher nomes colocados nas issues por apresentar pouca quantidade de votos e nomes para escolha.
 - **i(P3)** - Deve-se fazer um brainstorm para facilitar a decisão do nome.
 - **i(P4)** - O nome em latim é uma boa opção, basta escolher um nome que faça sentido para o projeto e passar para latim como Recon abreviação de Reconditorium de repositório.
 - **i(P5)** - Deve as siglas da Faculdade do Gama(FGA), já que nosso projeto é focado para pessoas da faculdade.
