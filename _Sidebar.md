@@ -26,6 +26,7 @@
 * [Mapa Mental]()
 * [Requisitos]()
 * [Estimativas]()
-* [Cenários e Léxicos]()
+* [Cenários e]()
+* [Léxicos](https://github.com/Desenho2018-2/GitPub/wiki/lexicos)
 * [Priorização Documentos](Priorizacao-Documentos)
 * [iStar](iStar)
