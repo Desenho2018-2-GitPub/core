@@ -23,7 +23,7 @@
   * [Especificação Suplementar]()
   * [iStar](iStar)
     * [Strategic Dependency](Strategic-Dependency)
-    * [Strategic Rationale]()
+    * [Strategic Rationale](Strategic-Rationale)
 
 * [Metodologia](Metodologia)
 * [5W2H]()
