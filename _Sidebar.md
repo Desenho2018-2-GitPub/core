@@ -6,6 +6,7 @@
   * [Pull Request](Pull-Request)
 
 * **Pré-Rastreabilidade**
+  * [Rich Picture](Richpicture)
   * [Argumentação](Argumentacao)
 
 * **Elicitação**
@@ -14,19 +15,22 @@
   * [Observação]()
   * [Introspecção]()
   * [Storytelling](Storytelling)
+
 * **Modelagem**
-  * [NRF]()
+  * [Cenários](cenarios)
+  * [Léxicos](lexicos)
+  * [NFR Framework]()
   * [Especificação Suplementar]()
+  * [iStar](iStar)
+    * [Strategic Dependency](Strategic-Dependency)
+    * [Strategic Rationale](Strategic-Rationale)
+
 * [Metodologia](Metodologia)
 * [5W2H]()
-* [Rich Picture](Richpicture)
 * [Protótipo Baixa Fidelidade](Prototipo-Baixa-Fidelidade)
 * [Plano de Elicitação de Requisitos](Plano-Elicitacao-Requisitos)
 * [Diagrama Causa-Efeito]()
 * [Mapa Mental]()
 * [Requisitos]()
 * [Estimativas]()
-* [Cenários e]()
-* [Léxicos](https://github.com/Desenho2018-2/GitPub/wiki/lexicos)
 * [Priorização Documentos](Priorizacao-Documentos)
-* [iStar](iStar)
