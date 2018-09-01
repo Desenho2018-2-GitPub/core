@@ -16,6 +16,10 @@
   * [Introspecção]()
   * [Storytelling](Storytelling)
 
+* **Priorização**
+
+  * [Moscow](https://github.com/Desenho2018-2/GitPub/wiki/Moscow)
+
 * **Modelagem**
   * [Cenários](cenarios)
   * [Léxicos](lexicos)
