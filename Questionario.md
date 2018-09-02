@@ -4,6 +4,7 @@ Data|Versão|Descrição|Autor
 -|-|-|-
 29/08/2018|1.0.0| Criação e adição de perguntas | Vitor Falcão
 29/08/2018|1.0.1| Adição de perguntas | Romeu Antunes
+01/09/2018|1.0.2| Adição de respostas e análise | Kamilla Costa
 
 ## Questionário
 
@@ -42,3 +43,20 @@ Data|Versão|Descrição|Autor
 - Todo mundo
 - Apenas usuários cadastrados
 - Não acho necessário uma seção de comentários
+
+
+## Respostas Obtidas
+
+[![](https://uploaddeimagens.com.br/images/001/591/595/full/Captura_de_tela_de_2018-09-01_23-47-45.png?1535856482)](https://uploaddeimagens.com.br/images/001/591/595/full/Captura_de_tela_de_2018-09-01_23-47-45.png?1535856482)
+
+[![](https://uploaddeimagens.com.br/images/001/591/597/original/Captura_de_tela_de_2018-09-01_23-49-44.png?1535856596)](https://uploaddeimagens.com.br/images/001/591/597/original/Captura_de_tela_de_2018-09-01_23-49-44.png?1535856596)
+
+[![](https://uploaddeimagens.com.br/images/001/591/600/original/Captura_de_tela_de_2018-09-01_23-51-54.png?1535856730)](https://uploaddeimagens.com.br/images/001/591/600/original/Captura_de_tela_de_2018-09-01_23-51-54.png?1535856730)
+
+[![](https://uploaddeimagens.com.br/images/001/591/603/original/Captura_de_tela_de_2018-09-01_23-53-08.png?1535856803)](https://uploaddeimagens.com.br/images/001/591/603/original/Captura_de_tela_de_2018-09-01_23-53-08.png?1535856803)
+
+[![](https://uploaddeimagens.com.br/images/001/591/605/original/Captura_de_tela_de_2018-09-01_23-54-19.png?1535856879)](https://uploaddeimagens.com.br/images/001/591/605/original/Captura_de_tela_de_2018-09-01_23-54-19.png?1535856879)
+
+[![](https://uploaddeimagens.com.br/images/001/591/607/original/Captura_de_tela_de_2018-09-01_23-55-58.png?1535856971)](https://uploaddeimagens.com.br/images/001/591/607/original/Captura_de_tela_de_2018-09-01_23-55-58.png?1535856971)
+
+[![](https://uploaddeimagens.com.br/imagens/captura_de_tela_de_2018-09-01_23-57-00-png)](https://uploaddeimagens.com.br/imagens/captura_de_tela_de_2018-09-01_23-57-00-png)
