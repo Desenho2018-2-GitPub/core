@@ -60,3 +60,20 @@ Data|Versão|Descrição|Autor
 [![](https://uploaddeimagens.com.br/images/001/591/607/original/Captura_de_tela_de_2018-09-01_23-55-58.png?1535856971)](https://uploaddeimagens.com.br/images/001/591/607/original/Captura_de_tela_de_2018-09-01_23-55-58.png?1535856971)
 
 [![](https://uploaddeimagens.com.br/imagens/captura_de_tela_de_2018-09-01_23-57-00-png)](https://uploaddeimagens.com.br/imagens/captura_de_tela_de_2018-09-01_23-57-00-png)
+
+## 5. Resultados
+<p align="justify">Com a realização do questionário, conseguimos entender a necessidade de desenvolvimento do sistema para a universidade e levantar alguns requisitos, exibidos a seguir:</p>
+
+Requisito|Tipo
+-|-
+Registro privado de projeto|Funcional
+Desvinculo Usuário/Disciplina|Funcional
+Vínculo Projeto/Disciplina|Funcional
+Forúm de dúvidas|Funcional
+Comentários|Funcional
+
+
+Nossos resultados foram baseados na resposta de 44 participantes do questionário elaborado.
+
+## 6. Conclusão
+<p align="justify">A utilização do questionário foi de extrema importância tanto para elicitar requisitos necessários no sistema, como para entender a real necessidade de seu desenvolvimento para utilização na universidade.</p>
