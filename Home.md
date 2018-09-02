@@ -23,4 +23,6 @@ Este espaço é destinado para os documentos e as descrições do projeto GitPub
 |:----------:|:------:|:--------------------:|:-------------------------:|
 | 19/08/2018 | 1.0 | Criação da primeira versão  | [Vitor Falcão](https://github.com/vitorfhc) |
 ---
+### Versão 1
+
 ![use cases](https://github.com/Desenho2018-2/GitPub/blob/master/docs/use_cases.png?raw=true)
