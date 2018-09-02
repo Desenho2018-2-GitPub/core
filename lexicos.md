@@ -2,6 +2,7 @@
 |:----------:|:------:|:-----------------------:|:-----------------:|
 | 30/08/2018 | 1.0    | Criação do documento        | Romeu Antunes     |
 | 30/08/2018 | 1.1    | Adição (Plataforma, Upload)        | Romeu Antunes     |
+| 02/09/2018 | 1.2    | Adição (Download, Visitante)        | Romeu Antunes     |
 
 
 Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos utilizados nesta wiki durante o projeto GitPub.
@@ -9,7 +10,6 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 ---
 
 ## Plataforma
-
 | NOME          | Plataforma                             |
 |---------------|----------------------------------------|
 | NOÇÃO         | Sistema que será desenvolvido.   |
@@ -19,9 +19,7 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 
 <br />
 
-
 ## _Upload_
-
 | NOME          | Upload                             |
 |---------------|----------------------------------------|
 | NOÇÃO         | Ação de submeter projeto dentro da plataforma.   |
@@ -30,3 +28,21 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 | SINÔNIMO(S)   | Submeter, carregar, enviar.                        |
 
 <br />
+
+## _Download_
+| NOME          | Upload                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Ação de baixar projeto da plataforma.   |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - O usuário realiza o download do projeto; <br/> 2 - O usuário recebe um feedback após um download; <br/> 3 - O usuário cancela o download;   |
+| SINÔNIMO(S)   | Transferência, descarregamento, cópia, baixar.                        |
+
+<br />
+
+## Visitante
+| NOME          | Visitante                                            |
+|---------------|------------------------------------------------------|
+| NOÇÃO         | Pessoa que acessa a plataforma sem estar logado.      |
+| CLASSIFICAÇÃO | Sujeito                                              |
+| IMPACTO(S)    | 1 - Visitante é cadastrado com sucesso |
+| SINÔNIMO(S)   |                                                      |
