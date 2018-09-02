@@ -9,35 +9,35 @@
 
 * **Metodologia**
   * [Metodologia](Metodologia)
-  * [Priorização Documentos](Priorizacao-Documentos) :heavy_check_mark:
+  * [Priorização Documentos](Priorizacao-Documentos)
 
 * **[Pré-Rastreabilidade - Gerência I](Pre-rastreabilidade)**
-  * [Rich Picture](Richpicture) :heavy_check_mark:
-  * [Argumentação](Argumentacao) :heavy_check_mark:
+  * [Rich Picture](Richpicture)
+  * [Argumentação](Argumentacao)
 
 * **[Elicitação](Plano-Elicitacao-Requisitos)**
-  * [Entrevista]() :x:
-  * [Questionário](Questionario) :heavy_check_mark:
-  * [Moscow](Moscow) :heavy_check_mark:
-  * [5W2H]() :x:
-  * [Observação]() :x:
-  * [Introspecção]() :x:
+  * [Entrevista]()
+  * [Questionário](Questionario)
+  * [Moscow](Moscow)
+  * [5W2H]()
+  * [Observação]()
+  * [Introspecção]()
   * [Storytelling](Storytelling)
 
-  * **Modelagem**
-    * [Cenários](cenarios) :heavy_check_mark:
-    * [Léxicos](lexicos) :heavy_check_mark:
-    * [Especificação de caso de uso]() :x:
-    * [Especificação Suplementar]() :x:
-    * [Diagrama de caso de uso]() :x:
-    * [iStar](iStar) :heavy_check_mark:
-      * [Strategic Dependency](Strategic-Dependency) :heavy_check_mark:
-      * [Strategic Rationale](Strategic-Rationale) :heavy_check_mark:
-    * [NFR Framework]()
+* **Modelagem**
+  * [Cenários](cenarios)
+  * [Léxicos](lexicos)
+  * [Especificação de caso de uso]()
+  * [Especificação Suplementar]()
+  * [Diagrama de caso de uso]()
+  * [iStar](iStar)
+    * [Strategic Dependency](Strategic-Dependency)
+    * [Strategic Rationale](Strategic-Rationale)
+  * [NFR Framework]()
 
 * **Análise**
-  * [Políticas de verificação e validação]() :x:
-  * [Checklist]() :x:
+  * [Políticas de verificação e validação]()
+  * [Checklist]()
 
 * **Protótipos**
   * [Protótipo Baixa Fidelidade](Prototipo-Baixa-Fidelidade)
