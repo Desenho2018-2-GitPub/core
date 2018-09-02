@@ -61,3 +61,7 @@
 |36|Editar idioma||x|||
 |37|Sair da conta de usuário|x||||
 |38|Visualizar projetos em que o usuário foi adicionado||||x|
+|39|Registro privado de projeto|x||||
+|40|Desvinculo Usuário/Disciplina|x||||
+|41|Vínculo Projeto/Disciplina|x||||
+|42|Forúm de dúvidas|x||||
