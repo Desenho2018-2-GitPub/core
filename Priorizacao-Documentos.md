@@ -5,19 +5,22 @@
 |27/08/2018|0.1|Criação do documento|Gabriel Ziegler|
 |28/08/2018|0.2|Adição da tabela do MoSCoW|Gabriel Ziegler|
 |28/08/2018|0.3|Atualização de documentos na tabela do MoSCoW|Gabriel Ziegler, João Carlos|
+| 03/09/2018 | 0.4 | Revisão de conteúdo  | [Romeu Antunes](https://github.com/RomeuCarvalhoAntunes) |
+
 
 # Priorização dos documentos
 
 ## Técnica
 
-A técnica utilizada para priorização de documentos foi o [MoSCoW](https://www.agilebusiness.org/content/moscow-prioritisation-0), que é fortemente utilizado para a priorização de requisitos de software, porém aqui adaptado para priorizar artefatos de software.
+<p align="justify">&emsp;&emsp; A técnica utilizada para priorização de documentos foi o <a href="https://www.agilebusiness.org/content/moscow-prioritisation-0">MoSCoW</a>, que é fortemente utilizado para a priorização de requisitos de software, porém aqui adaptado para priorizar artefatos de software.
+</p>
 
-A sigla MoSCoW significa:
+A sigla _MoSCoW_ significa:
 
-* **M**ust Have
-* **S**hould Have
-* **C**ould Have
-* **W**on’t Have this time
+* <b>M</b>ust Have
+* <b>S</b>hould Have
+* <b>C</b>ould Have
+* <b>W</b>on’t Have this time
 
 |Documento|Must|Should|Could|Won't|
 |---------|:----:|:------:|:-----:|:-----:|
