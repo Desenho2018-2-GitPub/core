@@ -7,4 +7,4 @@
 ---
 ### Versão 1
 
-![use cases](https://github.com/Desenho2018-2/GitPub/blob/master/docs/use_cases.png?raw=true)
+![use cases](https://github.com/Desenho2018-2/GitPub/blob/master/docs/images/use_cases.png?raw=true)
