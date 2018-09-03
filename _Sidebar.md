@@ -34,6 +34,7 @@
     * [Strategic Dependency](Strategic-Dependency)
     * [Strategic Rationale](Strategic-Rationale)
   * [NFR Framework]()
+  * [Banco de Dados](banco-de-dados)
 
 * **Análise**
   * [Políticas de verificação e validação]()
