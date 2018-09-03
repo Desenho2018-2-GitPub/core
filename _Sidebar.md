@@ -29,7 +29,7 @@
   * [Léxicos](lexicos)
   * [Especificação de caso de uso]()
   * [Especificação Suplementar]()
-  * [Diagrama de caso de uso]()
+  * [Diagrama de caso de uso](Diagrama-caso-de-uso)
   * [iStar](iStar)
     * [Strategic Dependency](Strategic-Dependency)
     * [Strategic Rationale](Strategic-Rationale)

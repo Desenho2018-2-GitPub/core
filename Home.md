@@ -17,12 +17,3 @@ Este espaço é destinado para os documentos e as descrições do projeto GitPub
 |  Vitor Falcão         |  [vitorfhcosta@gmail.com]()       |   [@vitorfhc](https://github.com/vitorfhc)                          |
 |  Victor Moura         |  [victor_cmoura@hotmail.com]()    |   [@victorcmoura](https://github.com/victorcmoura)                  |
 ---
-### Histórico de Revisões
-
-| Data       | Versão | Descrição            |         Autor             |
-|:----------:|:------:|:--------------------:|:-------------------------:|
-| 19/08/2018 | 1.0 | Criação da primeira versão  | [Vitor Falcão](https://github.com/vitorfhc) |
----
-### Versão 1
-
-![use cases](https://github.com/Desenho2018-2/GitPub/blob/master/docs/use_cases.png?raw=true)
