@@ -1,7 +1,9 @@
 ### Histórico
-|Data|Autor(es)|Descrição|Versão|
+|Data|Versão|Descrição|Autor(es)|
 |--|--|--|--|
-|01/09/2018|Kamilla Costa|Criação modelo da tabela do MoSCoW e adicionando primeiras funcionalidades|0.1|
+| 01/09/2018 | 0.1 | Criação modelo da tabela do MoSCoW e adicionando primeiras funcionalidades | Kamilla Costa |
+| 03/09/2018 | 1.1 | Revisão de conteúdo  | [Romeu Antunes](https://github.com/RomeuCarvalhoAntunes) |
+
 
 1. [Introdução](#1-introdução)  
 1.1. [Propósito](#11-propósito)  
@@ -11,13 +13,13 @@
 
 ## 1. Introdução
 ### 1.1. Propósito
-<p align="justify">O documento presente tem a finalidade de apresentar e estabelecer uma visão ampla sobre priorização de requisitos por meio da técnica 'MoSCoW' realizada em cima das funcionalidades identificadas no sistema GitPub.</p>
+<p align="justify">&emsp;&emsp;O documento presente tem a finalidade de apresentar e estabelecer uma visão ampla sobre priorização de requisitos por meio da técnica 'MoSCoW' realizada em cima das funcionalidades identificadas no sistema GitPub.</p>
 
 ### 1.2. Escopo
-<p align="justify">Será apresentada aqui a análise de priorização feita em cima das funcionalidades identificadas dentro do sistema GitPub. As marcações de "must", "should", "could" e "would", indicadas pela técnica de priorização, serão utilizadas com a finalidade de  priorizar tais funcionalidades.</p>
+<p align="justify">&emsp;&emsp;Será apresentada aqui a análise de priorização feita em cima das funcionalidades identificadas dentro do sistema GitPub. As marcações de <i>"must"</i>, <i>"should"</i>, <i>"could"</i> e <i>"would"</i>, indicadas pela técnica de priorização, serão utilizadas com a finalidade de  priorizar tais funcionalidades.</p>
 
 ## 2. Objetivos
-<p align="justify">Com a realização da técnica de priorização 'MoSCoW', pretende-se identificar e estabelecer funcionalidades mais necessárias no sistema, aquelas que possuem maior valor do ponto do vista do usuário e também aquelas que são básicas do ponto de vista dos desenvolvedores.</p>
+<p align="justify">&emsp;&emsp;Com a realização da técnica de priorização 'MoSCoW', pretende-se identificar e estabelecer funcionalidades mais necessárias no sistema, aquelas que possuem maior valor do ponto do vista do usuário e também aquelas que são básicas do ponto de vista dos desenvolvedores.</p>
 
 ## 3. MoSCoW
 
@@ -29,7 +31,7 @@
 |3|Visualizar disciplina|x||||
 |4|Visualizar semestre|x||||
 |5|Visualizar projeto|x||||
-|7|Comentar||x||| 
+|7|Comentar||x|||
 |8|Visualizar projetos para usuários logados|x||||
 |9|Matricular em disciplina|x||||
 |10|Registrar projeto|x||||
