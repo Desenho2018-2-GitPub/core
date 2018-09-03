@@ -31,4 +31,4 @@
 |Professor - Disciplina|Professor _possui_ disciplinas|Um professor possui uma ou várias disciplinas|1 para N|
 
 ### DE-R
-![de-r](https://github.com/Desenho2018-2/GitPub/blob/master/docs/images/de-r.png?raw=true)
+![de-r](https://github.com/Desenho2018-2/GitPub/blob/master/docs/images/de-r-v2.png?raw=true)
