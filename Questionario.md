@@ -1,11 +1,13 @@
 ## Versionamento
 
-Data|Versão|Descrição|Autor
--|-|-|-
-29/08/2018|1.0.0| Criação e adição de perguntas | Vitor Falcão
-29/08/2018|1.0.1| Adição de perguntas | Romeu Antunes
-01/09/2018|1.0.2| Adição de respostas e análise | Kamilla Costa
+|Data|Versão|Descrição|Autor|
+|-|-|-|-|
+|29/08/2018|1.0.0| Criação e adição de perguntas | Vitor Falcão |
+|29/08/2018|1.0.1| Adição de perguntas | Romeu Antunes |
+|01/09/2018|1.0.2| Adição de respostas e análise | Kamilla Costa |
+| 03/09/2018 | 1.0.3 | Revisão de conteúdo  | [Romeu Antunes](https://github.com/RomeuCarvalhoAntunes) |
 
+--- 
 ## Questionário
 
 ### Qual seu nível de interesse em um sistema que mantenha diversos projetos de várias disciplinas de maneira centralizada?
@@ -62,18 +64,18 @@ Data|Versão|Descrição|Autor
 [![](https://uploaddeimagens.com.br/imagens/captura_de_tela_de_2018-09-01_23-57-00-png)](https://uploaddeimagens.com.br/imagens/captura_de_tela_de_2018-09-01_23-57-00-png)
 
 ## Resultados
-<p align="justify">Com a realização do questionário, conseguimos entender a necessidade de desenvolvimento do sistema para a universidade e levantar alguns requisitos, exibidos a seguir:</p>
+<p align="justify">&emsp;&emsp;Com a realização do questionário, conseguimos entender a necessidade de desenvolvimento do sistema para a universidade e levantar alguns requisitos, exibidos a seguir:</p>
 
-Requisito|Tipo
--|-
-Registro privado de projeto|Funcional
-Desvinculo Usuário/Disciplina|Funcional
-Vínculo Projeto/Disciplina|Funcional
-Forúm de dúvidas|Funcional
-Comentários|Funcional
+|Requisito|Tipo|
+|-|-|
+|Registro privado de projeto|Funcional|
+|Desvinculo Usuário/Disciplina|Funcional|
+|Vínculo Projeto/Disciplina|Funcional|
+|Forúm de dúvidas|Funcional|
+|Comentários|Funcional|
 
 
 Nossos resultados foram baseados na resposta de 44 participantes do questionário elaborado.
 
 ## Conclusão
-<p align="justify">A utilização do questionário foi de extrema importância tanto para elicitar requisitos necessários no sistema, como para entender a real necessidade de seu desenvolvimento para utilização na universidade.</p>
+<p align="justify">&emsp;&emsp;A utilização do questionário foi de extrema importância tanto para elicitar requisitos necessários no sistema, como para entender a real necessidade de seu desenvolvimento para utilização na universidade.</p>
