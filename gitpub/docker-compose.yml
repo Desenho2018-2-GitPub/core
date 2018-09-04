@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  db:
+    image: postgres
+    environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+        - POSTGRES_DB=postgres
+
+  web:
+    build: .
+    command: ["./init_dev.sh"]
+    volumes:
+      - .:/gitpub
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
