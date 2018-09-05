@@ -3,7 +3,7 @@
 | 30/08/2018 | 1.0    | Criação do documento        | Romeu Antunes     |
 | 30/08/2018 | 1.1    | Adição (Plataforma, Upload)        | Romeu Antunes     |
 | 02/09/2018 | 1.2    | Adição (Download, Visitante)        | Romeu Antunes     |
-
+| 04/09/2018 | 1.3    | Review Page        | Kamilla Costa     |
 
 Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos utilizados nesta wiki durante o projeto GitPub.
 
