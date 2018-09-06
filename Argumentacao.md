@@ -11,7 +11,7 @@
 | 26/08/2018 | 0.2 | Adição da Introdução e Atualização da Argumentação  |[João Carlos], [Arthur Diniz] |
 | 27/08/2018 | 0.3 | Adição de Argumentação da Daily |[Gabriel Ziegler], [João Carlos] |
 | 28/08/2018 | 0.4 | Adição de Argumentação do Nome do Projeto | [João Carlos] |
-| 02/09/2018 | 0.2 | Realocação da explicação teórica da página  | Romeu Antunes |
+| 02/09/2018 | 0.5 | Realocação da explicação teórica da página  | Romeu Antunes |
 
 ---
 
@@ -19,9 +19,12 @@
 # Índice
 
 [1. Argumentação](#1-argumentação)
-- [1.1. (Tema,Linguagem, Framework)](#11-escolha-da-daily)
-- [1.2. (Escolha da daily)](#12-escolha-da-daily)
-- [1.3. (Escolha do nome)](#13-escolha-do-nome-do-projeto)
+- [Índice](#%C3%ADndice)
+- [1. Argumentação](#1-argumenta%C3%A7%C3%A3o)
+    - [1.1 (Tema, Linguagem, Framework)](#11-tema-linguagem-framework)
+    - [1.2 (Escolha da daily)](#12-escolha-da-daily)
+    - [1.3 (Escolha do nome do projeto)](#13-escolha-do-nome-do-projeto)
+    - [2.4 (Escolha )](#24-escolha)
 
 ---
 
