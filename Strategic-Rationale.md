@@ -8,11 +8,11 @@
 | 31/08/2018 | 0.1 | Criação do Documento    | [Gabriel Ziegler]         |
 | 31/08/2018 | 0.2 | Adição do SR do Visitante | [Gabriel Ziegler], [João Carlos] |
 | 05/09/2018 | 0.3 | Adição do SR do Estudante | [João Carlos], [Gabriel Ziegler]|
-
+| 06/09/2018 | 0.4 | Correção SR Estudante | [João Carlos]|
 
 ## Estudante
+[![sr-visitante.png(https://user-images.githubusercontent.com/29952415/45133429-7eb1d200-b16b-11e8-8ad0-7862b9b27322.png)](https://user-images.githubusercontent.com/29952415/45133429-7eb1d200-b16b-11e8-8ad0-7862b9b27322.png)
 
-[![sr-visitante.png](https://user-images.githubusercontent.com/29952415/45124493-f3bbe200-b140-11e8-9525-89cb8c2550f2.png)](https://user-images.githubusercontent.com/29952415/45124493-f3bbe200-b140-11e8-9525-89cb8c2550f2.png)
 
 ## Visitante
 
