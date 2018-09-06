@@ -12,6 +12,7 @@
 | 27/08/2018 | 0.3 | Adição de Argumentação da Daily |[Gabriel Ziegler], [João Carlos] |
 | 28/08/2018 | 0.4 | Adição de Argumentação do Nome do Projeto | [João Carlos] |
 | 02/09/2018 | 0.5 | Realocação da explicação teórica da página  | Romeu Antunes |
+| 06/09/2018 | 0.6 | Revisão | [João Carlos] |
 
 ---
 
@@ -24,7 +25,6 @@
     - [1.1 (Tema, Linguagem, Framework)](#11-tema-linguagem-framework)
     - [1.2 (Escolha da daily)](#12-escolha-da-daily)
     - [1.3 (Escolha do nome do projeto)](#13-escolha-do-nome-do-projeto)
-    - [2.4 (Escolha )](#24-escolha)
 
 ---
 
@@ -79,4 +79,3 @@
 
 [![definicaonome](https://user-images.githubusercontent.com/29952415/44757591-4de7f200-ab06-11e8-9f92-4352293bf9a1.jpg)](https://user-images.githubusercontent.com/29952415/44757591-4de7f200-ab06-11e8-9f92-4352293bf9a1.jpg)
 
-## 2.4 (Escolha )
