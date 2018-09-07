@@ -12,4 +12,6 @@ O Non-functional Requirements Framework (NFR Framework) é uma plataforma de tra
 
 ## Diagramas
 
-* [Versão 1]()
+* [Versão 1](https://github.com/Desenho2018-2/GitPub/blob/master/docs/images/NFRGitPubv1.png)
+
+![](https://github.com/Desenho2018-2/GitPub/blob/master/docs/images/NFRGitPubv1.png?raw=true)
