@@ -26,7 +26,7 @@
 
 * **Modelagem**
   * [Cenários](cenarios)
-  * [Léxicos](lexicos)
+  * [Lexicos](lexicos)
   * [Especificação de caso de uso]()
   * [Especificação Suplementar]()
   * [Diagrama de caso de uso](Diagrama-caso-de-uso)
