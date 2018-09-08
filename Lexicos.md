@@ -6,6 +6,7 @@
 | 04/09/2018 | 1.3    | Review Page        | Kamilla Costa     |
 | 07/09/2018 | 1.4    | Adição (Estudante, Professor, Administrador)       | Kamilla Costa     |
 | 07/09/2018 | 1.5    | Adição (Comentar, seguir)       | Kamilla Costa     |
+| 08/09/2018 | 1.6    | Adição (Pesquisar)       | Kamilla Costa     |
 
 Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos utilizados nesta wiki durante o projeto GitPub.
 
@@ -98,3 +99,14 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 | CLASSIFICAÇÃO | Objeto                                |
 | IMPACTO(S)    | 1 - Assim que o usuário passar a seguir outro, as publicações deste passam a aparecer em seu feed da aplicação |
 | SINÔNIMO(S)   |           |
+
+<br />
+
+## Pesquisar
+| NOME          | Pesquisar                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Ação realizada pelo usuário quando possui necessidade de procurar por projetos ou outros usuários dentro da plataforma.  |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - Usuário pesquisa pelo nome do usuário ou projeto no campo de pesquisa da plataforma. |
+| SINÔNIMO(S)   | Explorar       |
+
