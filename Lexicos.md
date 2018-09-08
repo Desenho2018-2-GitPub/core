@@ -4,6 +4,7 @@
 | 30/08/2018 | 1.1    | Adição (Plataforma, Upload)        | Romeu Antunes     |
 | 02/09/2018 | 1.2    | Adição (Download, Visitante)        | Romeu Antunes     |
 | 04/09/2018 | 1.3    | Review Page        | Kamilla Costa     |
+| 04/09/2018 | 1.4    | Adição (Estudante, Professor, Administrador)       | Kamilla Costa     |
 
 Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos utilizados nesta wiki durante o projeto GitPub.
 
@@ -46,3 +47,33 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 | CLASSIFICAÇÃO | Sujeito                                              |
 | IMPACTO(S)    | 1 - Visitante é cadastrado com sucesso |
 | SINÔNIMO(S)   |                                                      |
+
+<br />
+
+## Estudante
+| NOME          | Estudante                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Pessoa que acessa a plataforma estando logado   |
+| CLASSIFICAÇÃO | Sujeito                                |
+| IMPACTO(S)    | 1 - Estudante se loga na aplicação; <br /> 2 - Estudante pode visualizar ou submeter projetos, se cadastrar em disciplina, seguir usuários e realizar comentários|
+| SINÔNIMO(S)   | Aluno.                        |
+
+<br />
+
+## Professor
+| NOME          | Professor                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Pessoa que acessa a plataforma estando logado   |
+| CLASSIFICAÇÃO | Sujeito                                |
+| IMPACTO(S)    | 1 - Professor se loga na aplicação; <br /> 2 - Professor cria disciplina e escolhe senha para cadastro na disciplina <br /> 3 - Professor pode visualizar ou submeter projetos, se cadastrar em disciplina, seguir usuários, realizar comentários, remover aluno de disciplina e gerenciar disciplina.|
+| SINÔNIMO(S)   | Coordenador, Orientador.                        |
+
+<br />
+
+## Administrador
+| NOME          | Administrador                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Pessoa que gerencia a plataforma estando logado   |
+| CLASSIFICAÇÃO | Sujeito                                |
+| IMPACTO(S)    | 1 - Administrador gerencia aplicação por meio de permissões|
+| SINÔNIMO(S)   |                         |
