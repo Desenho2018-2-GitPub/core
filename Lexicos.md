@@ -4,7 +4,8 @@
 | 30/08/2018 | 1.1    | Adição (Plataforma, Upload)        | Romeu Antunes     |
 | 02/09/2018 | 1.2    | Adição (Download, Visitante)        | Romeu Antunes     |
 | 04/09/2018 | 1.3    | Review Page        | Kamilla Costa     |
-| 04/09/2018 | 1.4    | Adição (Estudante, Professor, Administrador)       | Kamilla Costa     |
+| 07/09/2018 | 1.4    | Adição (Estudante, Professor, Administrador)       | Kamilla Costa     |
+| 07/09/2018 | 1.5    | Adição (Comentar, seguir)       | Kamilla Costa     |
 
 Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos utilizados nesta wiki durante o projeto GitPub.
 
@@ -77,3 +78,23 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 | CLASSIFICAÇÃO | Sujeito                                |
 | IMPACTO(S)    | 1 - Administrador gerencia aplicação por meio de permissões|
 | SINÔNIMO(S)   |                         |
+
+<br />
+
+## Comentar
+| NOME          | Comentar                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Ação realizada pelo usuário de escrever em uma publicação   |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - O usuário que recebe esta ação de outro usuário é notificado <br/> 2 - O usuário marcado por meio da ação anterior é notificado  |
+| SINÔNIMO(S)   |                          |
+
+<br />
+
+## Seguir
+| NOME          | Seguir                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Ação realizada pelo usuário quando o usuário deseja ver as publicações de um perfil de forma frequente  |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - Assim que o usuário passar a seguir outro, as publicações deste passam a aparecer em seu feed da aplicação |
+| SINÔNIMO(S)   |           |
