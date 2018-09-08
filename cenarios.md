@@ -1,7 +1,7 @@
+| Data       | Versão | Descrição               | Autor             |
+|:----------:|:------:|:-----------------------:|:-----------------:|
 | 31/08/2018 | 1.0    | Criação do documento        | Romeu Antunes     |
 
-
----
 
 ## Cenários Geral.
 Aqui estão listados e descritos os cenários que não necessitam de especificação de Ator.
