@@ -16,3 +16,5 @@ Os Diagramas i*, são mais adequados para as fases iniciais do desenvolvimento d
 ## Diagramas
 
 * [Strategic Dependency Diagram](Strategic-Dependency)
+
+* [Strategic Rationale Diagram](Strategic-Rationale)
