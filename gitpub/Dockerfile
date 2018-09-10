@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:stretch-slim
 
 EXPOSE 8080
 
