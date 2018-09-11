@@ -16,6 +16,7 @@
   * [Argumentação](Argumentacao)
 
 * **[Elicitação](Plano-Elicitacao-Requisitos)**
+  * [Brainstorm](https://github.com/Desenho2018-2/GitPub/wiki/Brainstorm)
   * [Entrevista]()
   * [Questionário](Questionario)
   * [Moscow](Moscow)
