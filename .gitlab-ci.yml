@@ -17,7 +17,7 @@ build gitpub:
   script:
     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
     - docker build gitpub/ -t $GITPUB_IMAGE
-    - docker tag $DJANGO_RELEASE_IMAGE "$CI_REGISTRY_IMAGE/gitpub:latest"
+    - docker tag $GITPUB_IMAGE "$CI_REGISTRY_IMAGE/gitpub:latest"
     - docker push $GITPUB_IMAGE
     - docker push $CI_REGISTRY_IMAGE/gitpub:latest
   only:
