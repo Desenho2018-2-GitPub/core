@@ -1,0 +1,1 @@
+![reuniao](https://user-images.githubusercontent.com/18387694/45376062-3f510e80-b5cd-11e8-8ea3-8ebd4ad89832.jpg)
