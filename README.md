@@ -63,7 +63,7 @@ Docker:
 
 * **[Pré-Rastreabilidade - Gerência I](Pre-rastreabilidade)**
   * [Rich Picture](Richpicture)
-  * [Argumentação](Argumentacao)
+  * [Argumentação](https://github.com/Desenho2018-2/GitPub/docs/Argumentacao.md)
 
 * **[Elicitação](Plano-Elicitacao-Requisitos)**
   * [Brainstorm](https://github.com/Desenho2018-2/GitPub/wiki/Brainstorm)
