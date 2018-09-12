@@ -4,6 +4,7 @@
 |:----------:|:------:|:--------------------:|:-------------------------:|
 | 19/08/2018 | 0.1 | Criação do Documento com tema, épico, funcionalidades e user story  | [Arthur Diniz](https://github.com/arthurbdiniz) |
 | 12/09/2018 | 0.2 | Revisão dos termos utilizados  | [Victor Moura](https://github.com/victorcmoura) |
+| 13/09/2018 | 0.3 | Generalização de termos  | [Victor Moura](https://github.com/victorcmoura) |
 
 # Versão 2
 
@@ -29,7 +30,7 @@
 | FT03 | Sugerir noticias, disciplinas e projetos  para o usuário | EP02 |
 | FT04 | Chat entre usuários | EP01 |
 | FT05 | Explorar conteúdos | EP01 |
-| FT06 | Opção de contas | EP01, EP05 |
+| FT06 | Sistema de contas | EP01, EP05 |
 | FT07 | Alterar dados pessoais | EP01, EP05 |
 | FT08 | Alterar layout da aplicação | EP01, EP05 |
 | FT09 | Compartilhamento de projetos em redes sociais | EP01 |
@@ -41,7 +42,7 @@
 
 |    ID   |      Tipo     |     Eu como    |      Desejo       | De modo que | Prioridade | Status    | ID RELACIONADO (FEATURES) |
 |:-------:|:-------------:|:--------------:|:-----------------:|:-----------:|:----------:|:---------:|:-------------------------------:|
-|    US01    |   Funcional   | Usuário        | cadastrar no site | possa logar no site | Alta | To Do | FT05 |
+|    US01    |   Funcional   | Usuário        | cadastrar no site | possa logar no site | Alta | To Do | FT06 |
 |    US02    |   Funcional   | Usuário        | logar no site | tenha acesso a todas funcionalidades do Repositório | Alta | To Do | FT06 |
 |    US03    |   Funcional   | Usuário        | navegar pelo feed de repositórios |    consiga ver todos os repositórios em um só lugar | Alta | To Do | FT02, FT03, FT10 |
 |    US04    |   Funcional   | Usuário        | realizar publicação de arquivos contendo codigo e documentação | - | Alta | To Do | FT01 |
