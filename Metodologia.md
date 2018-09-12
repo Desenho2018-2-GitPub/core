@@ -3,7 +3,7 @@ Data|Versão|Descrição|Autor
 -|-|-|-
 29/08/2018|1.0.0|Adição dos artefatos da metodologia aplicada | Arthur Diniz
 29/08/2018|1.0.1|Adição das nossas modificações em cima do SCRUM | Arthur Diniz
-
+29/08/2018|1.0.2|Adição do diagrama metodológico do time | Romeu Antunes
 
 ## Scrum
 
@@ -81,3 +81,9 @@ Código -> Teste -> Review
 ```
 #### - Análise estática de código
 Para analisar o nível do código sendo produzido vamos utilizar ferramentas de análise estática.
+
+---
+
+## Diagrama metodológico
+
+![processo](https://user-images.githubusercontent.com/18054053/45429612-0753d500-b67a-11e8-9faa-f839f7ab8db8.png)
