@@ -3,6 +3,7 @@
 | Data       | Versão | Descrição            |         Autor             |
 |:----------:|:------:|:--------------------:|:-------------------------:|
 | 19/08/2018 | 0.1 | Criação do Documento com tema, épico, funcionalidades e user story  | [Arthur Diniz](https://github.com/arthurbdiniz) |
+| 12/09/2018 | 0.2 | Revisão dos termos utilizados  | [Victor Moura](https://github.com/victorcmoura) |
 
 # Versão 2
 
@@ -14,27 +15,27 @@
 ## Épicos
 | ID | DESCRIÇÃO | ID RELACIONADO (TEMA) |
 |----|-----------|----------------|
-| EP01 | Acesso a todas as funcionalidades do site. | TM01 |
-| EP03 | Interação do usuário com os projetos. | TM01 |
-| EP04 | Interação entre usuários. | TM01 |
-| EP05 | Ajustes de perfil. | TM01 |
-| EP06 | Suporte ao usuário. | TM01 |
+| EP01 | Como um usuário, eu desejo acessar e utilizar uma plataforma de centralização de projetos | TM01 |
+| EP03 | Como um usuário, eu desejo me cadastrar na plataforma de centralização de projetos | TM01 |
+| EP04 | Como um usuário, eu desejo interagir com outros usuários | TM01 |
+| EP05 | Como um usuário, eu desejo personalizar dados da plataforma | TM01 |
+| EP06 | Como um usuário, eu desejo ter ajuda no uso do sistema | TM01 |
 
 ## Funcionalidades (Features)
 | ID | DESCRIÇÃO | ID RELACIONADO (ÉPICOS) |
 |----|-----------|----------------|
-| FT01 | Publicar projetos. | EP01, EP03 |
-| FT02 | Pesquisar projetos. | EP01, EP03, EP04 |
-| FT03 | Sugerir noticias, disciplinas e projetos  para o usuário. | EP02 |
-| FT04 | Chat entre usuários. | EP01 |
-| FT05 | Explorar conteúdos. | EP01 |
-| FT06 | Opção de contas. | EP01, EP05 |
-| FT07 | Alterar dados pessoais. | EP01, EP05 |
-| FT08 | Alterar layout da aplicação. | EP01, EP05 |
-| FT09 | Compartilhamento de projetos em redes sociais. | EP01 |
-| FT10 | Organizar _feed_ de conteúdo. | EP01 |
-| FT11 | Recomendar projetos. | EP03, EP04 |
-| FT12 | Pagina de ajuda. | EP06 |
+| FT01 | Publicar projetos | EP01, EP03 |
+| FT02 | Pesquisar projetos | EP01, EP03, EP04 |
+| FT03 | Sugerir noticias, disciplinas e projetos  para o usuário | EP02 |
+| FT04 | Chat entre usuários | EP01 |
+| FT05 | Explorar conteúdos | EP01 |
+| FT06 | Opção de contas | EP01, EP05 |
+| FT07 | Alterar dados pessoais | EP01, EP05 |
+| FT08 | Alterar layout da aplicação | EP01, EP05 |
+| FT09 | Compartilhamento de projetos em redes sociais | EP01 |
+| FT10 | Organizar _feed_ de conteúdo | EP01 |
+| FT11 | Recomendar projetos | EP03, EP04 |
+| FT12 | Pagina de ajuda | EP06 |
 
 ## User Story
 
