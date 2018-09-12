@@ -30,6 +30,7 @@
   * [Lexicos](lexicos)
   * [Especificação de caso de uso]()
   * [Especificação Suplementar]()
+  * [Product Backlog](Product-Backlog)
   * [Diagrama de caso de uso](Diagrama-caso-de-uso)
   * [iStar](iStar)
     * [Strategic Dependency](Strategic-Dependency)
