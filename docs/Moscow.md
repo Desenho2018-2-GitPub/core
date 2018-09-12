@@ -23,6 +23,28 @@
 
 ## 3. MoSCoW
 
+### Requisitos Funcionais
+| *Label* | Nome | Priorização |
+| ------- | ---- | ----------- |
+| RF-01 | O sistema deve permitir o cadastro de usuários | Must have |
+| RF-02 | O sistema deve permitir a visualização dos projetos contidos em uma disciplina | Must have |
+| RF-03 | O sistema deve permitir buscar os conteúdos por meio de filtros | Could have |
+| RF-04 | O sistema deve permitir comentários nos projetos | Should have |
+| RF-05 | O sistema deve possuir sistema de controle de inscrição nas disciplinas | Should have |
+| RF-06 | O sistema deve permitir o usuário linkar arquivos do Git com um projeto | Must have |
+| RF-07 | O sistema deve permitir o usuário linkar arquivos, via upload, com um projeto | Should have |
+| RF-08 | O sistema deve permitir o gerenciamento de disciplinas | Must have |
+| RF-09 | O sistema deve permitir o gerenciamento de projetos | Must have |
+| RF-10 | O sistema deve permitir o gerenciamento de comentários | Must have |
+
+### Requisitos Não Funcionais
+| *Label* | Nome | Priorização |
+| ------- | ---- | ----------- |
+| RNF-01 | O sistema deve possuir boa usabilidade | Should have |
+| RNF-02 | O sistema deve apresentar bom desempenho | Should have |
+| RNF-03 | O sistema deve possuir bom controle de permissões | Must have |
+| RNF-04 | O sistema deve ser confiável | Should have |
+
 #### Interações
 |ID|Descrição|Must|Should|Could|Would|
 |--|--|--|--|--|--|
@@ -48,22 +70,21 @@
 |21|Curtir projeto|||x||
 |22|Curtir comentário||||x|
 |23|Responder comentário|||x||
-|24|Bloquear comentários ofensivos||x|||
+|24|Bloquear comentários ofensivos|x||||
 |25|Deixar de seguir usuário|||x||
-|26|Editar perfil||x|||
-|27|Alterar senha||x|||
-|28|Alterar foto|||x||
-|29|Alterar nome|x||||
-|30|Alterar email|x||||
+|26|Editar perfil|||x||
+|27|Alterar senha|||x||
+|28|Alterar foto||||x|
+|29|Alterar nome|||x||
+|30|Alterar email||||x|
 |31|Alterar biografia||x|||
 |32|Notificação de registro de novo projeto||||x|
-|33|Pesquisar usuário||x|||
-|34|Marcar como favorito determinado projeto||||x|
+|33|Pesquisar usuário||||x|
+|34|Marcar, como favorito, determinado projeto||||x|
 |35|Visualizar atividades recentes do usuário||||x|
-|36|Editar idioma||x|||
+|36|Editar idioma||||x|
 |37|Sair da conta de usuário|x||||
 |38|Visualizar projetos em que o usuário foi adicionado||||x|
-|39|Registro privado de projeto|x||||
-|40|Desvinculo Usuário/Disciplina|x||||
-|41|Vínculo Projeto/Disciplina|x||||
-|42|Forúm de dúvidas|x||||
+|39|Desvinculo Usuário/Disciplina||x|||
+|40|Vínculo Projeto/Disciplina|x||||
+|41|Forúm de dúvidas||||x|

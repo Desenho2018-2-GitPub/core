@@ -1,5 +1,3 @@
-# :file_folder: GitPub
-
 ![logo](https://user-images.githubusercontent.com/18054053/44956569-63f60980-ae9c-11e8-88c3-b67ba48f4693.png)
 
 ## About the Project
