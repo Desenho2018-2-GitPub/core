@@ -1,7 +1,7 @@
 ![logo](https://user-images.githubusercontent.com/18054053/44956569-63f60980-ae9c-11e8-88c3-b67ba48f4693.png)
 
 * **Políticas**
-* [Folha de Estilo](https://github.com/Desenho2018-2/GitPub/docs/Folha-de-Estilo.md)
+* [Folha de Estilo](https://github.com/Desenho2018-2/GitPub/wiki/Folha-de-Estilo.md)
 * [Branches](https://github.com/Desenho2018-2/GitPub/docs/Branches.md)
 * [Commits](https://github.com/Desenho2018-2/GitPub/docs/Commits.md)
 * [Issue](https://github.com/Desenho2018-2/GitPub/docs/Issues.md)
