@@ -15,6 +15,6 @@ Os Diagramas i*, são mais adequados para as fases iniciais do desenvolvimento d
 
 ## Diagramas
 
-* [Strategic Dependency Diagram](Strategic-Dependency)
+* [Strategic Dependency Diagram](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Dependency.md)
 
-* [Strategic Rationale Diagram](Strategic-Rationale)
+* [Strategic Rationale Diagram](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Rationale.md)
