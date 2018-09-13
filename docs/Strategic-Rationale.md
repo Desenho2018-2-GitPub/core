@@ -14,7 +14,7 @@
 
 ## Estudante
 
-[![sr-visitante.png]
+[![sr-visitante.png](https://user-images.githubusercontent.com/29952415/45133429-7eb1d200-b16b-11e8-8ad0-7862b9b27322.png)](https://user-images.githubusercontent.com/29952415/45133429-7eb1d200-b16b-11e8-8ad0-7862b9b27322.png)
 
 ## Visitante
 
