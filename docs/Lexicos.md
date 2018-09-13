@@ -110,3 +110,32 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 | IMPACTO(S)    | 1 - Usuário pesquisa pelo nome do usuário ou projeto no campo de pesquisa da plataforma. |
 | SINÔNIMO(S)   | Explorar       |
 
+<br />
+
+## Projeto
+| NOME          | Projeto                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Artefato realizado em uma disciplina pelo estudante.  |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - Usuário realiza upload de projetos. <br/>2 - O projeto passa a ser visível para outros usuários |
+| SINÔNIMO(S)   | Trabalho       |
+
+<br />
+
+## Criar Conta
+| NOME          | Criar Conta                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Ação realizada pelo usuário para cadastrar uma conta no aplicativo.  |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - Visitante realiza cadastro. <br/>2 - O Visitante se torna usuário. |
+| SINÔNIMO(S)   | Cadastrar       |
+
+<br />
+
+## Realizar login
+| NOME          | Criar Conta                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Ação realizada pelo usuário para acessar uma conta no aplicativo.  |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - Entra como usuário <br/>2 - Passa a ter posibildiade de realizar funcionalidades de estudantes. |
+| SINÔNIMO(S)   | Logar       |
