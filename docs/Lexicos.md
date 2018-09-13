@@ -33,7 +33,7 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 <br />
 
 ## _Download_
-| NOME          | Upload                             |
+| NOME          | Download                             |
 |---------------|----------------------------------------|
 | NOÇÃO         | Ação de baixar projeto da plataforma.   |
 | CLASSIFICAÇÃO | Objeto                                |
