@@ -7,6 +7,9 @@
 | 07/09/2018 | 1.4    | Adição (Estudante, Professor, Administrador)       | Kamilla Costa     |
 | 07/09/2018 | 1.5    | Adição (Comentar, seguir)       | Kamilla Costa     |
 | 08/09/2018 | 1.6    | Adição (Pesquisar)       | Kamilla Costa     |
+| 13/09/2018 | 1.7    | Adição (Criar conta, realizar login, Projeto)       | João Carlos     |
+| 13/09/2018 | 1.8    | Adição (Vincular Projeto)       | João Carlos     |
+
 
 Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos utilizados nesta wiki durante o projeto GitPub.
 
@@ -133,9 +136,19 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 <br />
 
 ## Realizar login
-| NOME          | Criar Conta                             |
+| NOME          | Realizar login                          |
 |---------------|----------------------------------------|
 | NOÇÃO         | Ação realizada pelo usuário para acessar uma conta no aplicativo.  |
 | CLASSIFICAÇÃO | Objeto                                |
 | IMPACTO(S)    | 1 - Entra como usuário <br/>2 - Passa a ter posibildiade de realizar funcionalidades de estudantes. |
 | SINÔNIMO(S)   | Logar       |
+
+<br />
+
+## Vincular projeto
+| NOME          | Vincular Projeto                          |
+|---------------|----------------------------------------|
+| NOÇÃO         | Ação realizada pelo usuário para colocar um projeto no aplicativo.  |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - Usuário realiza upload de projetos. <br/>2 - O projeto passa a ser visível para outros usuários|
+| SINÔNIMO(S)   | Upar projeto, subir projeto     |
