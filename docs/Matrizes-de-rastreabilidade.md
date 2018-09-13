@@ -33,22 +33,22 @@
 
 | Requisito | Documento fonte | Técnica de Elicitação | Contexto |
 | --------- | --------------- | --------------------- | -------- |
-| **RF-01** - O sistema deve permitir o cadastro de usuários | [Visitante - Cadastrar](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | - |
-| **RF-02** - O sistema deve permitir a visualização dos projetos contidos em uma disciplina | [Visitante - Visualizar](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | - |
-| **RF-03** - O sistema deve permitir buscar os conteúdos por meio de filtros | ["Utilizar labels para facilitar a busca de projetos"](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | - |
-| **RF-04** - O sistema deve permitir comentários nos projetos | [Visitante - Comentar](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | - |
-| **RF-05** - O sistema deve possuir sistema de controle de inscrição nas disciplinas | [Visitante - Matricular em disciplina](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | - |
-| **RF-06** - O sistema deve permitir o usuário linkar arquivos do Git com um projeto | [Arquivos - Git](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | - |
-| **RF-07** - O sistema deve permitir o usuário linkar arquivos, via upload, com um projeto | [Arquivos - Upload](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | - |
-| **RF-08** - O sistema deve permitir o gerenciamento de disciplinas | [Professor - Criar, remover, gerenciar disciplinas](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | - |
-| **RF-09** - O sistema deve permitir o gerenciamento de projetos | [Visitante - Visualizar projetos, registrar projetos](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | - |
-| **RF-10** - O sistema deve permitir o gerenciamento de comentários | [Visitante - Comentar](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | - |
+| **RF-01** - O sistema deve permitir o cadastro de usuários | [Visitante - Cadastrar](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | Sistema de Permissões |
+| **RF-02** - O sistema deve permitir a visualização dos projetos contidos em uma disciplina | [Visitante - Visualizar](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | Sistema de Centralização de Projetos |
+| **RF-03** - O sistema deve permitir buscar os conteúdos por meio de filtros | ["Utilizar labels para facilitar a busca de projetos"](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | Sistema de Centralização de Projetos |
+| **RF-04** - O sistema deve permitir comentários nos projetos | [Visitante - Comentar](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | Sistema de Centralização de Projetos |
+| **RF-05** - O sistema deve possuir sistema de controle de inscrição nas disciplinas | [Visitante - Matricular em disciplina](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | Sistema de Permissões |
+| **RF-06** - O sistema deve permitir o usuário linkar arquivos do Git com um projeto | [Arquivos - Git](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | Sistema de Centralização de Projetos |
+| **RF-07** - O sistema deve permitir o usuário linkar arquivos, via upload, com um projeto | [Arquivos - Upload](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | Sistema de Centralização de Projetos |
+| **RF-08** - O sistema deve permitir o gerenciamento de disciplinas | [Professor - Criar, remover, gerenciar disciplinas](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | Sistema de Centralização de Projetos |
+| **RF-09** - O sistema deve permitir o gerenciamento de projetos | [Visitante - Visualizar projetos, registrar projetos](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | Sistema de Centralização de Projetos |
+| **RF-10** - O sistema deve permitir o gerenciamento de comentários | [Visitante - Comentar](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm e Introspecção | Sistema de Centralização de Projetos |
 
 ### Requisitos Não Funcionais
 
 | Requisito | Documento fonte | Técnica de Elicitação | Contexto |
 | --------- | --------------- | --------------------- | -------- |
-| **RNF-01** - O sistema deve possuir boa usabilidade | ["Mostrar apenas disciplinas do semestre atual no frontend para não poluir o acesso", "Sair da disciplina" (riscado mas foi mencionado como influenciador na usabilidade)](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | | |
-| **RNF-02** - O sistema deve apresentar bom desempenho | [Professora consegue finalizar operações em poucos minutos (em tempo de aula)](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Storytelling.md) | | |
-| **RNF-03** - O sistema deve possuir bom controle de permissões | ["Em seguida, devem se logar e acessar a disciplina que desejam ter acesso aos projetos"](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Storytelling.md) | | |
-| **RNF-04** - O sistema deve ser confiável | [Alunos confiam no sistema para mostrar os seus trabalhos ao público externo à disciplina](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Storytelling.md) | | |
+| **RNF-01** - O sistema deve possuir boa usabilidade | ["Mostrar apenas disciplinas do semestre atual no frontend para não poluir o acesso", "Sair da disciplina" (riscado mas foi mencionado como influenciador na usabilidade)](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md) | Brainstorm | Sistema de Centralização de Projetos e Sistema de Permissões |
+| **RNF-02** - O sistema deve apresentar bom desempenho | [Professora consegue finalizar operações em poucos minutos (em tempo de aula)](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Storytelling.md) | Storytelling | Sistema de Centralização de Projetos e Sistema de Permissões |
+| **RNF-03** - O sistema deve possuir bom controle de permissões | ["Em seguida, devem se logar e acessar a disciplina que desejam ter acesso aos projetos"](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Storytelling.md) | Storytelling | Sistema de Centralização de Projetos e Sistema de Permissões |
+| **RNF-04** - O sistema deve ser confiável | [Alunos confiam no sistema para mostrar os seus trabalhos ao público externo à disciplina](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Storytelling.md) | Storytelling | Sistema de Centralização de Projetos e Sistema de Permissões |
