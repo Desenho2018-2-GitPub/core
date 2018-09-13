@@ -17,6 +17,7 @@
   * [Storytelling](https://github.com/Desenho2018-2/GitPub/wiki/Storytelling)
   * [Cenários](https://github.com/Desenho2018-2/GitPub/wiki/cenarios)
   * [Lexicos](https://github.com/Desenho2018-2/GitPub/wiki/Lexicos)
+  * [Checklist](https://github.com/Desenho2018-2/GitPub/wiki/checklist)
   * [Protótipo Baixa Fidelidade](https://github.com/Desenho2018-2/GitPub/wiki/Prototipo-Baixa-Fidelidade)
 
 * **Dinâmica 2**
