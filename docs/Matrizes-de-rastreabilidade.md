@@ -26,3 +26,29 @@
 | **RNF-02** - O sistema deve apresentar bom desempenho | - | - | - | - | - |
 | **RNF-03** - O sistema deve possuir bom controle de permissões | - | - | - | - | - |
 | **RNF-04** - O sistema deve ser confiável | - | - | - | - | - |
+
+## Backward-from
+
+| Requisito | Documento fonte | Técnica de Elicitação | Contexto |
+| --------- | --------------- | --------------------- | -------- |
+| **RF-01** - O sistema deve permitir o cadastro de usuários | | | |
+| **RF-02** - O sistema deve permitir a visualização dos projetos contidos em uma disciplina | | | |
+| **RF-03** - O sistema deve permitir buscar os conteúdos por meio de filtros | | | |
+| **RF-04** - O sistema deve permitir comentários nos projetos | | | |
+| **RF-05** - O sistema deve possuir sistema de controle de inscrição nas disciplinas | | | |
+| **RF-06** - O sistema deve permitir o usuário linkar arquivos do Git com um projeto | | | |
+| **RF-07** - O sistema deve permitir o usuário linkar arquivos, via upload, com um projeto | | | |
+| **RF-08** - O sistema deve permitir o gerenciamento de disciplinas | | | |
+| **RF-09** - O sistema deve permitir o gerenciamento de projetos | | | |
+| **RF-10** - O sistema deve permitir o gerenciamento de comentários | | | |
+
+### Requisitos Funcionais
+
+| Requisito | Documento fonte | Técnica de Elicitação | Contexto |
+| --------- | --------------- | --------------------- | -------- |
+| **RNF-01** - O sistema deve possuir boa usabilidade | | | |
+| **RNF-02** - O sistema deve apresentar bom desempenho | | | |
+| **RNF-03** - O sistema deve possuir bom controle de permissões | | | |
+| **RNF-04** - O sistema deve ser confiável | | | |
+
+### Requisitos Não Funcionais
