@@ -1,5 +1,11 @@
 # Matrizes de rastreabilidade
 
+| Data       | Versão | Descrição            | Autor             |
+|:----------:|:------:|:--------------------:|:-----------------:|
+| 12/09/2018  | 0.1    | Versão inicial das matrizes forward-from | [Victor Moura](https://github.com/victorcmoura) |
+| 13/09/2018  | 0.2    | Versão inicial das matrizes backward-from | [Victor Moura](https://github.com/victorcmoura) |
+
+
 ## Forward-from
 
 ### Requisitos Funcionais
