@@ -28,10 +28,10 @@
 
 | Requisito | iStar | NFR | Implementação |
 | --------- | ------- | ---- | ------- | ---------- | ------------- |
-| **RNF-01** - O sistema deve possuir boa usabilidade | - | - | - |
-| **RNF-02** - O sistema deve apresentar bom desempenho | - | - | - |
-| **RNF-03** - O sistema deve possuir bom controle de permissões | - | - | - |
-| **RNF-04** - O sistema deve ser confiável | - | - | - |
+| **RNF-01** - O sistema deve possuir boa usabilidade | [Boa usabilidade](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Dependency.md#strategic-dependency-geral) e [Boa usabilidade](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Rationale.md#sistema-gitpub) | [Usabilidade do sistema](https://github.com/Desenho2018-2/GitPub/blob/master/docs/NFRFramework.md#diagramas) | - |
+| **RNF-02** - O sistema deve apresentar bom desempenho | - | [Desempenho do sistema](https://github.com/Desenho2018-2/GitPub/blob/master/docs/NFRFramework.md#diagramas) | - |
+| **RNF-03** - O sistema deve possuir bom controle de permissões | [Gerenciamento completo de usuários](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Dependency.md#strategic-dependency-geral) | [Confiabilidade do sistema](https://github.com/Desenho2018-2/GitPub/blob/master/docs/NFRFramework.md#diagramas) | - |
+| **RNF-04** - O sistema deve ser confiável | [Segurança dos dados](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Rationale.md#sistema-gitpub), [Segurança dos dados pessoais](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Dependency.md#strategic-dependency-geral) e [Bom armazenamento de dados](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Rationale.md#sistema-gitpub) | [Confiabilidade do sistema](https://github.com/Desenho2018-2/GitPub/blob/master/docs/NFRFramework.md#diagramas) | - |
 
 ## Backward-from
 
