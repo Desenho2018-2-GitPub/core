@@ -1,47 +1,33 @@
 ![logo](https://user-images.githubusercontent.com/18054053/44956569-63f60980-ae9c-11e8-88c3-b67ba48f4693.png)
 
 * **Políticas**
-  * [Folha de Estilo](Folha-de-Estilo)
-  * [Branches](Branches)
-  * [Commits](Commits)
-  * [Issue](Issues)
-  * [Pull Request](Pull-Request)
+* [Folha de Estilo](https://github.com/Desenho2018-2/GitPub/docs/Folha-de-Estilo.md)
+* [Branches](https://github.com/Desenho2018-2/GitPub/docs/Branches.md)
+* [Commits](https://github.com/Desenho2018-2/GitPub/docs/Commits.md)
+* [Issue](https://github.com/Desenho2018-2/GitPub/docs/Issues.md)
+* [Pull Request](https://github.com/Desenho2018-2/GitPub/docs/Pull-Request.md)
 
-* **Metodologia**
-  * [Metodologia](Metodologia)
-  * [Priorização Documentos](Priorizacao-Documentos)
-
-* **[Pré-Rastreabilidade - Gerência I](Pre-rastreabilidade)**
-  * [Rich Picture](Richpicture)
-  * [Argumentação](Argumentacao)
-
-* **[Elicitação](Plano-Elicitacao-Requisitos)**
+* **Dinâmica 1**
+  * [Priorização Documentos](https://github.com/Desenho2018-2/GitPub/docs/Priorizacao-Documentos)
+  * [Rich Picture](https://github.com/Desenho2018-2/GitPub/docs/Richpicture.md)
+  * [Argumentação](https://github.com/Desenho2018-2/GitPub/docs/Argumentacao.md)
   * [Brainstorm](https://github.com/Desenho2018-2/GitPub/wiki/Brainstorm)
-  * [Entrevista]()
-  * [Questionário](Questionario)
-  * [Moscow](Moscow)
-  * [5W2H]()
-  * [Observação]()
-  * [Introspecção]()
-  * [Storytelling](Storytelling)
+  * [Questionário](https://github.com/Desenho2018-2/GitPub/docs/Questionario.md)
+  * [Moscow](https://github.com/Desenho2018-2/GitPub/docs/Moscow.md)
+  * [Storytelling](https://github.com/Desenho2018-2/GitPub/docs/Storytelling.md)
+  * [Cenários](https://github.com/Desenho2018-2/GitPub/docs/cenarios.md)
+  * [Lexicos](https://github.com/Desenho2018-2/GitPub/docs/Lexicos.md)
+  * [Protótipo Baixa Fidelidade](https://github.com/Desenho2018-2/GitPub/docs/Prototipo-Baixa-Fidelidade.md)
 
-* **Modelagem**
-  * [Cenários](cenarios)
-  * [Lexicos](lexicos)
-  * [Especificação de caso de uso]()
-  * [Especificação Suplementar]()
-  * [Product Backlog](Product-Backlog)
-  * [Diagrama de caso de uso](Diagrama-caso-de-uso)
-  * [iStar](iStar)
-    * [Strategic Dependency](Strategic-Dependency)
-    * [Strategic Rationale](Strategic-Rationale)
-  * [NFR Framework]()
-  * [Banco de Dados](Banco-de-Dados)
+* **Dinâmica 2**
+  * [Metodologia](https://github.com/Desenho2018-2/GitPub/docs/Metodologia.md)
 
-* **Análise**
-  * [Políticas de verificação e validação]()
-  * [Checklist]()
-
-* **Protótipos**
-  * [Protótipo Baixa Fidelidade](Prototipo-Baixa-Fidelidade)
+* **Dinâmica 3**
+  * [Product Backlog](https://github.com/Desenho2018-2/GitPub/docs/Product-Backlog.md)
+  * [Diagrama de caso de uso](https://github.com/Desenho2018-2/GitPub/docs/Diagrama-caso-de-uso.md)
+  * [iStar](https://github.com/Desenho2018-2/GitPub/docs/iStar.md)
+    * [Strategic Dependency](https://github.com/Desenho2018-2/GitPub/docs/Strategic-Dependency.md)
+    * [Strategic Rationale](https://github.com/Desenho2018-2/GitPub/docs/Strategic-Rationale.md)
+  * [NFR Framework](https://github.com/Desenho2018-2/GitPub/docs/NFRFramework.md)
+  * [Banco de Dados](https://github.com/Desenho2018-2/GitPub/docs/banco-de-dados.md)
   * [Protótipo Alta Fidelidade]()
