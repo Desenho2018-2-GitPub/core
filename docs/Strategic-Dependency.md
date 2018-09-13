@@ -14,7 +14,7 @@
 
 ## Strategic Dependency Geral
 
-[![gitpub-sd-geral](https://user-images.githubusercontent.com/29952415/45112693-b8a8b700-b11e-11e8-8eb3-de9dc8d00d04.png)](https://user-images.githubusercontent.com/29952415/45112693-b8a8b700-b11e-11e8-8eb3-de9dc8d00d04.png)
+[![gitpub-sd-geral](https://user-images.githubusercontent.com/29952415/45112693-b8a8b700-b11e-11e8-8eb3-de9dc8d00d04.png)
 
 [Versão 1](https://user-images.githubusercontent.com/29952415/44866093-9b757380-ac5a-11e8-999b-9645ab265dbb.png)
 
