@@ -73,9 +73,12 @@ Docker:
 * **Dinâmica 3**
   * [Product Backlog](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Product-Backlog.md)
   * [Diagrama de caso de uso](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Diagrama-caso-de-uso.md)
+  * [Diagrama de Classe](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Diagrama-de-Classe.md)
+  * [Diagrama Sequencial](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Diagrama-Sequencial.md)
   * [iStar](https://github.com/Desenho2018-2/GitPub/blob/master/docs/iStar.md)
     * [Strategic Dependency](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Dependency.md)
     * [Strategic Rationale](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Rationale.md)
   * [NFR Framework](https://github.com/Desenho2018-2/GitPub/blob/master/docs/NFRFramework.md)
   * [Banco de Dados](https://github.com/Desenho2018-2/GitPub/blob/master/docs/banco-de-dados.md)
+  * [Matrizes de Rastreabilidade](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Matrizes-de-rastreabilidade.md)
   * [Protótipo Alta Fidelidade]()

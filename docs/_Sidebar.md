@@ -25,6 +25,8 @@
 * **Dinâmica 3**
   * [Product Backlog](https://github.com/Desenho2018-2/GitPub/docs/Product-Backlog.md)
   * [Diagrama de caso de uso](https://github.com/Desenho2018-2/GitPub/docs/Diagrama-caso-de-uso.md)
+  * [Diagrama de Classe](https://github.com/Desenho2018-2/GitPub/docs/Diagrama-de-Classe.md)
+  * [Diagrama Sequencial](https://github.com/Desenho2018-2/GitPub/docs/Diagrama-Sequencial.md)
   * [iStar](https://github.com/Desenho2018-2/GitPub/docs/iStar.md)
     * [Strategic Dependency](https://github.com/Desenho2018-2/GitPub/docs/Strategic-Dependency.md)
     * [Strategic Rationale](https://github.com/Desenho2018-2/GitPub/docs/Strategic-Rationale.md)

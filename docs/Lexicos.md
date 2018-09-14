@@ -7,6 +7,9 @@
 | 07/09/2018 | 1.4    | Adição (Estudante, Professor, Administrador)       | Kamilla Costa     |
 | 07/09/2018 | 1.5    | Adição (Comentar, seguir)       | Kamilla Costa     |
 | 08/09/2018 | 1.6    | Adição (Pesquisar)       | Kamilla Costa     |
+| 13/09/2018 | 1.7    | Adição (Criar conta, realizar login, Projeto)       | João Carlos     |
+| 13/09/2018 | 1.8    | Adição (Vincular Projeto)       | João Carlos     |
+
 
 Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos utilizados nesta wiki durante o projeto GitPub.
 
@@ -33,7 +36,7 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 <br />
 
 ## _Download_
-| NOME          | Upload                             |
+| NOME          | Download                             |
 |---------------|----------------------------------------|
 | NOÇÃO         | Ação de baixar projeto da plataforma.   |
 | CLASSIFICAÇÃO | Objeto                                |
@@ -110,3 +113,42 @@ Léxicos responsáveis por esclarecer qualquer dúvida a respeito de termos util
 | IMPACTO(S)    | 1 - Usuário pesquisa pelo nome do usuário ou projeto no campo de pesquisa da plataforma. |
 | SINÔNIMO(S)   | Explorar       |
 
+<br />
+
+## Projeto
+| NOME          | Projeto                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Artefato realizado em uma disciplina pelo estudante.  |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - Usuário realiza upload de projetos. <br/>2 - O projeto passa a ser visível para outros usuários |
+| SINÔNIMO(S)   | Trabalho       |
+
+<br />
+
+## Criar Conta
+| NOME          | Criar Conta                             |
+|---------------|----------------------------------------|
+| NOÇÃO         | Ação realizada pelo usuário para cadastrar uma conta no aplicativo.  |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - Visitante realiza cadastro. <br/>2 - O Visitante se torna usuário. |
+| SINÔNIMO(S)   | Cadastrar       |
+
+<br />
+
+## Realizar login
+| NOME          | Realizar login                          |
+|---------------|----------------------------------------|
+| NOÇÃO         | Ação realizada pelo usuário para acessar uma conta no aplicativo.  |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - Entra como usuário <br/>2 - Passa a ter posibildiade de realizar funcionalidades de estudantes. |
+| SINÔNIMO(S)   | Logar       |
+
+<br />
+
+## Vincular projeto
+| NOME          | Vincular Projeto                          |
+|---------------|----------------------------------------|
+| NOÇÃO         | Ação realizada pelo usuário para colocar um projeto no aplicativo.  |
+| CLASSIFICAÇÃO | Objeto                                |
+| IMPACTO(S)    | 1 - Usuário realiza upload de projetos. <br/>2 - O projeto passa a ser visível para outros usuários|
+| SINÔNIMO(S)   | Upar projeto, subir projeto     |
