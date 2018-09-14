@@ -3,6 +3,7 @@
 | Data       | Versão | Descrição            |         Autor             |
 |:----------:|:------:|:--------------------:|:-------------------------:|
 | 13/09/2018 | 1.0 | Criação da primeira versão  | [Arthur Diniz](https://github.com/arthurbdiniz) |
+| 13/09/2018 | 1.1 | Atualização do diagrama de acordo com o DER  | [Arthur Diniz](https://github.com/arthurbdiniz) |
 ---
 
 
@@ -50,5 +51,9 @@ Relacionamentos entre classes.
 - Navegação: De onde vêm as informações da classe e para onde vão.
 
 ### Versão 1
-
 ![diagrama de classe](https://user-images.githubusercontent.com/18387694/45491996-819b5c80-b741-11e8-9951-954beaa4e998.jpg)
+
+### Versão 2
+![diagrama de classe](https://user-images.githubusercontent.com/18387694/45523568-614eba80-b7a0-11e8-9387-0defcd63bd48.jpg)
+
+
