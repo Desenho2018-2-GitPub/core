@@ -18,10 +18,10 @@
 &emsp;
 
 ### 2.1. Login Aluno
-![Login Aluno](/images/DiagramaSequencialLoginAlunov1.png)
+![Login Aluno](images/DiagramaSequencialLoginAlunov1.png)
 
 ### 2.2. Visualizar Disciplina
-![Visualizar Disciplina](/images/DiagramaSequencialBuscarDisciplinav1.png)
+![Visualizar Disciplina](images/DiagramaSequencialBuscarDisciplinav1.png)
 
 ### 2.3. Vinculo e Desvinculo de disciplina
-![Vinculo/Desvinculo de Disciplina](/images/DiagramaSequencialVincularDisciplinav1.png)
+![Vinculo/Desvinculo de Disciplina](images/DiagramaSequencialVincularDisciplinav1.png)
