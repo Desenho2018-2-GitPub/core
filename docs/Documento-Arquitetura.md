@@ -1,6 +1,5 @@
 | Data       | Versão | Descrição               | Autor             |
 |:----------:|:------:|:-----------------------:|:-----------------:|
-
 | 12/09/2018 | 1.0    | Criação do documento       | Kamilla Costa     |
 
 ## Sumário
