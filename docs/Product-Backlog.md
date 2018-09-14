@@ -5,6 +5,7 @@
 | 19/08/2018 | 0.1 | Criação do Documento com tema, épico, funcionalidades e user story  | [Arthur Diniz](https://github.com/arthurbdiniz) |
 | 12/09/2018 | 0.2 | Revisão dos termos utilizados  | [Victor Moura](https://github.com/victorcmoura) |
 | 13/09/2018 | 0.3 | Generalização de termos  | [Victor Moura](https://github.com/victorcmoura) |
+| 13/09/2018 | 0.4 | Adicionando novas Features e User Storys  | [Diego Resende](https://github.com/wdresende) |
 
 # Versão 2
 
@@ -37,6 +38,8 @@
 | FT10 | Organizar _feed_ de conteúdo | EP01 |
 | FT11 | Recomendar projetos | EP03, EP04 |
 | FT12 | Pagina de ajuda | EP06 |
+| FT13 | Gerenciar disciplinas | EP05 |
+| FT14 | Gerenciar projetos | EP05 |
 
 ## User Story
 
@@ -64,3 +67,5 @@
 |    US20    | Não Funcional | Usuário        | dar upload de uma imagems com tamanho maior que 50Mb | consiga postar imagens com uma melhor qualidade | Média | To Do | FT01
 |    US21    | Não Funciona  | Desenvolvedor  | limitar tamanho de upload de imagens para 100MB | evite latência no servidor e recupere os dados mais rapidamente | Alta | To Do | FT01
 |    US22    |   Funcional   | Usuário        | poder editar meu projeto | consiga realizar alterações nos textos nele contido | Alta | To Do | FT10 |
+|    US23    |   Funcional   | Usuário        | gerenciar minhas disciplinas | possa organizar da melhor forma possível | Alta | To Do | FT13 |
+|    US24    |   Funcional   | Usuário        | gerenciar meus projetos | possa organizar da melhor forma possível | Alta | To Do | FT14 |
