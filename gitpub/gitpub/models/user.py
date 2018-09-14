@@ -9,3 +9,6 @@ class User(models.Model):
     email = models.CharField(max_length=30)
     is_admin = models.BooleanField(default=False)
     is_teacher = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.username
