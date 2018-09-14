@@ -79,4 +79,5 @@ Docker:
     * [Strategic Rationale](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Rationale.md)
   * [NFR Framework](https://github.com/Desenho2018-2/GitPub/blob/master/docs/NFRFramework.md)
   * [Banco de Dados](https://github.com/Desenho2018-2/GitPub/blob/master/docs/banco-de-dados.md)
+  * [Matrizes de Rastreabilidade](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Matrizes-de-rastreabilidade.md)
   * [Protótipo Alta Fidelidade]()
