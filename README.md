@@ -83,4 +83,3 @@ Docker:
   * [Banco de Dados](https://github.com/Desenho2018-2/GitPub/blob/master/docs/banco-de-dados.md)
   * [Matrizes de Rastreabilidade](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Matrizes-de-rastreabilidade.md)
   * [Checklist](https://github.com/Desenho2018-2/GitPub/blob/master/docs/checklist.md)
-  * [Protótipo Alta Fidelidade]()
