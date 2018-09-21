@@ -21,7 +21,7 @@ build gitpub:
     - docker push $GITPUB_IMAGE
     - docker push $CI_REGISTRY_IMAGE/gitpub:latest
   only:
-    - /master|development|gitlab-ci/
+    - /master|development|continuos-integration|gitlab-ci/
   environment: development
   tags:
     - docker
