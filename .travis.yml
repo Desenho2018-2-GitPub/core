@@ -1,0 +1,39 @@
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+install:
+  - pip install -r requirements.txt
+
+
+# services:
+#   - docker:dind
+#
+# stages:
+#   - test
+#   - build
+#   - deploy
+#
+# variables:
+#   GITPUB_IMAGE: $CI_REGISTRY_IMAGE/gitpub:$CI_BUILD_REF_NAME
+#
+# build gitpub:
+#   image: docker:latest
+#   stage: build
+#   services:
+#     - docker:dind
+#   script:
+#     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
+#     - docker build gitpub/ -t $GITPUB_IMAGE
+#     - docker tag $GITPUB_IMAGE "$CI_REGISTRY_IMAGE/gitpub:latest"
+#     - docker push $GITPUB_IMAGE
+#     - docker push $CI_REGISTRY_IMAGE/gitpub:latest
+#   only:
+#     - /master|development|gitlab-ci/
+#   environment: development
+#   tags:
+#     - docker
