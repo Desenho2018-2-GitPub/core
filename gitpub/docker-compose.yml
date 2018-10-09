@@ -10,7 +10,7 @@ services:
 
   web:
     build: .
-    command: ["./init_dev.sh"]
+    command: ["/gitpub/scripts/init_dev.sh"]
     volumes:
       - .:/gitpub
     ports:
