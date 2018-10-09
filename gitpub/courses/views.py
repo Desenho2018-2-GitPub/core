@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from gitpub.logging import debug
+from cms.models import Course
 
 # Create your views here.
 @debug
