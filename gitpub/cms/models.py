@@ -7,11 +7,9 @@ from django.db import models
 
 class User(models.Model):
     """
-    Abstract class for users can be a student, professor or a admin
+    Abstract class for RegisteredUser
     """
     name = models.CharField(max_length=120)
-    email = models.CharField(max_length=150)
-    password = models.CharField(max_length=80)
 
     class Meta:
         abstract = True
@@ -20,27 +18,39 @@ class User(models.Model):
         return self.name
 
 
-class Professor(User):
+class RegisteredUser(User):
     """
-    Professor
+    Abstract class for Admin and Student
     """
-    #  Professor's registry at University
     registry = models.IntegerField()
+    email = models.CharField(max_length=150)
+    password = models.CharField(max_length=80)
+    token = models.CharField(max_length=150)
+
+    class Meta:
+        abstract = True
+
+    def create_project(self):
+        pass
 
 
-class Student(User):
+class Student(RegisteredUser):
     """
     Student
     """
-    #  Professor's registry at University
-    registry = models.IntegerField()
-
-
-class Admin(User):
-    """
-    Admin makes users professors
-    """
     pass
+
+
+class Admin(RegisteredUser):
+    """
+    Admins make other users admins
+    """
+    def make_admin(self, User):
+        pass
+
+    def create_discipline(self):
+        pass
+
 
 class Material(models.Model):
     """
