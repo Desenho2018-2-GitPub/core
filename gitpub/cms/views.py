@@ -6,3 +6,11 @@ from gitpub.logging import debug
 @debug
 def index(request):
     return render(request, 'index.html')
+
+@debug
+def login(request):
+    return render(request, 'login.html')
+
+@debug
+def register(request):
+    return render(request, 'register.html')
