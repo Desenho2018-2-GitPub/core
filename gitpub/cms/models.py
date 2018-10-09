@@ -5,20 +5,17 @@ import datetime
 from django.db import models
 
 
-class User(models.Model):
+class CustomUser(models.Model):
     """
     Abstract class for RegisteredUser
     """
     name = models.CharField(max_length=120)
 
-    class Meta:
-        abstract = True
-
     def __str__(self):
         return self.name
 
 
-class RegisteredUser(User):
+class RegisteredUser(CustomUser):
     """
     Abstract class for Admin and Student
     """
@@ -26,9 +23,6 @@ class RegisteredUser(User):
     email = models.CharField(max_length=150)
     password = models.CharField(max_length=80)
     token = models.CharField(max_length=150)
-
-    class Meta:
-        abstract = True
 
     def create_project(self):
         pass
@@ -45,7 +39,7 @@ class Admin(RegisteredUser):
     """
     Admins make other users admins
     """
-    def make_admin(self, User):
+    def make_admin(self, CustomUser):
         pass
 
     def create_discipline(self):
@@ -83,7 +77,7 @@ class Course(models.Model):
     """
     description = models.CharField(max_length=140)
     name = models.CharField(max_length=50)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -96,9 +90,9 @@ class Classroom(models.Model):
     """
     name = models.CharField(max_length=50)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE,
+    owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE,
                               related_name='owner_user')
-    enrolled_user = models.ManyToManyField(User)
+    enrolled_user = models.ManyToManyField(CustomUser)
     period = models.ForeignKey(Period, on_delete=models.CASCADE)
 
     def __str___(self):
@@ -126,7 +120,7 @@ class Comment(models.Model):
     A comment is written by an user to a project.
     """
     text = models.CharField(max_length=140)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
 
     def __str__(self):
