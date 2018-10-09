@@ -1,23 +1,63 @@
-from django.db import models
+"""
+Models module
+"""
 import datetime
+from django.db import models
+
 
 class User(models.Model):
     """
-    A user can be a student, professor, guest or a admin
+    Abstract class for RegisteredUser
     """
-    username = models.CharField(max_length=30)
-    email = models.CharField(max_length=30)
-    is_admin = models.BooleanField(default=False)
-    is_teacher = models.BooleanField(default=False)
+    name = models.CharField(max_length=120)
+
+    class Meta:
+        abstract = True
 
     def __str__(self):
-        return self.username
+        return self.name
+
+
+class RegisteredUser(User):
+    """
+    Abstract class for Admin and Student
+    """
+    registry = models.IntegerField()
+    email = models.CharField(max_length=150)
+    password = models.CharField(max_length=80)
+    token = models.CharField(max_length=150)
+
+    class Meta:
+        abstract = True
+
+    def create_project(self):
+        pass
+
+
+class Student(RegisteredUser):
+    """
+    Student
+    """
+    pass
+
+
+class Admin(RegisteredUser):
+    """
+    Admins make other users admins
+    """
+    def make_admin(self, User):
+        pass
+
+    def create_discipline(self):
+        pass
+
 
 class Material(models.Model):
     """
     Materials belong to projects
     """
     url = models.CharField(max_length=140)
+
 
 class Period(models.Model):
     """
@@ -36,6 +76,7 @@ class Period(models.Model):
     def __str__(self):
         return ", ".join([self.semester, self.year])
 
+
 class Course(models.Model):
     """
     A course is created by an user and belongs to a class
@@ -47,6 +88,7 @@ class Course(models.Model):
     def __str__(self):
         return self.name
 
+
 class Classroom(models.Model):
     """
     A classroom can be created and/or enrolled by an user
@@ -54,7 +96,8 @@ class Classroom(models.Model):
     """
     name = models.CharField(max_length=50)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owner_user')
+    owner = models.ForeignKey(User, on_delete=models.CASCADE,
+                              related_name='owner_user')
     enrolled_user = models.ManyToManyField(User)
     period = models.ForeignKey(Period, on_delete=models.CASCADE)
 
@@ -63,6 +106,7 @@ class Classroom(models.Model):
 
     class Meta:
         ordering = ('course', 'period', 'name')
+
 
 class Project(models.Model):
     """
@@ -75,6 +119,7 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Comment(models.Model):
     """
