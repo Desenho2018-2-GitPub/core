@@ -23,7 +23,7 @@ class AnonymousUser(CustomUser):
         try:
             super(AnonymousUser, self).save(*args, **kwargs)
         except:
-            AnonymousUser.objects.get(id=1)
+            AnonymousUser.objects.get(id=0)
 
     def delete(self, *args, **kwargs):
         pass
@@ -39,9 +39,9 @@ class RegisteredUser(CustomUser):
     Abstract class for Admin and Student
     """
     registry = models.IntegerField()
-    email = models.CharField(max_length=150)
+    email = models.CharField(max_length=150, unique=True)
     password = models.CharField(max_length=80)
-    token = models.CharField(max_length=150)
+    token = models.CharField(max_length=150, default="")
 
     def create_project(self):
         pass
