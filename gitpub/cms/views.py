@@ -14,3 +14,7 @@ def login(request):
 @debug
 def register(request):
     return render(request, 'register.html')
+
+@debug
+def dashboard(request):
+    return render(request, 'dashboard.html')
