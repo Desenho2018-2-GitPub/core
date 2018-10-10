@@ -25,19 +25,13 @@
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
       <div class="container">
         <a class="navbar-brand mr-lg-5" href="../index.html">
-          <img src="../static/assets/img/brand/white.png">
+          <img src="../static/assets/img/brand/gitpub.png">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
         <div class="navbar-collapse collapse" id="navbar_global">
           <div class="navbar-collapse-header">
-            <div class="row">
-              <div class="col-6 collapse-brand">
-                <a href="../index.html">
-                  <img src="../static/assets/img/brand/blue.png">
-                </a>
-              </div>
               <div class="col-6 collapse-close">
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                   <span></span>
@@ -48,10 +42,6 @@
           </div>
           <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
-                <i class="ni ni-ui-04 d-lg-none"></i>
-                <span class="nav-link-inner--text">Components</span>
-              </a>
               <div class="dropdown-menu dropdown-menu-xl">
                 <div class="dropdown-menu-inner">
                   <a href="https://demos.creative-tim.com/argon-design-system/docs/getting-started/overview.html" class="media d-flex align-items-center">
@@ -72,7 +62,7 @@
                       <p class="description d-none d-md-inline-block mb-0">Learn more about colors, typography, icons and the grid system we used for Argon.</p>
                     </div>
                   </a>
-                  <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
+                  /<a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
                     <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
                       <i class="ni ni-ui-04"></i>
                     </div>
@@ -82,18 +72,6 @@
                     </div>
                   </a>
                 </div>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
-                <i class="ni ni-collection d-lg-none"></i>
-                <span class="nav-link-inner--text">Examples</span>
-              </a>
-              <div class="dropdown-menu">
-                <a href="../examples/landing.html" class="dropdown-item">Landing</a>
-                <a href="../examples/profile.html" class="dropdown-item">Profile</a>
-                <a href="../examples/login.html" class="dropdown-item">Login</a>
-                <a href="../examples/register.html" class="dropdown-item">Register</a>
               </div>
             </li>
           </ul>
@@ -123,11 +101,19 @@
               </a>
             </li>
             <li class="nav-item d-none d-lg-block ml-lg-4">
-              <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" class="btn btn-neutral btn-icon">
-                <span class="btn-inner--icon">
+              <a href="http://localhost:8080/login.html" target="_blank" class="btn btn-neutral btn-icon">
+                <!-- <span class="btn-inner--icon">
                   <i class="fa fa-cloud-download mr-2"></i>
-                </span>
-                <span class="nav-link-inner--text">Download</span>
+                </span> -->
+                <span class="nav-link-inner--text">Sign in</span>
+              </a>
+            </li>
+            <li class="nav-item d-none d-lg-block ml-lg-4">
+              <a href="http://localhost:8080/register.html" target="_blank" class="btn btn-neutral btn-icon">
+                <!-- <span class="btn-inner--icon">
+                  <i class="fa fa-cloud-download mr-2"></i>
+                </span> -->
+                <span class="nav-link-inner--text">Sign up</span>
               </a>
             </li>
           </ul>
@@ -150,28 +136,91 @@
           <span></span>
           <span></span>
         </div>
-        <div class="container py-lg-md d-flex">
+        <div class="flex-container">
           <div class="col px-0">
             <div class="row">
               <div class="col-lg-6">
-                <h1 class="display-3  text-white">A beautiful Design System
-                  <span>completed with examples</span>
+                <h1 class="display-3  text-white">Built for developers of the University of Brasilia
+                  <span></span>
                 </h1>
-                <p class="lead  text-white">The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
-                <div class="btn-wrapper">
-                  <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="btn btn-info btn-icon mb-3 mb-sm-0">
-                    <span class="btn-inner--icon"><i class="fa fa-code"></i></span>
-                    <span class="btn-inner--text">Components</span>
-                  </a>
-                  <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-white btn-icon mb-3 mb-sm-0">
-                    <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
-                    <span class="btn-inner--text">Download HTML</span>
-                  </a>
-                </div>
+                <p class="lead  text-white">GitPub is an web application developed by Software Engineering students of Universidade de Brasilia - UnB, that aims to aid the management of software projects within university disciplines.</p>
               </div>
             </div>
           </div>
-        </div>
+          <div class="signup">
+            <div class="card bg-secondary shadow border-0">
+              <div class="card-header bg-white pb-5">
+                <div class="text-muted text-center mb-3">
+                  <small>Sign up with</small>
+                </div>
+                <div class="text-center">
+                  <a href="#" class="btn btn-neutral btn-icon mr-4">
+                    <span class="btn-inner--icon">
+                      <img src="../static/assets/img/icons/common/github.svg">
+                    </span>
+                    <span class="btn-inner--text">Github</span>
+                  </a>
+                  <a href="#" class="btn btn-neutral btn-icon">
+                    <span class="btn-inner--icon">
+                      <img src="../static/assets/img/icons/common/google.svg">
+                    </span>
+                    <span class="btn-inner--text">Google</span>
+                  </a>
+                </div>
+              </div>
+              <div class="card-body px-lg-5 py-lg-5">
+                <div class="text-center text-muted mb-4">
+                  <small>Or sign up with credentials</small>
+                </div>
+                <form role="form">
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Name" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Email" type="email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Password" type="password">
+                    </div>
+                  </div>
+                  <div class="text-muted font-italic">
+                    <small>password strength:
+                      <span class="text-success font-weight-700">strong</span>
+                    </small>
+                  </div>
+                  <div class="row my-4">
+                    <div class="col-12">
+                      <div class="custom-control custom-control-alternative custom-checkbox">
+                        <input class="custom-control-input" id="customCheckRegister" type="checkbox">
+                        <label class="custom-control-label" for="customCheckRegister">
+                          <span>I agree with the
+                            <a href="#">Privacy Policy</a>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button type="button" class="btn btn-primary mt-4">Create account</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         <!-- SVG separator -->
         <div class="separator separator-bottom separator-skew">
           <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -539,7 +588,7 @@
               <img src="../static/assets/img/theme/kamilla.png" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
               <div class="pt-4 text-center">
                 <h5 class="title">
-                  <span class="d-block mb-1">Kamilla</span>
+                  <span class="d-block mb-1">Kamilla Costa</span>
                   <small class="h6 text-muted">-</small>
                 </h5>
                 <div class="mt-3">
@@ -579,7 +628,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
       </div>
     </section>
