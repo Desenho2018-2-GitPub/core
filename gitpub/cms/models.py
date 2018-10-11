@@ -3,8 +3,9 @@ Models module
 """
 import datetime
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, UserManager, PermissionsMixin
 
-class CustomUser(models.Model):
+class CustomUser(AbstractBaseUser, PermissionsMixin):
     """
     Abstract class for RegisteredUser
     """
@@ -39,9 +40,28 @@ class RegisteredUser(CustomUser):
     Abstract class for Admin and Student
     """
     registry = models.IntegerField()
+    username = models.CharField(max_length=150, unique=True)
     email = models.CharField(max_length=150, unique=True)
-    password = models.CharField(max_length=80)
-    token = models.CharField(max_length=150, default="")
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+
+    objects = UserManager()
+
+    USERNAME_FIELD = 'username'
+    REQUIRED_FIELDS = ['email', 'name', 'registry']
+
+    def save(self, *args, **kwargs):
+        if self.is_superuser is True and not isinstance(self, Admin):
+            Admin.objects.create(
+                name=self.name,
+                registry=self.registry,
+                username=self.username,
+                is_staff=self.is_staff,
+                is_superuser=self.is_superuser,
+                email=self.email
+            )
+        else:
+            super(RegisteredUser, self).save(*args, **kwargs)
 
     def create_project(self):
         pass
