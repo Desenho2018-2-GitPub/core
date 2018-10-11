@@ -67,7 +67,9 @@
                 <div class="text-center text-muted mb-4">
                   <small>Or sign in with credentials</small>
                 </div>
-                <form role="form">
+                <form role="form" method="post">
+                  {% csrf_token %}
+                  {{ form.as_p }}
                   <div class="form-group mb-3">
                     <div class="input-group input-group-alternative">
                       <div class="input-group-prepend">
@@ -91,8 +93,9 @@
                     </label>
                   </div>
                   <div class="text-center">
-                    <button type="button" class="btn btn-primary my-4">Sign in</button>
+                    <button type="submit" class="btn btn-primary my-4">Sign in</button>
                   </div>
+
                 </form>
               </div>
             </div>
