@@ -50,41 +50,6 @@ class RegisteredUser(CustomUser):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email', 'name', 'registry']
 
-    def save(self, *args, **kwargs):
-        if self.is_superuser is True and not isinstance(self, Admin):
-            Admin.objects.create(
-                name=self.name,
-                registry=self.registry,
-                username=self.username,
-                is_staff=self.is_staff,
-                is_superuser=self.is_superuser,
-                email=self.email
-            )
-        else:
-            super(RegisteredUser, self).save(*args, **kwargs)
-
-    def create_project(self):
-        pass
-
-
-class Student(RegisteredUser):
-    """
-    Student
-    """
-    pass
-
-
-class Admin(RegisteredUser):
-    """
-    Admins make other users admins
-    """
-    def make_admin(self, CustomUser):
-        pass
-
-    def create_discipline(self):
-        pass
-
-
 class Material(models.Model):
     """
     Materials belong to projects
@@ -116,7 +81,6 @@ class Course(models.Model):
     """
     description = models.CharField(max_length=140)
     name = models.CharField(max_length=50)
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -128,11 +92,25 @@ class Classroom(models.Model):
     and belongs to a course
     """
     name = models.CharField(max_length=50)
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE,
-                              related_name='owner_user')
-    enrolled_user = models.ManyToManyField(CustomUser)
-    period = models.ForeignKey(Period, on_delete=models.CASCADE)
+    course = models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        related_name='classrooms'
+    )
+    owner = models.ForeignKey(
+        RegisteredUser, 
+        on_delete=models.CASCADE,
+        related_name='owned_classrooms'
+    )
+    enrolled_users = models.ManyToManyField(
+        RegisteredUser,
+        related_name='enrolled_classrooms'
+    )
+    period = models.ForeignKey(
+        Period,
+        on_delete=models.CASCADE,
+        related_name='classrooms'
+    )
 
     def __str___(self):
         return self.name
@@ -148,7 +126,10 @@ class Project(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=140)
     views = models.IntegerField(default=0)
-    classroom = models.ManyToManyField(Classroom)
+    classroom = models.ManyToManyField(
+        Classroom,
+        related_name='projects'
+    )
 
     def __str__(self):
         return self.name
@@ -159,8 +140,16 @@ class Comment(models.Model):
     A comment is written by an user to a project.
     """
     text = models.CharField(max_length=140)
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        CustomUser,
+        on_delete=models.CASCADE,
+        related_name='comments'
+    )
+    project = models.ForeignKey(
+        Project,
+        on_delete=models.CASCADE,
+        related_name='comments'    
+    )
 
     def __str__(self):
         return self.text
