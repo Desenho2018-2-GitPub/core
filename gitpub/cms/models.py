@@ -4,7 +4,6 @@ Models module
 import datetime
 from django.db import models
 
-
 class CustomUser(models.Model):
     """
     Abstract class for RegisteredUser
@@ -14,15 +13,35 @@ class CustomUser(models.Model):
     def __str__(self):
         return self.name
 
+class AnonymousUser(CustomUser):
+    """
+    AnonymousUser
+    """
+    def save(self, *args, **kwargs):
+        self.pk = 0
+        self.name = "Anonymous User"
+        try:
+            super(AnonymousUser, self).save(*args, **kwargs)
+        except:
+            AnonymousUser.objects.get(id=0)
+
+    def delete(self, *args, **kwargs):
+        pass
+
+    @classmethod
+    def load(cls):
+        obj, created = cls.objects.get_or_create(pk=0, name="Anonymous User")
+        return obj
+
 
 class RegisteredUser(CustomUser):
     """
     Abstract class for Admin and Student
     """
     registry = models.IntegerField()
-    email = models.CharField(max_length=150)
+    email = models.CharField(max_length=150, unique=True)
     password = models.CharField(max_length=80)
-    token = models.CharField(max_length=150)
+    token = models.CharField(max_length=150, default="")
 
     def create_project(self):
         pass
