@@ -14,3 +14,7 @@ def login(request):
 @debug
 def register(request):
     return render(request, 'register.html')
+
+@debug
+def forgot_password(request):
+    return render(request, 'forgot-password.html')
