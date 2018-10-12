@@ -1562,9 +1562,10 @@ pre code
     }
     .col-lg-6
     {
-        max-width: 50%;
+        max-width: 60%;
+        margin: 0 auto;
+        flex: 0 0 80%;
 
-        flex: 0 0 50%;
     }
     .col-lg-7
     {
@@ -18786,5 +18787,8 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle
 .signup
 {
     max-width: 32 .66667%;
-    flex: 0 0 32.66667%;
+    flex: 0 0 80%;
+    max-width: 40%;
+    margin: 0 auto;
+    
 }
