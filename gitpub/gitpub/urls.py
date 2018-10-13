@@ -18,8 +18,8 @@ from django.urls import path, include
 from django.conf.urls import url
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^courses/', include(('courses.urls', 'courses'), namespace='courses')),
-    url(r'^accounts/', include('django.contrib.auth.urls')),
+    url(r'admin/', admin.site.urls),
+    url(r'courses/', include(('courses.urls', 'courses'), namespace='courses')),
+    url(r'accounts/', include('django.contrib.auth.urls')),
     url(r'', include(('cms.urls', 'cms'), namespace='cms')),
 ]
