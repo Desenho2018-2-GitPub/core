@@ -1,7 +1,7 @@
-{% extends 'base.html' %} {% block content %}
+{% extends '../layouts/base.html' %} {% block content %}
 
 <main>
-  <section class="section section-shaped">
+  <section class="section section-shaped pt-0">
     <div class="shape shape-style-1 bg-gradient-default">
       <span></span>
       <span></span>
@@ -15,13 +15,19 @@
     <div class="container pt-lg-md">
       <div class="row justify-content-center">
         <div class="col-lg-5">
+          <div class="row justify-content-center session-brand">
+            <img class="session-brand" src="../static/assets/img/brand/gitpub.png">
+          </div>
+          <div class="row justify-content-center session-brand">
+            <h2 class="text-light">Sign in to GitPub</h2>
+          </div>
           <div class="card bg-secondary shadow border-0">
             <div class="card-header bg-white pb-3">
               <div class="text-muted text-center mb-3">
-                <small>Sign up with</small>
+                <small>Sign in with</small>
               </div>
-              <div class="text-center">
-                <a href="#" class="btn btn-neutral btn-icon mr-4">
+              <div class="btn-wrapper text-center">
+                <a href="#" class="btn btn-neutral btn-icon">
                   <span class="btn-inner--icon">
                     <img src="../static/assets/img/icons/common/github.svg">
                   </span>
@@ -37,19 +43,11 @@
             </div>
             <div class="card-body px-lg-3 py-lg-3">
               <div class="text-center text-muted mb-4">
-                <small>Or sign up with credentials</small>
+                <small>Or sign in with credentials</small>
               </div>
               <form role="form">
-                <div class="form-group">
-                  <div class="input-group input-group-alternative mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
-                    </div>
-                    <input class="form-control" placeholder="Name" type="text">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="input-group input-group-alternative mb-3">
+                <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
@@ -64,41 +62,30 @@
                     <input class="form-control" placeholder="Password" type="password">
                   </div>
                 </div>
-                <div class="text-muted font-italic">
-                  <small>password strength:
-                    <span class="text-success font-weight-700">strong</span>
-                  </small>
-                </div>
-                <div class="row my-4">
-                  <div class="col-12">
-                    <div class="custom-control custom-control-alternative custom-checkbox">
-                      <input class="custom-control-input" id="customCheckRegister" type="checkbox">
-                      <label class="custom-control-label" for="customCheckRegister">
-                        <span>I agree with the
-                          <a href="#">Privacy Policy</a>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
+                <div class="custom-control custom-control-alternative custom-checkbox">
+                  <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
+                  <label class="custom-control-label" for=" customCheckLogin">
+                    <span>Remember me</span>
+                  </label>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary mt-4">Create account</button>
+                  <button type="button" class="btn btn-primary my-4">Sign in</button>
                 </div>
               </form>
             </div>
           </div>
           <div class="row mt-3">
-              <div class="col-6">
-                <!-- <a href="#" class="text-light">
-                  <small>Forgot password?</small>
-                </a> -->
-              </div>
-              <div class="col-6 text-right">
-                <a href="login" class="text-light">
-                  <small>Já possui conta, faça o login!</small>
-                </a>
-              </div>
+            <div class="col-6">
+              <a href="forgot-password" class="text-light">
+                <small>Esqueceu a senha?</small>
+              </a>
             </div>
+            <div class="col-6 text-right">
+              <a href="register" class="text-light">
+                <small>Criar conta</small>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
