@@ -9,12 +9,12 @@ def index(request):
 
 @debug
 def login(request):
-    return render(request, 'login.html')
+    return render(request, 'authentication/login.html')
 
 @debug
 def register(request):
-    return render(request, 'register.html')
+    return render(request, 'authentication/register.html')
 
 @debug
 def forgot_password(request):
-    return render(request, 'forgot-password.html')
+    return render(request, 'authentication/forgot-password.html')
