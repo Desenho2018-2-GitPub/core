@@ -1,7 +1,8 @@
 from django.urls import path
-from . import views
+from . import views, courses_views
 from django.conf.urls import url
 
 urlpatterns = [
-    url(r'^$', views.index, name='index')
+    url(r'^$', views.index, name='index'),
+    url(r'^courses/', courses_views.index, name='courses_index')
 ]
