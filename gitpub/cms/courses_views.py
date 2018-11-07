@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from gitpub.logging import debug
 from .models import Course
@@ -11,8 +11,9 @@ def index(request):
 
 # GET /courses/1
 @debug
-def show(request):
-    pass
+def show(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    return render(request, 'courses/show.html', {'course': course})
 
 # GET /courses/new
 @debug
