@@ -7,6 +7,7 @@ from .models import Course
 @debug
 def index(request):
     courses = Course.objects.all()
+    courses = sorted(courses, key=lambda x: x.id)
     return render(request, 'courses/index.html', {'courses': courses})
 
 # GET /courses/1
@@ -29,12 +30,23 @@ def create(request):
     )
     return redirect('/courses')
 
-# PATCH/PUT /courses/edit/1
+# GET /courses/edit/1
 @debug
-def edit(request):
-    pass
+def edit(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    return render(request, 'courses/edit.html', {'course': course})
 
-# DELETE /courses/1
+# POST /courses/edit/1/update
+@debug
+def update(request):
+    course = get_object_or_404(Course, id=request.POST['course_id'])
+    course.name = request.POST['course_name']
+    course.description = request.POST['course_description']
+    course.save()
+    redirect_url = "/courses/" + str(course.id) + "/"
+    return redirect(redirect_url)
+
+# GET /courses/delete/1
 @debug
 def delete(request):
     pass
