@@ -7,13 +7,13 @@
             <li>
                 <h4>{{each.id }} - {{ each.name }}</h4>
                 <p>{{each.description}}</p>
-                <button>Show</button>
-                <button>Edit</button>
-                <button>Delete</button>
+                <a href="/courses/{{each.id}}" class="nav-link nav-link-icon">Show</a>
+                <a class="nav-link nav-link-icon">Edit</a>
+                <a class="nav-link nav-link-icon">Delete</a>
             </li>
             {% endfor %}
         </ul>
     </div>
-    <button>New</button>
+    <a href="" class="nav-link nav-link-icon">New</a>
 </div>
 {% endblock %}
