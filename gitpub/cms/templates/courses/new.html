@@ -1,0 +1,12 @@
+{% extends 'layouts/base.html' %} {% block content %}
+<h1>New Course</h1>
+<form action="/courses/create/" method="post">
+    {% csrf_token %}
+    Name:
+    <br>
+    <input type="text" name="course_name" placeholder="Name"><br> Description:
+    <br>
+    <input type="text" name="course_description" placeholder="Description"><br><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
