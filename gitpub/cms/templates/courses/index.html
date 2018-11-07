@@ -9,7 +9,7 @@
                 <p>{{each.description}}</p>
                 <a href="/courses/{{each.id}}" class="nav-link nav-link-icon">Show</a>
                 <a href="/courses/edit/{{each.id}}" class="nav-link nav-link-icon">Edit</a>
-                <a href=""class="nav-link nav-link-icon">Delete</a>
+                <a href="/courses/delete/{{each.id}}"class="nav-link nav-link-icon">Delete</a>
             </li>
             {% endfor %}
         </ul>

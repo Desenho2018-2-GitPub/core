@@ -48,5 +48,7 @@ def update(request):
 
 # GET /courses/delete/1
 @debug
-def delete(request):
-    pass
+def delete(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    course.delete()
+    return redirect('/courses')
