@@ -34,9 +34,15 @@ def new(request, course_id):
 def create(request, course_id):
     classroom_owner, ucreated = RegisteredUser.objects.get_or_create(id=1, registry=1, username='bla', email='bla@bla.com')
     try:
-        classroom_period, pcreated = Period.objects.get_or_create(year=2018, semester=1)
+        classroom_period, pcreated = Period.objects.get_or_create(
+            year=request.POST['period_year'],
+            semester=request.POST['period_semester']
+        )
     except MultipleObjectsReturned:
-        classroom_period = Period.objects.filter(year=2018, semester=1)[0]
+        classroom_period = Period.objects.filter(
+            year=request.POST['period_year'],
+            semester=request.POST['period_semester']
+        )[0]
 
     Classroom.objects.create(
         name=request.POST['classroom_name'],
