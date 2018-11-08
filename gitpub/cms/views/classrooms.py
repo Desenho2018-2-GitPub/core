@@ -57,13 +57,13 @@ def create(request, course_id):
     )
     return redirect('/courses/' + course_id + '/classrooms')
 
-# GET /courses/edit/1
+# GET /courses/course_id/classrooms/edit/classroom_id
 @debug
 def edit(request, course_id, classroom_id):
     classroom = get_object_or_404(Classroom, id=classroom_id)
     return render(request, 'classrooms/edit.html', {'classroom': classroom, 'course_id': course_id })
 
-# POST /courses/edit/1/update
+# POST /classrooms/update
 @debug
 def update(request, course_id):
     classroom = get_object_or_404(Classroom, id=request.POST['classroom_id'])
@@ -78,7 +78,7 @@ def update(request, course_id):
     redirect_url = '/courses/' + course_id + '/classrooms/' + str(classroom.id)
     return redirect(redirect_url)
 
-# GET /courses/delete/1
+# GET /courses/course_id/classrooms/delete/classroom_id
 @debug
 def delete(request, course_id, classroom_id):
     classroom = get_object_or_404(Classroom, id=classroom_id)
