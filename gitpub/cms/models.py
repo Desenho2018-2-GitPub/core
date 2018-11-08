@@ -61,11 +61,9 @@ class Period(models.Model):
     """
     A class belongs to a period (Semester 1 or 2)
     """
-    FIRST = 1
-    SECOND = 2
     SEMESTER_CHOICES = (
-        (FIRST, 'First'),
-        (SECOND, 'Second')
+        (1, 'First'),
+        (2, 'Second')
     )
     YEAR_CHOICES = [(r, r) for r in range(2000, datetime.date.today().year+1)]
     year = models.IntegerField(choices=YEAR_CHOICES)
