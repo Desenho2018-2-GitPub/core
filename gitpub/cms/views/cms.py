@@ -4,8 +4,6 @@ from gitpub.logging import debug
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponseNotFound
 
-from .models import Course, Classroom
-
 @debug
 def index(request):
     return render(request, 'index.html')
@@ -21,13 +19,3 @@ def register(request):
 @debug
 def forgot_password(request):
     return render(request, 'authentication/forgot-password.html')
-
-@debug
-def classrooms(request, course_id):
-    try:
-        Course.objects.get(pk=course_id)
-    except ObjectDoesNotExist as error:
-        # return HttpResponseNotFound()
-        pass
-    data = { 'course_id': course_id }
-    return render(request, 'classrooms/classrooms.html', data)
