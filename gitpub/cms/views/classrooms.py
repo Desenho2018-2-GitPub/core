@@ -72,9 +72,9 @@ def create(request, course_id):
 #     redirect_url = "/courses/" + str(course.id) + "/"
 #     return redirect(redirect_url)
 
-# # GET /courses/delete/1
-# @debug
-# def delete(request, course_id):
-#     course = get_object_or_404(Course, id=course_id)
-#     course.delete()
-#     return redirect('/courses')
+# GET /courses/delete/1
+@debug
+def delete(request, course_id, classroom_id):
+    classroom = get_object_or_404(Classroom, id=classroom_id)
+    classroom.delete()
+    return redirect('/courses/' + course_id + '/classrooms/')
