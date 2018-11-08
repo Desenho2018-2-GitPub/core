@@ -6,7 +6,7 @@
     {% for each in enrolled_users %}
         <p>User: {{each.username}}</p>
     {% endfor %}
-    <a href="/courses/{{course.id}}/classrooms/edit/{{classroom.id}}">Edit</a>
-    <a href="/courses/{{course.id}}/classrooms/delete/{{classroom.id}}">Delete</a>
+    <a href="/courses/{{course_id}}/classrooms/edit/{{classroom.id}}">Edit</a>
+    <a href="/courses/{{course_id}}/classrooms/delete/{{classroom.id}}">Delete</a>
 </div>
 {% endblock %}

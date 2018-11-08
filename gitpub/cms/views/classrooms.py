@@ -20,6 +20,7 @@ def index(request, course_id):
 def show(request, course_id, classroom_id):
     classroom = get_object_or_404(Classroom, id=classroom_id)
     data = {
+        'course_id': course_id,
         'classroom': classroom,
         'enrolled_users': classroom.enrolled_users.all()
     }
@@ -60,11 +61,11 @@ def create(request, course_id):
 @debug
 def edit(request, course_id, classroom_id):
     classroom = get_object_or_404(Classroom, id=classroom_id)
-    return render(request, 'classrooms/edit.html', {'classroom': classroom})
+    return render(request, 'classrooms/edit.html', {'classroom': classroom, 'course_id': course_id })
 
 # POST /courses/edit/1/update
 @debug
-def update(request):
+def update(request, course_id):
     classroom = get_object_or_404(Classroom, id=request.POST['classroom_id'])
     classroom.name = request.POST['classroom_name']
     period_year = request.POST['year']
@@ -74,7 +75,7 @@ def update(request):
     classroom_period.semester = period_semester
     classroom_period.save()
     classroom.save()
-    redirect_url = 'courses/' + course_id + '/classrooms/' + classroom_id
+    redirect_url = '/courses/' + course_id + '/classrooms/' + str(classroom.id)
     return redirect(redirect_url)
 
 # GET /courses/delete/1
