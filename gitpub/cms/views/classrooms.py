@@ -5,10 +5,14 @@ from cms.models import Classroom, Course
 
 # GET /courses/course_id/classrooms
 @debug
-def index(request):
+def index(request, course_id):
     course = get_object_or_404(Course, id=course_id)
     classrooms = Classroom.objects.filter(course__id=course_id)
-    return render(request, 'classrooms/index.html', {'classrooms': classrooms})
+    data = {
+        'classrooms': classrooms,
+        'course_id': course_id
+    }
+    return render(request, 'classrooms/index.html', data)
 
 # # GET /courses/1
 # @debug
@@ -16,12 +20,12 @@ def index(request):
 #     course = get_object_or_404(Course, id=course_id)
 #     return render(request, 'courses/show.html', {'course': course})
 
-# # GET /courses/new
-# @debug
-# def new(request):
-#     return render(request, 'courses/new.html')
+# GET /courses/course_id/classrooms/new
+@debug
+def new(request):
+    return render(request, 'classrooms/new.html')
 
-# # POST /courses/create
+# # POST /courses/course_id/classrooms/new
 # @debug
 # def create(request):
 #     Course.objects.create(
