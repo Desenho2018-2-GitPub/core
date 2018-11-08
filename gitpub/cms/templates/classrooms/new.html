@@ -1,6 +1,6 @@
 {% extends 'layouts/base.html' %} {% block content %}
 <h1>New Classroom</h1>
-<form action="/courses/{{course_id}}/classrooms/new" method="post">
+<form action="/courses/{{course_id}}/classrooms/create/" method="post">
     {% csrf_token %}
     Name:<br>
     <input type="text" name="classroom_name" placeholder="Name"><br> 

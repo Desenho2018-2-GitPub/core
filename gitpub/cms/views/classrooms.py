@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from gitpub.logging import debug
-from cms.models import Classroom, Course
+from cms.models import Classroom, Course, RegisteredUser, Period
+from django.core.exceptions import MultipleObjectsReturned
 
 # GET /courses/course_id/classrooms
 @debug
@@ -22,15 +23,26 @@ def index(request, course_id):
 
 # GET /courses/course_id/classrooms/new
 @debug
-def new(request):
-    return render(request, 'classrooms/new.html')
+def new(request, course_id):
+    data = {
+        'course_id': course_id
+    }
+    return render(request, 'classrooms/new.html', data)
 
 # POST /courses/course_id/classrooms/new
 @debug
 def create(request, course_id):
-    Course.objects.create(
-        name=request.POST['classrooms_name'],
-        course=course_id
+    classroom_owner, ucreated = RegisteredUser.objects.get_or_create(id=1, registry=1, username='bla', email='bla@bla.com')
+    try:
+        classroom_period, pcreated = Period.objects.get_or_create(year=2018, semester=1)
+    except MultipleObjectsReturned:
+        classroom_period = Period.objects.filter(year=2018, semester=1)[0]
+
+    Classroom.objects.create(
+        name=request.POST['classroom_name'],
+        course=Course.objects.get(id=course_id),
+        owner=classroom_owner,
+        period=classroom_period
     )
     return redirect('/courses/' + course_id + '/classrooms')
 

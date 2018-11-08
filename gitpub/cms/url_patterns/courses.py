@@ -12,5 +12,5 @@ urlpatterns = [
     url(r'^delete/(?P<course_id>\d+)/$', courses.delete, name='courses_delete'),
     url(r'^(?P<course_id>\d+)/$', courses.show, name='courses_show'),
     url(r'^$', courses.index, name='courses_index'),
-    url(r'^(?P<course_id>\d+)/classrooms', include(classrooms))
+    url(r'^(?P<course_id>\d+)/classrooms/', include(classrooms))
 ]
