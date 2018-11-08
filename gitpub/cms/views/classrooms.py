@@ -56,21 +56,26 @@ def create(request, course_id):
     )
     return redirect('/courses/' + course_id + '/classrooms')
 
-# # GET /courses/edit/1
-# @debug
-# def edit(request, course_id):
-#     course = get_object_or_404(Course, id=course_id)
-#     return render(request, 'courses/edit.html', {'course': course})
+# GET /courses/edit/1
+@debug
+def edit(request, course_id, classroom_id):
+    classroom = get_object_or_404(Classroom, id=classroom_id)
+    return render(request, 'classrooms/edit.html', {'classroom': classroom})
 
-# # POST /courses/edit/1/update
-# @debug
-# def update(request):
-#     course = get_object_or_404(Course, id=request.POST['course_id'])
-#     course.name = request.POST['course_name']
-#     course.description = request.POST['course_description']
-#     course.save()
-#     redirect_url = "/courses/" + str(course.id) + "/"
-#     return redirect(redirect_url)
+# POST /courses/edit/1/update
+@debug
+def update(request):
+    classroom = get_object_or_404(Classroom, id=request.POST['classroom_id'])
+    classroom.name = request.POST['classroom_name']
+    period_year = request.POST['year']
+    period_semester = request.POST['semester']
+    classroom_period = classroom.period
+    classroom_period.year = period_year
+    classroom_period.semester = period_semester
+    classroom_period.save()
+    classroom.save()
+    redirect_url = 'courses/' + course_id + '/classrooms/' + classroom_id
+    return redirect(redirect_url)
 
 # GET /courses/delete/1
 @debug

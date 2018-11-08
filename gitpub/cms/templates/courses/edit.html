@@ -1,12 +1,13 @@
 {% extends 'layouts/base.html' %} {% block content %}
-<h1>Editing {{ course.name }}</h1>
+<h1>Editing {{ classroom.name }}</h1>
 <form action="/courses/update" method="post">
     {% csrf_token %}
     Name:<br>
-    <input type="text" name="course_name" value={{ course.name }}><br> 
-    Description:<br>
-    <input type="text" name="course_description" value={{ course.description }}><br><br>
-    <input type="hidden" name="course_id" value={{ course.id }}>
+    <input type="text" name="classroom_name" value={{ classroom.name }}><br> 
+    Year:<br>
+    <input type="text" name="year" value={{ classroom.period.year }}><br><br>
+    Semester:<br>
+    <input type="text" name="semester" value={{ classroom.period.semester }}><br><br>
     <input type="submit" value="Save">
 </form>
 {% endblock %}
