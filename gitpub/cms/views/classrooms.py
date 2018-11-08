@@ -25,14 +25,14 @@ def index(request, course_id):
 def new(request):
     return render(request, 'classrooms/new.html')
 
-# # POST /courses/course_id/classrooms/new
-# @debug
-# def create(request):
-#     Course.objects.create(
-#         name=request.POST['course_name'],
-#         description=request.POST['course_description']
-#     )
-#     return redirect('/courses')
+# POST /courses/course_id/classrooms/new
+@debug
+def create(request, course_id):
+    Course.objects.create(
+        name=request.POST['classrooms_name'],
+        course=course_id
+    )
+    return redirect('/courses/' + course_id + '/classrooms')
 
 # # GET /courses/edit/1
 # @debug
