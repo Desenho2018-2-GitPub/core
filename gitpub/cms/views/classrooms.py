@@ -15,11 +15,15 @@ def index(request, course_id):
     }
     return render(request, 'classrooms/index.html', data)
 
-# # GET /courses/1
-# @debug
-# def show(request, course_id):
-#     course = get_object_or_404(Course, id=course_id)
-#     return render(request, 'courses/show.html', {'course': course})
+# GET /courses/course_id/classrooms/classroom_id
+@debug
+def show(request, course_id, classroom_id):
+    classroom = get_object_or_404(Classroom, id=classroom_id)
+    data = {
+        'classroom': classroom,
+        'enrolled_users': classroom.enrolled_users.all()
+    }
+    return render(request, 'classrooms/show.html', data)
 
 # GET /courses/course_id/classrooms/new
 @debug

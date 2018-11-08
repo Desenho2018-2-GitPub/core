@@ -1,0 +1,12 @@
+{% extends 'layouts/base.html' %} {% block content %}
+<div>
+    <h1>{{ classroom.name }}</h1>
+    <p>{{ classroom.period.semester }} / {{ classroom.period.year }}</p>
+    <h2>Enrolled users</h2>
+    {% for each in enrolled_users %}
+        <p>User: {{each.username}}</p>
+    {% endfor %}
+    <a href="/courses/{{course.id}}/classrooms/edit/{{classroom.id}}">Edit</a>
+    <a href="/courses/{{course.id}}/classrooms/delete/{{classroom.id}}">Delete</a>
+</div>
+{% endblock %}
