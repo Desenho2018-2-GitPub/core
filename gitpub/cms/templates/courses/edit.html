@@ -1,4 +1,5 @@
-{% extends 'layouts/base.html' %} {% block content %}
+{% extends 'courses/base.html' %} {% block content %}
+
 <h1>Editing {{ course.name }}</h1>
 <form action="/courses/update" method="post">
     {% csrf_token %}

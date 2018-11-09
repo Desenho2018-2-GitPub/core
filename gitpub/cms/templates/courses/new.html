@@ -1,11 +1,25 @@
-{% extends 'layouts/base.html' %} {% block content %}
+{% extends 'courses/base.html' %} {% block content %}
+
+
 <h1>New Course</h1>
 <form action="/courses/create/" method="post">
     {% csrf_token %}
     Name:<br>
-    <input type="text" name="course_name" placeholder="Name"><br> 
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+            <input type="text" name="course_name" class="form-control form-control-alternative" placeholder="Meu Curso">
+            </div>
+        </div>
+    </div>
     Description:<br>
-    <input type="text" name="course_description" placeholder="Description"><br><br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+            <input type="text" name="course_description" class="form-control form-control-alternative" placeholder="Descrição">
+            </div>
+        </div>
+    </div>
     <input type="submit" value="Submit">
 </form>
 {% endblock %}
