@@ -34,7 +34,7 @@ def new(request, course_id):
     }
     return render(request, 'classrooms/new.html', data)
 
-# POST /courses/course_id/classrooms/new
+# POST /courses/course_id/classrooms/create
 @debug
 def create(request, course_id):
     classroom_owner, ucreated = RegisteredUser.objects.get_or_create(id=1, registry=1, username='bla', email='bla@bla.com')
