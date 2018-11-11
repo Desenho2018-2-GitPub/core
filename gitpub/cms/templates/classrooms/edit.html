@@ -1,0 +1,13 @@
+{% extends 'layouts/base.html' %} {% block content %}
+<h1>Editing {{ classroom.name }}</h1>
+<form action="/courses/{{course_id}}/classrooms/update" method="post">
+    {% csrf_token %}
+    Name:<br>
+    <input type="text" name="classroom_name" value={{ classroom.name }}><br> 
+    Period:<br>
+    <input type="text" name="year" value={{ classroom.period.year }}><br><br>
+    <input type="text" name="semester" value={{ classroom.period.semester }}><br><br>
+    <input type="hidden" name="classroom_id" value="{{ classroom.id }}">
+    <input type="submit" value="Save">
+</form>
+{% endblock %}
