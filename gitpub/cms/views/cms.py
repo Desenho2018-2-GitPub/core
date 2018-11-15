@@ -18,4 +18,4 @@ def register(request):
 
 @debug
 def forgot_password(request):
-    return render(request, 'authentication/forgot-password.html')
+    return render(request, 'authentication/forgot_password.html')
