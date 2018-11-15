@@ -1,14 +1,11 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'layouts/base.html' %} {% block content %}
 
 <header class="header-global">
   <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
     <div class="container">
-      <a class="navbar-brand mr-lg-5" href="../index.html">
-        <img src="../static/assets/img/brand/gitpub.png">
+      <a class="navbar-brand mr-lg-5" href="/">
+        <img src="/static/assets/img/brand/gitpub.png">
       </a>
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
       <div class="navbar-collapse collapse" id="navbar_global">
         <div class="navbar-collapse-header">
             <div class="col-6 collapse-close">
@@ -80,7 +77,7 @@
             </a>
           </li>
           <li class="nav-item d-none d-lg-block ml-lg-4">
-            <a href="login.html" target="" class="btn btn-neutral btn-icon">
+            <a href="login" target="" class="btn btn-neutral btn-icon">
               <span class="btn-inner--icon">
                 <i class="fa fa-user mr-2"></i>
               </span>
@@ -88,7 +85,7 @@
             </a>
           </li>
           <li class="nav-item d-none d-lg-block ml-lg-4">
-            <a href="register.html" target="" class="btn btn-neutral btn-icon">
+            <a href="register" target="" class="btn btn-neutral btn-icon">
               <span class="btn-inner--icon">
                 <i class="fa fa-user-plus mr-2"></i>
               </span>
@@ -147,17 +144,25 @@
                 </a>
               </div>
             </div>
-            <div class="card-body px-lg-5 py-lg-5">
+            <div class="card-body px-lg-5 py-lg-2">
               <div class="text-center text-muted mb-2">
                 <small>Or sign up with credentials</small>
               </div>
               <form role="form">
                 <div class="form-group">
-                  <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group input-group-alternative mb-0">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                     </div>
                     <input class="form-control" placeholder="Name" type="text">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative mb-0">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Username" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -169,6 +174,14 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <div class="input-group input-group-alternative mb-0">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Registration" type="text">
+                  </div>
+                </div>
+                <div class="form-group">
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
@@ -176,10 +189,13 @@
                     <input class="form-control" placeholder="Password" type="password">
                   </div>
                 </div>
-                <div class="text-muted font-italic">
-                  <small>password strength:
-                    <span class="text-success font-weight-700">strong</span>
-                  </small>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Password confirmation" type="password">
+                  </div>
                 </div>
                 <div class="row my-0">
                   <div class="col-8">
@@ -217,17 +233,17 @@
             <div class="col-lg-4">
               <div class="card card-lift--hover shadow border-0">
                 <div class="card-body py-5">
-                  <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                    <i class="ni ni-check-bold"></i>
+                  <div class="icon icon-shape icon-shape-info rounded-circle mb-4">
+                    <i class="ni ni-laptop"></i>
                   </div>
-                  <h6 class="text-primary text-uppercase">About the repository</h6>
+                  <h6 class="text-info text-uppercase">About the repository</h6>
                   <p class="description mt-3">The application consists of a repository for projects that are developed in the course of the disciplines of the UnB and that most of the time are lost for lack of an appropriate place to expose what has been developed by the students and as a result the University loses the opportunity to own a portfolio with quality projects.</p>
                   <div>
-                    <span class="badge badge-pill badge-primary">UnB</span>
-                    <span class="badge badge-pill badge-primary">projects</span>
-                    <span class="badge badge-pill badge-primary">Students</span>
+                    <span class="badge badge-pill badge-info">UnB</span>
+                    <span class="badge badge-pill badge-info">projects</span>
+                    <span class="badge badge-pill badge-info">Students</span>
                   </div>
-                  <a href="#" class="btn btn-primary mt-4">Learn more</a>
+                  <a href="#" class="btn btn-info mt-4">Learn more</a>
                 </div>
               </div>
             </div>
@@ -251,16 +267,16 @@
             <div class="col-lg-4">
               <div class="card card-lift--hover shadow border-0">
                 <div class="card-body py-5">
-                  <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
-                    <i class="ni ni-planet"></i>
+                  <div class="icon icon-shape icon-shape-dark rounded-circle mb-4">
+                    <i class="ni ni-spaceship"></i>
                   </div>
-                  <h6 class="text-warning text-uppercase">Contribute with us</h6>
+                  <h6 class="text-dark text-uppercase">Contribute with us</h6>
                   <p class="description mt-3">If you are a student of the University of Brasilia and are starting a new project inserted in the context of a discipline taught at the university do not waste time and start already contributing with our repository. You're part of it!.</p>
                   <div>
-                    <span class="badge badge-pill badge-warning">FGA</span>
-                    <span class="badge badge-pill badge-warning">Brasília</span>
+                    <span class="badge badge-pill badge-secondary">FGA</span>
+                    <span class="badge badge-pill badge-secondary">Brasília</span>
                   </div>
-                  <a href="#" class="btn btn-warning mt-4">Learn more</a>
+                  <a href="#" class="btn btn-secondary mt-4">Learn more</a>
                 </div>
               </div>
             </div>
@@ -269,94 +285,27 @@
       </div>
     </div>
   </section>
-  <section class="section section-lg">
-    <div class="container">
-      <div class="row row-grid align-items-center">
-        <div class="col-md-6 order-md-2">
-          <img src="../static/assets/img/theme/promo-1.png" class="img-fluid floating">
-        </div>
-        <div class="col-md-6 order-md-1">
-          <div class="pr-md-5">
-            <div class="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
-              <i class="ni ni-settings-gear-65"></i>
-            </div>
-            <h3>Awesome features</h3>
-            <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
-            <ul class="list-unstyled mt-5">
-              <li class="py-2">
-                <div class="d-flex align-items-center">
-                  <div>
-                    <div class="badge badge-circle badge-success mr-3">
-                      <i class="ni ni-settings-gear-65"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <h6 class="mb-0">Carefully crafted components</h6>
-                  </div>
-                </div>
-              </li>
-              <li class="py-2">
-                <div class="d-flex align-items-center">
-                  <div>
-                    <div class="badge badge-circle badge-success mr-3">
-                      <i class="ni ni-html5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <h6 class="mb-0">Amazing page examples</h6>
-                  </div>
-                </div>
-              </li>
-              <li class="py-2">
-                <div class="d-flex align-items-center">
-                  <div>
-                    <div class="badge badge-circle badge-success mr-3">
-                      <i class="ni ni-satisfied"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <h6 class="mb-0">Super friendly support team</h6>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="section bg-secondary">
-    <div class="container">
-      <div class="row row-grid align-items-center">
-        <div class="col-md-6">
-          <div class="card bg-default shadow border-0">
-            <img src="../static/assets/img/theme/img-1-1200x1000.jpg" class="card-img-top">
-            <blockquote class="card-blockquote">
-              <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="svg-bg">
-                <polygon points="0,52 583,95 0,95" class="fill-default" />
-                <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
-              </svg>
-              <h4 class="display-3 font-weight-bold text-white">Design System</h4>
-              <p class="lead text-italic text-white">The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens.</p>
-            </blockquote>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pl-md-5">
-            <div class="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
-              <i class="ni ni-settings"></i>
+      <div class="container">
+        <div class="row row-grid align-items-center">
+          <div class="col-md-6">
+            <div class="card bg-default shadow border-0">
+              <img src="../static/assets/img/theme/projects.png" class="card-img-top">
             </div>
-            <h3>Our customers</h3>
-            <p class="lead">Don't let your uses guess by attaching tooltips and popoves to any element. Just make sure you enable them first via JavaScript.</p>
-            <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
-            <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
-            <a href="#" class="font-weight-bold text-warning mt-5">A beautiful UI Kit for impactful websites</a>
+          </div>
+          <div class="col-md-6">
+            <div class="pl-md-5">
+              <div class="icon icon-lg icon-shape icon-shape-secondary shadow rounded-circle mb-5">
+                <i class="ni ni-settings"></i>
+              </div>
+              <h3>Welcome home, developers of the University of Brasilia</h3>
+              <p class="lead">Gitpub offers greater convenience to search for projects and/or disciplines taught at the institution as well as the visualization of projects of other students who were submitted to the repository and sending messages to other users.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="section pb-0 bg-gradient-warning">
+    </section>
+  <section class="section pb-0 bg-gradient-info">
     <div class="container">
       <div class="row row-grid align-items-center">
         <div class="col-md-6 order-lg-2 ml-lg-auto">
@@ -364,53 +313,6 @@
             <img src="../static/assets/img/ill/ill-2.svg" class="img-center img-fluid">
           </div>
         </div>
-        <div class="col-lg-6 order-lg-1">
-          <div class="d-flex px-3">
-            <div>
-              <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                <i class="ni ni-building text-primary"></i>
-              </div>
-            </div>
-            <div class="pl-4">
-              <h4 class="display-3 text-white">Modern Interface</h4>
-              <p class="text-white">The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
-            </div>
-          </div>
-          <div class="card shadow shadow-lg--hover mt-5">
-            <div class="card-body">
-              <div class="d-flex px-3">
-                <div>
-                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                    <i class="ni ni-satisfied"></i>
-                  </div>
-                </div>
-                <div class="pl-4">
-                  <h5 class="title text-success">Awesome Support</h5>
-                  <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
-                  <a href="#" class="text-success">Learn more</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card shadow shadow-lg--hover mt-5">
-            <div class="card-body">
-              <div class="d-flex px-3">
-                <div>
-                  <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                    <i class="ni ni-active-40"></i>
-                  </div>
-                </div>
-                <div class="pl-4">
-                  <h5 class="title text-warning">Modular Components</h5>
-                  <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever.</p>
-                  <a href="#" class="text-warning">Learn more</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- SVG separator -->
     <div class="separator separator-bottom separator-skew zindex-100">
       <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -422,8 +324,8 @@
     <div class="container">
       <div class="row justify-content-center text-center mb-lg">
         <div class="col-lg-8">
-          <h2 class="display-3">The amazing Team</h2>
-          <p class="lead text-muted">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record maximum.</p>
+          <h2 class="display-3">Development time</h2>
+          <p class="lead text-muted">The Gitpub platform is developed by undergraduate students of the University of Brasilia of Gama College regarding the product delivery of the discipline of Software design taught by Professor Milene Serrano.</p>
         </div>
       </div>
       <div class="row">
@@ -608,147 +510,104 @@
       </div>
     </div>
   </section>
-  <section class="section section-lg pt-0">
-    <div class="container">
-      <div class="card bg-gradient-warning shadow-lg border-0">
-        <div class="p-5">
-          <div class="row align-items-center">
-            <div class="col-lg-8">
-              <h3 class="text-white">We made website building easier for you.</h3>
-              <p class="lead text-white mt-3">I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture.</p>
-            </div>
-            <div class="col-lg-3 ml-lg-auto">
-              <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-lg btn-block btn-white">Download HTML</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="section section-lg bg-gradient-default">
     <div class="container pt-lg pb-300">
       <div class="row text-center justify-content-center">
         <div class="col-lg-10">
-          <h2 class="display-3 text-white">Build something</h2>
-          <p class="lead text-white">According to the National Oceanic and Atmospheric Administration, Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent tihs year down to low ice.</p>
+          <h2 class="display-3 text-white">Contact us</h2>
         </div>
       </div>
       <div class="row row-grid mt-5">
         <div class="col-lg-4">
-          <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+          <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-secondary">
             <i class="ni ni-settings text-primary"></i>
           </div>
-          <h5 class="text-white mt-3">Building tools</h5>
-          <p class="text-white mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="text-white mt-3">Portal UnB Gama</h5>
+            <div class="d-flex align-items-center">
+              <div>
+                <h6 class="mb-0">About</h6>
+              </div>
+            </div>
+              <div class="d-flex align-items-center">
+                <div>
+                  <h6 class="mb-0">Graduation</h6>
+                </div>
+              </div>
+                <div class="d-flex align-items-center">
+                  <div>
+                    <h6 class="mb-0">Graduate</h6>
+                  </div>
+                </div>
+              <div class="d-flex align-items-center">
+                <div>
+                   <h6 class="mb-0">Terms of Use</h6>
+                </div>
+              </div>
+            <div class="d-flex align-items-center">
+              <div>
+                <h6 class="mb-0">Contact</h6>
+              </div>
+            </div>
         </div>
         <div class="col-lg-4">
-          <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-            <i class="ni ni-ruler-pencil text-primary"></i>
+          <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-secondary">
+            <i class="ni ni-settings text-primary"></i>
           </div>
-          <h5 class="text-white mt-3">Grow your market</h5>
-          <p class="text-white mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="text-white mt-3">Useful Links</h5>
+            <div class="d-flex align-items-center">
+              <div>
+                <h6 class="mb-0">UNB Portal</h6>
+              </div>
+            </div>
+              <div class="d-flex align-items-center">
+                <div>
+                  <h6 class="mb-0">Enrollsweb</h6>
+                </div>
+              </div>
+                <div class="d-flex align-items-center">
+                  <div>
+                    <h6 class="mb-0">Saeweb Property</h6>
+                  </div>
+                </div>
+              <div class="d-flex align-items-center">
+                <div>
+                   <h6 class="mb-0">Moodle UNB</h6>
+                </div>
+              </div>
+            <div class="d-flex align-items-center">
+              <div>
+                <h6 class="mb-0">Moodle FGA</h6>
+              </div>
+            </div>
+       </div>
+       <div class="col-lg-4">
+         <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-secondary">
+           <i class="ni ni-settings text-primary"></i>
+         </div>
+         <h5 class="text-white mt-3">Social networks</h5>
+           <div class="d-flex align-items-center">
+             <div>
+               <h6 class="mb-0">Facebook</h6>
+             </div>
+           </div>
+             <div class="d-flex align-items-center">
+               <div>
+                 <h6 class="mb-0">Instagram</h6>
+               </div>
+             </div>
+               <div class="d-flex align-items-center">
+                 <div>
+                   <h6 class="mb-0">Twitter</h6>
+                 </div>
+               </div>
+           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-            <i class="ni ni-atom text-primary"></i>
-          </div>
-          <h5 class="text-white mt-3">Launch time</h5>
-          <p class="text-white mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
-    <!-- SVG separator -->
+      <!-- SVG separator -->
     <div class="separator separator-bottom separator-skew zindex-100">
       <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
       </svg>
     </div>
   </section>
-  <section class="section section-lg pt-lg-0 section-contact-us">
-    <div class="container">
-      <div class="row justify-content-center mt--300">
-        <div class="col-lg-8">
-          <div class="card bg-gradient-secondary shadow">
-            <div class="card-body p-lg-5">
-              <h4 class="mb-1">Want to work with us?</h4>
-              <p class="mt-0">Your project is very important to us.</p>
-              <div class="form-group mt-5">
-                <div class="input-group input-group-alternative">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-user-run"></i></span>
-                  </div>
-                  <input class="form-control" placeholder="Your name" type="text">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group input-group-alternative">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                  </div>
-                  <input class="form-control" placeholder="Email address" type="email">
-                </div>
-              </div>
-              <div class="form-group mb-4">
-                <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
-              </div>
-              <div>
-                <button type="button" class="btn btn-default btn-round btn-block btn-lg">Send Message</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
-<footer class="footer has-cards">
-  <div class="container">
-    <div class="row row-grid align-items-center my-md">
-      <div class="col-lg-6">
-        <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
-        <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
-      </div>
-      <div class="col-lg-6 text-lg-center btn-wrapper">
-        <a target="_blank" href="https://twitter.com/creativetim" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip" data-original-title="Follow us">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="Like us">
-          <i class="fa fa-facebook-square"></i>
-        </a>
-        <a target="_blank" href="https://dribbble.com/creativetim" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" data-toggle="tooltip" data-original-title="Follow us">
-          <i class="fa fa-dribbble"></i>
-        </a>
-        <a target="_blank" href="https://github.com/creativetimofficial" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip" data-original-title="Star on Github">
-          <i class="fa fa-github"></i>
-        </a>
-      </div>
-    </div>
-    <hr>
-    <div class="row align-items-center justify-content-md-between">
-      <div class="col-md-6">
-        <div class="copyright">
-          &copy; 2018
-          <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-        </div>
-      </div>
-      <div class="col-md-6">
-        <ul class="nav nav-footer justify-content-end">
-          <li class="nav-item">
-            <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-          </li>
-          <li class="nav-item">
-            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-
 {% endblock %}

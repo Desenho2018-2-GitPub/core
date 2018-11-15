@@ -3,8 +3,9 @@ Models module
 """
 import datetime
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, UserManager, PermissionsMixin
 
-class CustomUser(models.Model):
+class CustomUser(AbstractBaseUser, PermissionsMixin):
     """
     Abstract class for RegisteredUser
     """
@@ -39,31 +40,15 @@ class RegisteredUser(CustomUser):
     Abstract class for Admin and Student
     """
     registry = models.IntegerField()
+    username = models.CharField(max_length=150, unique=True)
     email = models.CharField(max_length=150, unique=True)
-    password = models.CharField(max_length=80)
-    token = models.CharField(max_length=150, default="")
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
 
-    def create_project(self):
-        pass
+    objects = UserManager()
 
-
-class Student(RegisteredUser):
-    """
-    Student
-    """
-    pass
-
-
-class Admin(RegisteredUser):
-    """
-    Admins make other users admins
-    """
-    def make_admin(self, CustomUser):
-        pass
-
-    def create_discipline(self):
-        pass
-
+    USERNAME_FIELD = 'username'
+    REQUIRED_FIELDS = ['email', 'name', 'registry']
 
 class Material(models.Model):
     """
@@ -76,11 +61,9 @@ class Period(models.Model):
     """
     A class belongs to a period (Semester 1 or 2)
     """
-    FIRST = 1
-    SECOND = 2
     SEMESTER_CHOICES = (
-        (FIRST, 'First'),
-        (SECOND, 'Second')
+        (1, 'First'),
+        (2, 'Second')
     )
     YEAR_CHOICES = [(r, r) for r in range(2000, datetime.date.today().year+1)]
     year = models.IntegerField(choices=YEAR_CHOICES)
@@ -96,7 +79,6 @@ class Course(models.Model):
     """
     description = models.CharField(max_length=140)
     name = models.CharField(max_length=50)
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -108,11 +90,25 @@ class Classroom(models.Model):
     and belongs to a course
     """
     name = models.CharField(max_length=50)
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE,
-                              related_name='owner_user')
-    enrolled_user = models.ManyToManyField(CustomUser)
-    period = models.ForeignKey(Period, on_delete=models.CASCADE)
+    course = models.ForeignKey(
+        Course,
+        on_delete=models.CASCADE,
+        related_name='classrooms'
+    )
+    owner = models.ForeignKey(
+        RegisteredUser, 
+        on_delete=models.CASCADE,
+        related_name='owned_classrooms'
+    )
+    enrolled_users = models.ManyToManyField(
+        RegisteredUser,
+        related_name='enrolled_classrooms'
+    )
+    period = models.ForeignKey(
+        Period,
+        on_delete=models.CASCADE,
+        related_name='classrooms'
+    )
 
     def __str___(self):
         return self.name
@@ -128,7 +124,10 @@ class Project(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=140)
     views = models.IntegerField(default=0)
-    classroom = models.ManyToManyField(Classroom)
+    classroom = models.ManyToManyField(
+        Classroom,
+        related_name='projects'
+    )
 
     def __str__(self):
         return self.name
@@ -139,8 +138,16 @@ class Comment(models.Model):
     A comment is written by an user to a project.
     """
     text = models.CharField(max_length=140)
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        CustomUser,
+        on_delete=models.CASCADE,
+        related_name='comments'
+    )
+    project = models.ForeignKey(
+        Project,
+        on_delete=models.CASCADE,
+        related_name='comments'    
+    )
 
     def __str__(self):
         return self.text

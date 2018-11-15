@@ -1,5 +1,5 @@
 from django.test import TestCase, TransactionTestCase 
-from cms.models import AnonymousUser, Student, Admin
+from cms.models import AnonymousUser, RegisteredUser
 from django.db import transaction
 
 # Create your tests here.
@@ -28,64 +28,15 @@ class UserCreationTestCase(TransactionTestCase):
         anonymous_user2 = AnonymousUser.objects.create(name="Any name")
         self.assertEqual(anonymous_user2.name, "Anonymous User")
 
-    # Student
-    def test_student_creation(self):
-        quantity = len(Student.objects.all())
-        Student.objects.create(
+    # Registered User
+    def test_registereduser_creation(self):
+        quantity = len(RegisteredUser.objects.all())
+        RegisteredUser.objects.create(
             name="Any name",
             registry="0000000",
             email="student@email.com",
-            password="pwd123"
-            )
-
-        self.assertEqual(len(Student.objects.all()), quantity + 1)
-
-    def test_student_duplicate_email(self):
-        quantity = len(Student.objects.all())
-        Student.objects.create(
-            name="Any name",
-            registry="0000000",
-            email="student@email.com",
-            password="pwd123"
-            )
-
-        with self.assertRaises(Exception) as e:
-            Student.objects.create(
-                name="Any another name",
-                registry="0000001",
-                email="student@email.com",
-                password="pwd1233"
-            )
-
-        self.assertEqual(len(Student.objects.all()), quantity + 1)
-
-    # Admin
-    def test_admin_creation(self):
-        quantity = len(Admin.objects.all())
-        Admin.objects.create(
-            name="Any name",
-            registry="0000000",
-            email="student@email.com",
-            password="pwd123"
+            password="pwd123",
+            username="anuusername"
         )
 
-        self.assertEqual(len(Admin.objects.all()), quantity + 1)
-
-    def test_admin_duplicate_email(self):
-        quantity = len(Student.objects.all())
-        Admin.objects.create(
-            name="Any name",
-            registry="0000000",
-            email="student@email.com",
-            password="pwd123"
-            )
-
-        with self.assertRaises(Exception) as e:
-            Admin.objects.create(
-                name="Any another name",
-                registry="0000001",
-                email="student@email.com",
-                password="pwd1233"
-            )
-
-        self.assertEqual(len(Admin.objects.all()), quantity + 1)
+        self.assertEqual(len(RegisteredUser.objects.all()), quantity + 1)

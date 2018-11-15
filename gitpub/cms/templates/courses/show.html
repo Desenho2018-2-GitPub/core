@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %} {% block content %}
+<div class="container pt-lg-md">
+        <div class="justify-content-center">
+          <div class=" card-body px-lg-3 py-lg-3">
+            <div>
+              <form role="form" class="card bg-secondary shadow p-4">
+                <h1>{{ course.name }}</h1>
+                    <p>{{ course.description }}</p>
+            <div class="row">
+              <div class="col-sm">
+                <a href="/courses/edit/{{course.id}}">Editar</a>
+                <a href="/courses/delete/{{course.id}}">Deletar</a>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
