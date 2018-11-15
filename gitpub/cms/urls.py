@@ -8,6 +8,6 @@ urlpatterns = [
     url(r'^$', cms.index, name='index'),
     url(r'^login', cms.login, name='login'),
     url(r'^register', cms.register, name='register'),
-    url(r'^forgot_password', cms.register, name='forgot_password'),
+    url(r'^forgot_password', cms.forgot_password, name='forgot_password'),
     url(r'^courses/', include(courses))
 ]
