@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from gitpub.logging import debug
-from cms.models import Course
+from cms.models import Course, Classroom
 
 # GET /courses
 @debug
