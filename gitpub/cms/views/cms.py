@@ -73,6 +73,9 @@ def forgot_password(request):
 
 @debug
 def dashboard(request):
-    courses = Course.objects.all()
-    courses = sorted(courses, key=lambda x: x.id)
-    return render(request, 'dashboard.html', {'courses': courses})
+    if not request.user.is_authenticated:
+        return redirect('/login', {'errors':['User is not authenticated']})
+    else:
+        courses = Course.objects.all()
+        courses = sorted(courses, key=lambda x: x.id)
+        return render(request, 'dashboard.html', {'courses': courses})
