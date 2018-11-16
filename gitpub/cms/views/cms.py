@@ -5,6 +5,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponseNotFound
 from django.contrib import auth
 from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
 
 from cms.models import Course, Classroom
 
@@ -72,10 +73,8 @@ def forgot_password(request):
     return render(request, 'authentication/forgot_password.html')
 
 @debug
+@login_required(login_url='/login')
 def dashboard(request):
-    if not request.user.is_authenticated:
-        return redirect('/login', {'errors':['User is not authenticated']})
-    else:
-        courses = Course.objects.all()
-        courses = sorted(courses, key=lambda x: x.id)
-        return render(request, 'dashboard.html', {'courses': courses})
+    courses = Course.objects.all()
+    courses = sorted(courses, key=lambda x: x.id)
+    return render(request, 'dashboard.html', {'courses': courses})
