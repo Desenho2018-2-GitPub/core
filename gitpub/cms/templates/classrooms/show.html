@@ -1,5 +1,5 @@
 {% extends 'layouts/base.html' %} {% block content %}
-<div>
+<!-- <div>
     <h1>{{ classroom.name }}</h1>
     <p>{{ classroom.period.semester }} / {{ classroom.period.year }}</p>
     <h2>Enrolled users</h2>
@@ -8,5 +8,28 @@
     {% endfor %}
     <a href="/courses/{{course_id}}/classrooms/edit/{{classroom.id}}">Edit</a>
     <a href="/courses/{{course_id}}/classrooms/delete/{{classroom.id}}">Delete</a>
+</div> -->
+
+<div class="container pt-lg-md">
+  <div class="justify-content-center">
+    <div class=" card-body px-lg-3 py-lg-3">
+      <div>
+        <form role="form" class="card bg-secondary shadow p-4">
+          <h1>{{ classroom.name }}</h1>
+          <p>{{ classroom.period.semester }} / {{ classroom.period.year }}</p>
+          <h2>Enrolled users</h2>
+          {% for each in enrolled_users %}
+              <p>User: {{each.username}}</p>
+          {% endfor %}
+          <div class="row">
+            <div class="col-sm">
+              <a href="/courses/{{course_id}}/classrooms/edit/{{classroom.id}}">Editar</a>
+              <a href="/courses/{{course_id}}/classrooms/delete/{{classroom.id}}">Deletar</a>
+            </div>
+          </div>
+        </form>       
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
