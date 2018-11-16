@@ -125,21 +125,6 @@
         <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
           <div class="container">
             <div class="row">
-              <!-- <div class="col-6">
-                <div class="card card-lift--hover shadow my-3">
-                  <div class="card-body ">
-                    <h6 class="text-primary text-uppercase">Projeto de GCES</h6>
-                    <p class="description mt-3">Este projeto tem como objetivo criar um sistema inteligente de alocação de salas para
-                    Universidade de Brasília, a premissa é a falta de automação neste processo</p>
-                    <div>
-                      <span class="badge badge-pill badge-primary">GCES</span>
-                      <span class="badge badge-pill badge-primary">UnB</span>
-                      <span class="badge badge-pill badge-primary">DEG</span>
-                    </div>
-                    <a href="#" class="btn btn-primary mt-4">Explorar</a>
-                  </div>
-                </div>
-              </div> -->
               {% for each in courses %}
               <div class="col-6">
                   <div class="card card-lift--hover shadow my-3">
@@ -151,21 +136,17 @@
                         <span class="badge badge-pill badge-primary">UnB</span>
                         <span class="badge badge-pill badge-primary">DEG</span>
                       </div>
-                      <a href="/courses/{{each.id}}" class="btn btn-primary mt-4">Explorar</a>
+                      <a href="/courses/{{each.id}}"  class="btn btn-primary btn-sm mt-4">Explorar</a>
+                      <a href="/courses/edit/{{each.id}}"  class="btn btn-primary btn-sm mt-4">Editar</a>
+                      <a href="/courses/delete/{{each.id}}"  class="btn btn-danger btn-sm mt-4">Deletar</a>
+        
                     </div>
                   </div>
-                        <!-- <li>
-                            <h4>{{each.id }} - {{ each.name }}</h4>
-                            <p>{{each.description}}</p>
-                            <a href="/courses/{{each.id}}" class="nav-link nav-link-icon">Show</a>
-                            <a href="/courses/edit/{{each.id}}" class="nav-link nav-link-icon">Edit</a>
-                            <a href="/courses/delete/{{each.id}}"class="nav-link nav-link-icon">Delete</a>
-                        </li> -->
+              </div>
+              <!-- <h4>{{each.id }} - {{ each.name }}</h4> -->
+
               {% endfor %}
 
-              
-              
-            
             </div> <!--  End Row -->
           </div>
         </div>
