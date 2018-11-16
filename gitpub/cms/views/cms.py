@@ -15,10 +15,15 @@ def index(request):
 
 @debug
 def login(request):
+    redirect_url = '/dashboard'
+
+    if request.GET.get('next') is not None:
+        redirect_url = request.GET.get('next')
+
     if not request.user.is_authenticated:
-        return render(request, 'authentication/login.html')
+        return render(request, 'authentication/login.html', {'next':redirect_url})
     else:
-        return redirect('/dashboard')
+        return redirect(redirect_url)
 
 @debug
 def authenticate(request):
@@ -27,11 +32,16 @@ def authenticate(request):
 
     user = auth.authenticate(request, username=username, password=password)
 
+    redirect_url = '/dashboard'
+
+    if request.POST.get('next') is not None:
+        redirect_url = request.POST.get('next')
+
     if user is not None:
         auth.login(request, user)
-        return redirect('/dashboard')
+        return redirect(redirect_url)
     else:
-        return redirect('/login')
+        return redirect('/login', {'next': redirect_url})
 
 @debug
 def create_user(request):

@@ -47,6 +47,7 @@
               </div>
               <form role="form" action="/authenticate" method="post">
                 {% csrf_token %}
+                <input name="next" value="{{ next }}" type="hidden">
                 <div class="form-group mb-3">
                   <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
