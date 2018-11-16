@@ -33,6 +33,11 @@ def authenticate(request):
         return redirect('/login')
 
 @debug
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
+
+@debug
 def register(request):
     return render(request, 'authentication/register.html')
 
