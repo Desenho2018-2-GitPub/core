@@ -37,7 +37,7 @@ def new(request, course_id):
 # POST /courses/course_id/classrooms/create
 @debug
 def create(request, course_id):
-    classroom_owner, ucreated = RegisteredUser.objects.get_or_create(id=1, registry=1, username='bla', email='bla@bla.com')
+    classroom_owner = request.user
     try:
         classroom_period, pcreated = Period.objects.get_or_create(
             year=request.POST['period_year'],
