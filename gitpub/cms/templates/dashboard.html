@@ -102,14 +102,14 @@
           <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
               <li class="nav-item">
                   <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true">
-                    <i class="ni ni-cloud-upload-96 mr-2"></i>
-                    Projetos
+                    <i class="ni ni-bell-55 mr-2"></i>
+                    Disciplinas
                   </a>
               </li>
               <li class="nav-item">
                   <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false">
-                    <i class="ni ni-bell-55 mr-2"></i>
-                    Disciplinas
+                    <i class="ni ni-cloud-upload-96 mr-2"></i>
+                    Projetos
                   </a>
               </li>
               <li class="nav-item">
@@ -124,26 +124,35 @@
         <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
           <div class="container">
             <div class="row">
-              {% for each in courses %}
-              <div class="col-6">
-                  <div class="card card-lift--hover shadow my-3">
+              {% if courses|length_is:'0' %}
+                <div class="col-12">
+                  <div class="card shadow my-3">
                     <div class="card-body ">
-                      <h6 class="text-primary text-uppercase">{{ each.name }}</h6>
-                      <p class="description mt-3">{{each.description}}</p>
-                      <div>
-                        <span class="badge badge-pill badge-primary">GCES</span>
-                        <span class="badge badge-pill badge-primary">UnB</span>
-                        <span class="badge badge-pill badge-primary">DEG</span>
-                      </div>
-                      <a href="/courses/{{each.id}}"  class="btn btn-primary btn-sm mt-4">Explorar</a>
-                      <a href="/courses/edit/{{each.id}}"  class="btn btn-primary btn-sm mt-4">Editar</a>
-                      <a href="/courses/delete/{{each.id}}"  class="btn btn-danger btn-sm mt-4">Deletar</a>
-        
+                      <h6 class="text-primary text-uppercase">Voce ainda não possui nenhum projeto...</h6>
+                      <a href="/courses/new"  class="btn btn-primary mt-4">Criar Projeto</a>
                     </div>
                   </div>
-              </div>
-              <!-- <h4>{{each.id }} - {{ each.name }}</h4> -->
-
+                </div>
+              {% endif %}
+              {% for each in courses %}
+                <div class="col-6">
+                    <div class="card card-lift--hover shadow my-3">
+                      <div class="card-body ">
+                        <h6 class="text-primary text-uppercase">{{ each.name }}</h6>
+                        <p class="description mt-3">{{each.description}}</p>
+                        <div>
+                          <span class="badge badge-pill badge-primary">GCES</span>
+                          <span class="badge badge-pill badge-primary">UnB</span>
+                          <span class="badge badge-pill badge-primary">DEG</span>
+                        </div>
+                        <a href="/courses/{{each.id}}"  class="btn btn-primary btn-sm mt-4">Explorar</a>
+                        <a href="/courses/edit/{{each.id}}"  class="btn btn-primary btn-sm mt-4">Editar</a>
+                        <a href="/courses/delete/{{each.id}}"  class="btn btn-danger btn-sm mt-4">Deletar</a>
+          
+                      </div>
+                    </div>
+                </div>
+                <!-- <h4>{{each.id }} - {{ each.name }}</h4> -->
               {% endfor %}
 
             </div> <!--  End Row -->
