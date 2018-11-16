@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from gitpub.logging import debug
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponseNotFound
+from django.contrib import auth
+from django.shortcuts import redirect
 
 from cms.models import Course, Classroom
 
@@ -12,7 +14,23 @@ def index(request):
 
 @debug
 def login(request):
-    return render(request, 'authentication/login.html')
+    if not request.user.is_authenticated:
+        return render(request, 'authentication/login.html')
+    else:
+        return redirect('/dashboard')
+
+@debug
+def authenticate(request):
+    username = request.POST['username']
+    password = request.POST['password']
+
+    user = auth.authenticate(request, username=username, password=password)
+
+    if user is not None:
+        auth.login(request, user)
+        return redirect('/dashboard')
+    else:
+        return redirect('/login')
 
 @debug
 def register(request):
