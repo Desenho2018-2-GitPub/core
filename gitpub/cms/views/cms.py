@@ -4,6 +4,8 @@ from gitpub.logging import debug
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponseNotFound
 
+from cms.models import Course, Classroom
+
 @debug
 def index(request):
     return render(request, 'index.html')
@@ -22,4 +24,6 @@ def forgot_password(request):
 
 @debug
 def dashboard(request):
-    return render(request, 'dashboard.html')
+    courses = Course.objects.all()
+    courses = sorted(courses, key=lambda x: x.id)
+    return render(request, 'dashboard.html', {'courses': courses})
