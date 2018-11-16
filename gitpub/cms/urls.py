@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^login', cms.login, name='login'),
     url(r'^register', cms.register, name='register'),
     url(r'^forgot_password', cms.forgot_password, name='forgot_password'),
-    url(r'^dashboard', cms.dashboard, name='dashboard')
+    url(r'^dashboard', cms.dashboard, name='dashboard'),
+    url(r'^courses/', include(courses))
 ]
