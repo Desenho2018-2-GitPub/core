@@ -79,21 +79,20 @@
       <div class="col-3 mt-3">
         <div class="px-4">
           <div class="row justify-content-center">
-                  <img src="../static/assets/img/theme/romeu.jpeg" class="rounded-circle" style="width:90px; height:90px; align-self:center;">
+            <img src="/static/assets/img/theme/profile.png" class="rounded-circle" style="width:180px; height:180px; align-self:center;">
           </div>
           <div class="text-center mt-5">
-            <h3> Romeuzin Carvalho
-              <span class="font-weight-light">, 18</span>
+            <h3>{{ user.name }}
+              <span class="font-weight-light"></span>
             </h3>
-            <div class="h6 font-weight-300">Engenharia de Software</div>
-            <div class="h6 mt-4">Universidade de Brasília</div>
+            <div class="h6 font-weight-300">{{ user.email }}</div>
+            <div class="h6 mt-2">@{{ user.username }}</div>
           </div>
-          <div class="mt-5 py-5 border-top text-center">
+          <div class="mt-4 py-5 border-top text-center">
             <div class="row justify-content-center">
               <div class="col-lg-9">
                 <p>Insira aqui uma pequena bio</p>
               </div>
-              <div class="h6 mt-4 text-center font-weight-light">romeucarvalho2009@hotmail.com</div>
             </div>
           </div>
         </div>
