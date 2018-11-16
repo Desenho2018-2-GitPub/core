@@ -33,6 +33,32 @@ def authenticate(request):
         return redirect('/login')
 
 @debug
+def create_user(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    email = request.POST['email']
+    registry = request.POST['registry']
+    name = request.POST['name']
+
+    User = auth.get_user_model()
+
+    User.objects.create_user(
+        name=name,
+        username=username,
+        email=email,
+        registry=registry,
+        password=password
+    )
+
+    user = auth.authenticate(request, username=username, password=password)
+
+    if user is not None:
+        auth.login(request, user)
+        return redirect('/dashboard')
+    else:
+        return redirect('/')
+
+@debug
 def logout(request):
     auth.logout(request)
     return redirect('/')

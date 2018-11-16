@@ -148,13 +148,14 @@
               <div class="text-center text-muted mb-2">
                 <small>Or sign up with credentials</small>
               </div>
-              <form role="form">
+              <form role="form" action="/create_user" method="post">
+                {% csrf_token %}
                 <div class="form-group">
                   <div class="input-group input-group-alternative mb-0">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Name" type="text">
+                    <input class="form-control" name="name" placeholder="Name" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -162,7 +163,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Username" type="text">
+                    <input class="form-control" name="username" placeholder="Username" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -170,7 +171,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" type="email">
+                    <input class="form-control" name="email" placeholder="Email" type="email">
                   </div>
                 </div>
                 <div class="form-group">
@@ -178,7 +179,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Registration" type="text">
+                    <input class="form-control" name="registry" placeholder="Registration" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -186,7 +187,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password" type="password">
+                    <input class="form-control" name="password" placeholder="Password" type="password">
                   </div>
                 </div>
                 <div class="form-group">
@@ -210,7 +211,7 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary mt-3">Create account</button>
+                  <button type="submit" class="btn btn-primary mt-3">Create account</button>
                 </div>
               </form>
             </div>
