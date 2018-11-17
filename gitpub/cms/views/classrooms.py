@@ -107,3 +107,24 @@ def delete(request, course_id, classroom_id):
     classroom = get_object_or_404(Classroom, id=classroom_id)
     classroom.delete()
     return redirect('/courses/' + course_id + '/classrooms/')
+
+@debug
+@login_required(login_url='/login')
+def subscribe(request, course_id, classroom_id):
+    classroom = get_object_or_404(Classroom, id=classroom_id)
+    enrolled = list(classroom.enrolled_users.all())
+    enrolled.append(request.user)
+    classroom.enrolled_users.set(enrolled)
+    classroom.save()
+    return redirect('/courses/' + course_id)
+
+
+@debug
+@login_required(login_url='/login')
+def unsubscribe(request, course_id, classroom_id):
+    classroom = get_object_or_404(Classroom, id=classroom_id)
+    enrolled = list(classroom.enrolled_users.all())
+    enrolled.remove(request.user)
+    classroom.enrolled_users.set(enrolled)
+    classroom.save()
+    return redirect('/courses/' + course_id)

@@ -8,6 +8,8 @@ urlpatterns = [
     url(r'^update/$', classrooms.update, name='classrooms_update'),
     url(r'^edit/(?P<classroom_id>\d+)/$', classrooms.edit, name='classrooms_edit'),
     url(r'^delete/(?P<classroom_id>\d+)/$', classrooms.delete, name='classrooms_delete'),
+    url(r'^(?P<classroom_id>\d+)/subscribe$', classrooms.subscribe, name='classrooms_subscribe'),
+    url(r'^(?P<classroom_id>\d+)/unsubscribe$', classrooms.unsubscribe, name='classrooms_unsubscribe'),
     url(r'^(?P<classroom_id>\d+)/$', classrooms.show, name='classrooms_show'),
     url(r'^$', classrooms.index, name='classrooms_index')
 ]
