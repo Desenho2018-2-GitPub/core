@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bfada28f24f3411d918b3ac2456db21a)](https://www.codacy.com/app/vitorfhc/GitPub?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Desenho2018-2/GitPub&amp;utm_campaign=Badge_Grade)
 ![logo](https://user-images.githubusercontent.com/18054053/44956569-63f60980-ae9c-11e8-88c3-b67ba48f4693.png)
 
 ## About the Project
