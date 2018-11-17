@@ -4,8 +4,10 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-12">
-          <h1>Courses</h1>
-          <a href="/courses/new" class="btn btn-primary btn-sm m-4 ">New</a>
+          <h1 class="display-3 mt-4">Disciplinas</h1>
+          {% if user.is_superuser %}
+          <a href="/courses/new" class="btn btn-primary btn-lg btn-block m-4">Criar Disciplina</a>
+          {% endif %}
           <div class="row row-grid">
             {% for each in courses %}
             <div class="col-lg-4 mb-4">

@@ -1,23 +1,46 @@
-{% extends 'layouts/base.html' %} 
-
-{% block content %}
+{% extends 'layouts/base.html' %} {% block content %}
 <div class="container pt-lg-md">
   <div class="justify-content-center">
     <div class=" card-body px-lg-3 py-lg-3">
       <div>
         <form role="form" class="card bg-secondary shadow p-4">
-          <h1>{{ course.name }}</h1>
+          <h1 class="display-3">{{ course.name }}</h1>
           <p>{{ course.description }}</p>
           <div class="row">
             <div class="col-sm">
-              <a href="/courses/edit/{{course.id}}">Editar</a>
-              <a href="/courses/delete/{{course.id}}">Deletar</a>
+              {% if user.is_superuser %}
+              <a class="btn btn-primary btn-sm mt-4" href="/courses/edit/{{course.id}}">Editar</a>
+              {% endif %} {% if user.is_staff %}
+              <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/new">Adicionar Turma</a>
+              {% endif %} {% if user.is_superuser %}
+              <a class="btn btn-danger btn-sm mt-4" href="/courses/delete/{{course.id}}">Deletar</a>
+              {% endif %}
             </div>
           </div>
-        </form>       
+        </form>
+      </div>
+      <div class="card bg-secondary shadow p-4 mt-4">
+        <h1 class="display-3">Turmas</h1>
+        {% for classroom in course.classrooms.all %}
+        <div class="card bg-secondary shadow p-4 mt-4">
+          <h5>
+            {{ classroom.name }} - {{ classroom.owner.name }}
+            <small class="text-muted">{{ classroom.period.semester }}/{{ classroom.period.year }}</small>
+          </h5>
+          <div class="row">
+            <div class="col-sm">
+              <a class="btn btn-info btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}">Explorar</a>
+              {% if user in classroom.enrolled_users.all %}
+              <a class="btn btn-danger btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/unsubscribe">Desmatricular</a>
+              {% else %}
+              <a class="btn btn-success btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/subscribe">Matriular</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
 </div>
 {% endblock %}
-
