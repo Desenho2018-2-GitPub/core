@@ -9,7 +9,7 @@ echo "** Migrating changes if existent **"
 python3 manage.py migrate
 
 echo "** Running autopep8 **"
-autopep8 -r --in-place --agressive .
+autopep8 -r --in-place --aggressive --aggressive /gitpub
 
 echo "** Waiting for DB **"
 python3 /gitpub/scripts/wait_db.py || exit 1

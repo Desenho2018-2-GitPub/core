@@ -13,5 +13,4 @@ ADD . /gitpub/
 
 WORKDIR /gitpub
 
-RUN pip3 install --upgrade setuptools
 RUN pip3 install -r requirements.txt
