@@ -41,7 +41,8 @@ class RegisteredUser(CustomUser):
     """
     registry = models.IntegerField()
     username = models.CharField(max_length=150, unique=True)
-    email = models.CharField(max_length=150, unique=True)
+    email = models.EmailField(max_length=150, unique=True)
+    bio = models.CharField(max_length=280, default="")
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
