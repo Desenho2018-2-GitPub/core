@@ -9,9 +9,11 @@ from django.contrib.auth.decorators import login_required
 
 from cms.models import Course, Classroom
 
+
 @debug
 def index(request):
     return render(request, 'index.html')
+
 
 @debug
 def login(request):
@@ -21,9 +23,12 @@ def login(request):
         redirect_url = request.GET.get('next')
 
     if not request.user.is_authenticated:
-        return render(request, 'authentication/login.html', {'next':redirect_url})
+        return render(request,
+                      'authentication/login.html',
+                      {'next': redirect_url})
     else:
         return redirect(redirect_url)
+
 
 @debug
 def authenticate(request):
@@ -42,6 +47,7 @@ def authenticate(request):
         return redirect(redirect_url)
     else:
         return redirect('/login', {'next': redirect_url})
+
 
 @debug
 def create_user(request):
@@ -69,18 +75,22 @@ def create_user(request):
     else:
         return redirect('/')
 
+
 @debug
 def logout(request):
     auth.logout(request)
     return redirect('/')
 
+
 @debug
 def register(request):
     return render(request, 'authentication/register.html')
 
+
 @debug
 def forgot_password(request):
     return render(request, 'authentication/forgot_password.html')
+
 
 @debug
 @login_required(login_url='/login')

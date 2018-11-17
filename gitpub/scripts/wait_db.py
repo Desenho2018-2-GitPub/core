@@ -10,14 +10,15 @@ pg_host = 'db'
 
 start = time.time()
 success = False
-param = "dbname='{}' user='{}' host='{}' password='{}'".format(pg_db, pg_user, pg_host, pg_psw)
+param = "dbname='{}' user='{}' host='{}' password='{}'".format(
+    pg_db, pg_user, pg_host, pg_psw)
 
 while True:
     try:
         db = psycopg2.connect(param)
         success = True
         break
-    except:
+    except BaseException:
         print('No DB connection')
     end = time.time()
     if not success and end - start >= 15:

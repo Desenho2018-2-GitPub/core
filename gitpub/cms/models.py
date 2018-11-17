@@ -5,6 +5,7 @@ import datetime
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, UserManager, PermissionsMixin
 
+
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     """
     Abstract class for RegisteredUser
@@ -14,16 +15,18 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.name
 
+
 class AnonymousUser(CustomUser):
     """
     AnonymousUser
     """
+
     def save(self, *args, **kwargs):
         self.pk = 0
         self.name = "Anonymous User"
         try:
             super(AnonymousUser, self).save(*args, **kwargs)
-        except:
+        except BaseException:
             AnonymousUser.objects.get(id=0)
 
     def delete(self, *args, **kwargs):
@@ -51,6 +54,7 @@ class RegisteredUser(CustomUser):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email', 'name', 'registry']
 
+
 class Material(models.Model):
     """
     Materials belong to projects
@@ -66,7 +70,8 @@ class Period(models.Model):
         (1, 'First'),
         (2, 'Second')
     )
-    YEAR_CHOICES = [(r, r) for r in range(2000, datetime.date.today().year+1)]
+    YEAR_CHOICES = [(r, r)
+                    for r in range(2000, datetime.date.today().year + 1)]
     year = models.IntegerField(choices=YEAR_CHOICES)
     semester = models.IntegerField(choices=SEMESTER_CHOICES)
 
@@ -97,7 +102,7 @@ class Classroom(models.Model):
         related_name='classrooms'
     )
     owner = models.ForeignKey(
-        RegisteredUser, 
+        RegisteredUser,
         on_delete=models.CASCADE,
         related_name='owned_classrooms'
     )
@@ -147,7 +152,7 @@ class Comment(models.Model):
     project = models.ForeignKey(
         Project,
         on_delete=models.CASCADE,
-        related_name='comments'    
+        related_name='comments'
     )
 
     def __str__(self):
