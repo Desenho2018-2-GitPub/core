@@ -69,3 +69,12 @@ def debug(func):
             ))
         return result
     return decorated
+
+def debug_time(func):
+    def decorated(*args, **kwargs):
+        begin = time.clock()
+        result = func(*args, **kwargs)
+        end = time.clock()
+        print(begin - end)
+        return result
+    return decorated
