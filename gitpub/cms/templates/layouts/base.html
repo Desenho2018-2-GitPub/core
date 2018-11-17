@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    {% if user.is_authenticated %}
+    {% if user.is_authenticated and request.path != '/' %}
     <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-default">
         <div class="container">
             <a class="navbar-brand" href="#">GitPub</a>
