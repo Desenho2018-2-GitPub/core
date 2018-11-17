@@ -68,7 +68,7 @@ def create(request, course_id):
         owner=classroom_owner,
         period=classroom_period
     )
-    return redirect('/courses/' + course_id + '/classrooms')
+    return redirect('/courses/' + course_id)
 
 # GET /courses/course_id/classrooms/edit/classroom_id
 
