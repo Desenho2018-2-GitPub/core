@@ -72,9 +72,14 @@ def debug(func):
 
 def debug_time(func):
     def decorated(*args, **kwargs):
+        debug_instance = GitPubDebugger()
         begin = time.clock()
         result = func(*args, **kwargs)
         end = time.clock()
-        print(begin - end)
+        msg = '{} took {} seconds'.format(
+                func.__name__,
+                begin - end
+                )
+        debug_instance.debug(msg)
         return result
     return decorated
