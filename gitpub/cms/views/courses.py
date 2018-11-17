@@ -33,7 +33,7 @@ def create(request):
         name=request.POST['course_name'],
         description=request.POST['course_description']
     )
-    return redirect('/courses')
+    return redirect('/dashboard')
 
 # GET /courses/edit/1
 @debug
@@ -59,4 +59,4 @@ def update(request):
 def delete(request, course_id):
     course = get_object_or_404(Course, id=course_id)
     course.delete()
-    return redirect('/courses')
+    return redirect('/dashboard')
