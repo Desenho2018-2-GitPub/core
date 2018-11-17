@@ -1,5 +1,5 @@
 {% extends 'layouts/base.html' %} {% block content %}
-  <!-- <header class="header-global">
+<!-- <header class="header-global">
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-default">
       <div class="container">
         <a class="navbar-brand" href="#">GitPub</a>
@@ -50,7 +50,7 @@
     </nav>
   </header> -->
 
-  <main>
+<main>
 
   <div class="container">
     <div class="row justify-content-center">
@@ -75,112 +75,100 @@
           </div>
         </div>
       </div>
-        <div class="col-9">
+      <div class="col-9">
         <div class="nav-wrapper">
           <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
-              <li class="nav-item">
-                  <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true">
-                    <i class="ni ni-bell-55 mr-2"></i>
-                    Disciplinas
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false">
-                    <i class="ni ni-cloud-upload-96 mr-2"></i>
-                    Projetos
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false">
-                    <i class="ni ni-calendar-grid-58 mr-2"></i>
-                    Mensagens
-                  </a>
-              </li>
+            <li class="nav-item">
+              <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab"
+                aria-controls="tabs-icons-text-1" aria-selected="true">
+                <i class="ni ni-bell-55 mr-2"></i>
+                Disciplinas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2"
+                aria-selected="false">
+                <i class="ni ni-cloud-upload-96 mr-2"></i>
+                Projetos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3"
+                aria-selected="false">
+                <i class="ni ni-calendar-grid-58 mr-2"></i>
+                Mensagens
+              </a>
+            </li>
           </ul>
-      </div>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
-          <div class="container">
-            <div class="row">
-              {% if courses|length_is:'0' %}
+        </div>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+            <div class="container">
+              <div class="row">
+                {% if user.is_staff %}
                 <div class="col-12">
+                  <a href="/courses/new" class="btn btn-primary btn-lg btn-block mt-4">Criar Disciplina</a>
+                </div>
+                {% endif %} {% for each in courses %}
+                <div class="col-6">
                   <div class="card shadow my-3">
                     <div class="card-body ">
-                      <h6 class="text-primary text-uppercase">Voce ainda não possui nenhum projeto...</h6>
-                      <a href="/courses/new"  class="btn btn-primary mt-4">Criar Projeto</a>
+                      <h6 class="text-primary text-uppercase">{{ each.name }}</h6>
+                      <p class="description mt-3">{{each.description}}</p>
+                      <div>
+                        <span class="badge badge-pill badge-primary">GCES</span>
+                        <span class="badge badge-pill badge-primary">UnB</span>
+                        <span class="badge badge-pill badge-primary">DEG</span>
+                      </div>
+                      <a href="/courses/{{each.id}}" class="btn btn-primary btn-sm mt-4">Explorar</a>
+                      <a href="/courses/edit/{{each.id}}" class="btn btn-primary btn-sm mt-4">Editar</a>
+                      <a href="/courses/delete/{{each.id}}" class="btn btn-danger btn-sm mt-4">Deletar</a>
+
                     </div>
                   </div>
                 </div>
-              {% endif %}
-              {% for each in courses %}
-                <div class="col-6">
-                    <div class="card shadow my-3">
-                      <div class="card-body ">
-                        <h6 class="text-primary text-uppercase">{{ each.name }}</h6>
-                        <p class="description mt-3">{{each.description}}</p>
-                        <div>
-                          <span class="badge badge-pill badge-primary">GCES</span>
-                          <span class="badge badge-pill badge-primary">UnB</span>
-                          <span class="badge badge-pill badge-primary">DEG</span>
-                        </div>
-                        <a href="/courses/{{each.id}}"  class="btn btn-primary btn-sm mt-4">Explorar</a>
-                        <a href="/courses/edit/{{each.id}}"  class="btn btn-primary btn-sm mt-4">Editar</a>
-                        <a href="/courses/delete/{{each.id}}"  class="btn btn-danger btn-sm mt-4">Deletar</a>
-          
-                      </div>
-                    </div>
-                </div>
                 <!-- <h4>{{each.id }} - {{ each.name }}</h4> -->
-              {% endfor %}
+                {% endfor %}
 
-            </div> <!--  End Row -->
+              </div> <!--  End Row -->
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+            <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3 mt-3" src="../static/assets/img/theme/disciplina-logo.png" alt="Generic placeholder image">
+                <div class="media-body text-justify">
+                  <h5 class="mt-1 mb-1">PED 1</h5>
+                  Noções de Métodos Experimentais Circuitos Lógicos MSI Sistemas de Numeração e Códigos Princípios de Sistemas Sequenciais
+                  Portas Lógicas e Álgebra Booleana Circuitos Lógicos Combinacionais VHDL Aritmética Digital: Operações e
+                  Circuitos
+                </div>
+              </li>
+              <li class="media my-4">
+                <img class="mr-3 mt-3" src="../static/assets/img/theme/disciplina-logo.png" alt="Generic placeholder image">
+                <div class="media-body text-justify">
+                  <h5 class="mt-1 mb-1">Prática de Eletronica Digital 1</h5>
+                  Noções de Métodos Experimentais Circuitos Lógicos MSI Sistemas de Numeração e Códigos Princípios de Sistemas Sequenciais
+                  Portas Lógicas e Álgebra Booleana Circuitos Lógicos Combinacionais VHDL Aritmética Digital: Operações e
+                  Circuitos
+                </div>
+              </li>
+              <li class="media">
+                <img class="mr-3 mt-3" src="../static/assets/img/theme/disciplina-logo.png" alt="Generic placeholder image">
+                <div class="media-body text-justify">
+                  <h5 class="mt-1 mb-1">Prática de Eletronica Digital 1</h5>
+                  Noções de Métodos Experimentais Circuitos Lógicos MSI Sistemas de Numeração e Códigos Princípios de Sistemas Sequenciais
+                  Portas Lógicas e Álgebra Booleana Circuitos Lógicos Combinacionais VHDL Aritmética Digital: Operações e
+                  Circuitos
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
+            #TODO
           </div>
         </div>
-        <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
-          <ul class="list-unstyled">
-            <li class="media">
-              <img class="mr-3 mt-3" src="../static/assets/img/theme/disciplina-logo.png" alt="Generic placeholder image">
-              <div class="media-body text-justify">
-                <h5 class="mt-1 mb-1">PED 1</h5>
-                Noções de Métodos Experimentais Circuitos Lógicos MSI
-                Sistemas de Numeração e Códigos Princípios de Sistemas Sequenciais
-                Portas Lógicas e Álgebra Booleana
-                Circuitos Lógicos Combinacionais
-                VHDL
-                Aritmética Digital: Operações e Circuitos
-              </div>
-            </li>
-            <li class="media my-4">
-              <img class="mr-3 mt-3" src="../static/assets/img/theme/disciplina-logo.png" alt="Generic placeholder image">
-              <div class="media-body text-justify">
-                <h5 class="mt-1 mb-1">Prática de Eletronica Digital 1</h5>
-                Noções de Métodos Experimentais Circuitos Lógicos MSI
-                Sistemas de Numeração e Códigos Princípios de Sistemas Sequenciais
-                Portas Lógicas e Álgebra Booleana
-                Circuitos Lógicos Combinacionais
-                VHDL
-                Aritmética Digital: Operações e Circuitos
-              </div>
-            </li>
-            <li class="media">
-              <img class="mr-3 mt-3" src="../static/assets/img/theme/disciplina-logo.png" alt="Generic placeholder image">
-              <div class="media-body text-justify">
-                <h5 class="mt-1 mb-1">Prática de Eletronica Digital 1</h5>
-                Noções de Métodos Experimentais Circuitos Lógicos MSI
-                Sistemas de Numeração e Códigos Princípios de Sistemas Sequenciais
-                Portas Lógicas e Álgebra Booleana
-                Circuitos Lógicos Combinacionais
-                VHDL
-                Aritmética Digital: Operações e Circuitos
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
-          #TODO
-        </div>
       </div>
-    </div>
-  </main>
+</main>
 
 {% endblock %}
