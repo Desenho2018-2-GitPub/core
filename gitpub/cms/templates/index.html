@@ -76,6 +76,24 @@
               <span class="nav-link-inner--text d-lg-none">Github</span>
             </a>
           </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item d-none d-lg-block ml-lg-4">
+            <a href="dashboard" target="" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+                <i class="fa fa-address-card"></i>
+              </span>
+              <span class="nav-link-inner--text">My Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item d-none d-lg-block ml-lg-4">
+            <a href="logout" target="" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+                <i class="fa fa-sign-out"></i>
+              </span>
+              <span class="nav-link-inner--text">Logout</span>
+            </a>
+          </li>
+          {% else %}
           <li class="nav-item d-none d-lg-block ml-lg-4">
             <a href="login" target="" class="btn btn-neutral btn-icon">
               <span class="btn-inner--icon">
@@ -92,6 +110,7 @@
               <span class="nav-link-inner--text">Sign up</span>
             </a>
           </li>
+          {% endif %}
         </ul>
       </div>
     </div>
