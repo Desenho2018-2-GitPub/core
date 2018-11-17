@@ -78,7 +78,7 @@ def debug_time(func):
         end = time.clock()
         msg = '{} took {} seconds'.format(
                 func.__name__,
-                begin - end
+                round(end - begin, 3)
                 )
         debug_instance.debug(msg)
         return result
