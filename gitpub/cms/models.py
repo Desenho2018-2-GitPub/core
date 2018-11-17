@@ -29,7 +29,7 @@ class AnonymousUser(CustomUser):
         except BaseException:
             AnonymousUser.objects.get(id=0)
 
-    def delete(self, *args, **kwargs):
+    def delete(self):
         pass
 
     @classmethod

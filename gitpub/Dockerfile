@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN mkdir /gitpub
 
-ADD . /gitpub/
+COPY . /gitpub/
 
 WORKDIR /gitpub
 
