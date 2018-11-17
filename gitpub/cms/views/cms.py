@@ -98,3 +98,23 @@ def dashboard(request):
     courses = Course.objects.all()
     courses = sorted(courses, key=lambda x: x.id)
     return render(request, 'dashboard.html', {'courses': courses})
+
+@debug
+@login_required(login_url='/login')
+def update_user(request):
+    user_data = {
+        'name': request.POST.get('name'),
+        'username': request.POST.get('username'),
+        'email': request.POST.get('email'),
+        'registry': request.POST.get('registry'),
+        'bio': request.POST.get('bio')
+    }
+    User = auth.get_user_model()
+
+    user = User.objects.get(id=request.user.id)
+
+    user.__dict__.update(**user_data)
+
+    user.save()
+
+    return redirect('/dashboard')

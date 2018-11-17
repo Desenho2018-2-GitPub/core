@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^authenticate', cms.authenticate, name='authenticate'),
     url(r'^logout', cms.logout, name='logout'),
     url(r'^create_user', cms.create_user, name='create_user'),
+    url(r'^update_user', cms.update_user, name='update_user'),
     url(r'^courses/', include(courses))
 ]
