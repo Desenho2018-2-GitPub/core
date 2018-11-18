@@ -89,6 +89,22 @@ class Course(models.Model):
     def __str__(self):
         return self.name
 
+    def number_of_classrooms(self):
+        return len(self.classrooms.all())
+
+    number_of_classrooms = property(number_of_classrooms)
+
+    def number_of_projects(self):
+        classrooms = self.classrooms.all()
+        total = 0
+
+        for classroom in classrooms:
+            total += classroom.number_of_projects
+
+        return total
+
+    number_of_projects = property(number_of_projects)
+
 
 class Classroom(models.Model):
     """
@@ -118,6 +134,11 @@ class Classroom(models.Model):
 
     def __str___(self):
         return self.name
+
+    def number_of_projects(self):
+        return len(self.projects.all())
+
+    number_of_projects = property(number_of_projects)
 
     class Meta:
         ordering = ('course', 'period', 'name')
