@@ -15,6 +15,9 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.name
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
 class AnonymousUser(CustomUser):
     """
@@ -23,7 +26,7 @@ class AnonymousUser(CustomUser):
 
     def save(self, *args, **kwargs):
         self.pk = 0
-        self.name = "Anonymous User"
+        self.name = "Usuário Anônimo"
         try:
             super(AnonymousUser, self).save(*args, **kwargs)
         except BaseException:
@@ -53,14 +56,6 @@ class RegisteredUser(CustomUser):
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email', 'name', 'registry']
-
-
-class Material(models.Model):
-    """
-    Materials belong to projects
-    """
-    url = models.CharField(max_length=140)
-
 
 class Period(models.Model):
     """
@@ -178,3 +173,15 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
+class Material(models.Model):
+    """
+    Materials belong to projects
+    """
+    url = models.CharField(max_length=140)
+    
+    project = models.ForeignKey(
+        Project,
+        on_delete=models.CASCADE,
+        related_name='materials'
+    )
