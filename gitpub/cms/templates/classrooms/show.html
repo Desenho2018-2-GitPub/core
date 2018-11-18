@@ -10,13 +10,15 @@
             <div class="col-sm">
               {% if user.is_superuser or user is classroom.owner %}
               <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/edit/{{classroom.id}}">Editar</a>
-              {% endif %} {% if user in classroom.enrolled_users.all %}
+              {% endif %} {% if user in classroom.enrolled_users.all or user.is_superuser or user.id == classroom.owner.id %}
               <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/new/">Adicionar
-                Projeto</a>
+                Projeto
+              </a>
+              {% endif %} {% if user in classroom.enrolled_users.all %}
               <a class="btn btn-danger btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/unsubscribe">Desmatricular</a>
-              {% else %}
+              {% elif user.is_authenticated %}
               <a class="btn btn-success btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/subscribe">Matricular</a>
-              {% endif %} {% if user.is_superuser %}
+              {% endif %} {% if user.is_superuser and user.is_authenticated %}
               <a class="btn btn-danger btn-sm mt-4" href="/courses/{{course.id}}/classrooms/delete/{{classroom.id}}">Deletar</a>
               {% endif %}
             </div>

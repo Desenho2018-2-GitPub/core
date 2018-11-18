@@ -136,7 +136,7 @@
             </div>
         </div>
     </nav>
-    {% elif request.path != '/login' and request.path != '/register' %}
+    {% elif request.path != '/login' and request.path != '/register' and request.path != '/' %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-default">
         <div class="container">
             <a class="navbar-brand mr-lg-5" href="/">
@@ -169,7 +169,7 @@
                             <span class="btn-inner--icon">
                                 <i class="fa fa-address-card"></i>
                             </span>
-                            <span class="nav-link-inner--text">Cursos</span>
+                            <span class="nav-link-inner--text">Disciplinas</span>
                         </a>
                     </li>
                     <li class="nav-item d-none d-lg-block ml-lg-4">
