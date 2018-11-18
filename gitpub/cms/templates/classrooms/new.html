@@ -12,7 +12,7 @@
 <div class="container pt-lg-md">
   <div class="justify-content-center">
     <div class=" card-body px-lg-3 py-lg-3">
-      <h1>Nova Sala</h1>
+      <h1>Nova Turma</h1>
       <form role="form" class="card bg-secondary shadow p-4" action="/courses/{{course_id}}/classrooms/create/" method="post">
         {% csrf_token %}
         <div class="form-group mb-3">
@@ -25,12 +25,18 @@
         </div>
         <div class="form-group mb-3">
           <div class="input-group input-group-alternative">
-            <input class="form-control" name="period_year"  type="text" placeholder="2000" >
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+            </div>
+            <input class="form-control" name="period_year"  type="text" placeholder="Ano" >
           </div>
         </div>
         <div class="form-group mb-3">
             <div class="input-group input-group-alternative">
-              <input class="form-control" name="period_semester"  type="text" placeholder="1 ou 2" >
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="ni ni-tag"></i></span>
+              </div>
+              <input class="form-control" name="period_semester"  type="text" placeholder="Período, 1 ou 2" >
             </div>
         </div>
         <input class="btn btn-default" type="submit" value="Criar">
