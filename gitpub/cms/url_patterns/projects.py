@@ -9,5 +9,4 @@ urlpatterns = [
     url(r'^edit/(?P<project_id>\d+)/$', projects.edit, name='projects_edit'),
     url(r'^delete/(?P<project_id>\d+)/$', projects.delete, name='projects_delete'),
     url(r'^(?P<project_id>\d+)/$', projects.show, name='projects_show'),
-    url(r'^$', projects.index, name='projects_index')
 ]

@@ -69,5 +69,10 @@ def update(request, course_id, classroom_id):
 
 @debug
 @login_required(login_url='/login')
-def delete(request, course_id, classroom_id):
-    pass
+def delete(request, course_id, classroom_id, project_id):
+    project = Project.objects.get(id=project_id)
+    project.delete()
+
+    redirect_url = '/courses/{0}/classrooms/{1}/'.format(course_id, classroom_id)
+
+    return redirect(redirect_url)

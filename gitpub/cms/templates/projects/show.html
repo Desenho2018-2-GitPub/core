@@ -8,8 +8,9 @@
           <p>{{ project.description }}</p>
           <div class="row">
             <div class="col-sm">
-              {% if user.id == classroom.owner.id %}
+              {% if user.id == classroom.owner.id or user.is_superuser %}
               <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/edit/{{project.id}}">Editar</a>
+              <a class="btn btn-danger btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/delete/{{project.id}}">Deletar</a>
               {% endif %}
             </div>
           </div>
