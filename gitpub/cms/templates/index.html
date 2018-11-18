@@ -170,6 +170,7 @@
                 </a>
               </div>
             </div> -->
+            {% if not user.is_authenticated %}
             <div class="card-body px-lg-5 py-lg-2">
               <div class="text-center text-muted mb-2">
                 <small>Inscreva-se</small>
@@ -241,6 +242,7 @@
                 </div>
               </form>
             </div>
+            {% endif %}
           </div>
         </div>
         <!-- SVG separator -->
