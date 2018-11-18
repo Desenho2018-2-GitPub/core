@@ -1,7 +1,7 @@
 from django.urls import path
 from cms.views import courses
 from django.conf.urls import url
-from ..url_patterns import classrooms
+from cms.url_patterns import classrooms
 from django.urls import include
 
 urlpatterns = [

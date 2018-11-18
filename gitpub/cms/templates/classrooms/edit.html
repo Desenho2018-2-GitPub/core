@@ -15,7 +15,7 @@
         <div class="justify-content-center">
           <div class=" card-body px-lg-3 py-lg-3">
             <h1>Editando {{ classroom.name }}</h1>
-            <form action="/courses/{{course_id}}/classrooms/update" class="card bg-secondary shadow p-4" method="post">
+            <form action="/courses/{{course_id}}/classrooms/update/" class="card bg-secondary shadow p-4" method="post">
                 
                 {% csrf_token %}
                 <div class="form-group mb-3">
