@@ -141,12 +141,10 @@
         <div class="col px-0">
           <div class="row">
             <div class="col-lg-6">
-              <h1 class="display-3 text-white">Built for developers of the University of Brasilia
+              <h1 class="display-3 text-white">Construído por desenvolvedores para desenvolvedores da Universidade de Brasília
                 <span></span>
               </h1>
-              <p class="lead text-white">GitPub is an web application developed by Software Engineering students of Universidade
-                de Brasilia - UnB, that aims to aid the management of software projects within university disciplines.</p>
-              <p class="lead text-white">Explore os cursos cadastrados:</p>
+              <p class="lead text-white">O GitPub é uma aplicação web desenvolvida por estudantes de Engenharia de Software da Universidade de Brasília - UnB, que visa auxiliar o gerenciamento de projetos de software dentro das disciplinas da universidade.</p>
               <a href="/courses" class="btn btn-lg btn-secondary btn-block mt-4">Explorar</a>
             </div>
           </div>
@@ -174,7 +172,7 @@
             </div> -->
             <div class="card-body px-lg-5 py-lg-2">
               <div class="text-center text-muted mb-2">
-                <small>Or sign up with credentials</small>
+                <small>Inscreva-se</small>
               </div>
               <form role="form" action="/create_user" method="post">
                 {% csrf_token %}
@@ -183,7 +181,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                     </div>
-                    <input class="form-control" name="name" placeholder="Name" type="text">
+                    <input class="form-control" name="name" placeholder="Nome" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -207,7 +205,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                     </div>
-                    <input class="form-control" name="registry" placeholder="Registration" type="text">
+                    <input class="form-control" name="registry" placeholder="Matrícula" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -215,7 +213,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" name="password" placeholder="Password" type="password">
+                    <input class="form-control" name="password" placeholder="Senha" type="password">
                   </div>
                 </div>
                 <div class="form-group">
@@ -223,7 +221,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password confirmation" type="password">
+                    <input class="form-control" placeholder="Confirmação da Senha" type="password">
                   </div>
                 </div>
                 <div class="row my-0">
@@ -231,15 +229,15 @@
                     <div class="custom-control custom-control-alternative custom-checkbox">
                       <input class="custom-control-input" id="customCheckRegister" type="checkbox">
                       <label class="custom-control-label" for="customCheckRegister">
-                        <span>I agree with the
-                          <a href="#">Privacy Policy</a>
+                        <span>Eu concordo com a
+                          <a href="#">Política de Privacidade</a>
                         </span>
                       </label>
                     </div>
                   </div>
                 </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary mt-3">Create account</button>
+                  <button type="submit" class="btn btn-primary mt-3">Criar conta</button>
                 </div>
               </form>
             </div>
@@ -265,11 +263,8 @@
                     <div class="icon icon-shape icon-shape-info rounded-circle mb-4">
                       <i class="ni ni-laptop"></i>
                     </div>
-                    <h6 class="text-info text-uppercase">About the repository</h6>
-                    <p class="description mt-3">The application consists of a repository for projects that are developed
-                      in the course of the disciplines of the UnB and that most of the time are lost for lack of an appropriate
-                      place to expose what has been developed by the students and as a result the University loses the opportunity
-                      to own a portfolio with quality projects.</p>
+                    <h6 class="text-info text-uppercase">Sobre o repositório</h6>
+                    <p class="description mt-3">A aplicação consiste em um repositório para projetos que são desenvolvidos no decorrer das disciplinas da UnB e que na maioria das vezes são perdidos por falta de um local apropriado para expor o que foi desenvolvido pelos alunos e como resultado a Universidade perde a oportunidade de possuir um portfólio com projetos de qualidade.</p>
                     <div>
                       <span class="badge badge-pill badge-info">UnB</span>
                       <span class="badge badge-pill badge-info">projects</span>
@@ -285,11 +280,8 @@
                     <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
                       <i class="ni ni-istanbul"></i>
                     </div>
-                    <h6 class="text-success text-uppercase">Share university projects</h6>
-                    <p class="description mt-3">GitPub is a great repository for versioning of projects developed at the
-                      University of Brasilia that offers greater reliability so that students can submit and archive their
-                      projects developed in disciplines taught at the university inserted in disciplines created by the responsible
-                      teachers.
+                    <h6 class="text-success text-uppercase">Compartilhe projetos universitários</h6>
+                    <p class="description mt-3">O GitPub é um ótimo repositório para versionamento de projetos desenvolvidos na Universidade de Brasília que oferece maior confiabilidade para que os alunos possam enviar e arquivar seus projetos desenvolvidos em disciplinas ministradas na universidade inseridas em disciplinas criadas pelos professores responsáveis.
                     </p>
                     <div>
                       <span class="badge badge-pill badge-success">Repository</span>
@@ -306,10 +298,8 @@
                       <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
                         <i class="ni ni-spaceship"></i>
                       </div>
-                      <h6 class="text-warning text-uppercase">Contribute with us</h6>
-                      <p class="description mt-3">If you are a student of the University of Brasilia and are starting a new
-                          project inserted in the context of a discipline taught at the university do not waste time and start
-                          already contributing with our repository. You're part of it!.</p>
+                      <h6 class="text-warning text-uppercase">Contribua conosco</h6>
+                      <p class="description mt-3">e você é um estudante da Universidade de Brasília e está iniciando um novo projeto inserido no contexto de uma disciplina ministrada na universidade não perca tempo e comece já a contribuir com nosso repositório. Você é parte disso!</p>
                       <div>
                         <span class="badge badge-pill badge-warning">marketing</span>
                         <span class="badge badge-pill badge-warning">product</span>
@@ -337,10 +327,8 @@
               <div class="icon icon-lg icon-shape icon-shape-secondary shadow rounded-circle mb-5">
                 <i class="ni ni-settings"></i>
               </div>
-              <h3>Welcome home, developers of the University of Brasilia</h3>
-              <p class="lead">Gitpub offers greater convenience to search for projects and/or disciplines taught at the institution
-                as well as the visualization of projects of other students who were submitted to the repository and sending
-                messages to other users.</p>
+              <h3>Bem vindo ao lar, desenvolvedores da Universidade de Brasília</h3>
+              <p class="lead">O Gitpub oferece maior conveniência para buscar projetos e / ou disciplinas ministradas na instituição, bem como a visualização de projetos de outros alunos que foram submetidos ao repositório e envio de mensagens para outros usuários.</p>
             </div>
           </div>
         </div>
@@ -365,10 +353,8 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-lg">
           <div class="col-lg-8">
-            <h2 class="display-3">Development time</h2>
-            <p class="lead text-muted">The Gitpub platform is developed by undergraduate students of the University of Brasilia
-              of Gama College regarding the product delivery of the discipline of Software design taught by Professor Milene
-              Serrano.
+            <h2 class="display-3">Development team</h2>
+            <p class="lead text-muted">A plataforma Gitpub é desenvolvida por alunos de graduação da Universidade de Brasília do Gama College, no que se refere à entrega do produto da disciplina de design de software ministrada pelo professor Milene Serrano.
             </p>
           </div>
         </div>
