@@ -15,10 +15,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.name
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-
 class AnonymousUser(CustomUser):
     """
     AnonymousUser
@@ -40,6 +36,9 @@ class AnonymousUser(CustomUser):
         obj, created = cls.objects.get_or_create(pk=0, name="Anonymous User")
         return obj
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
 class RegisteredUser(CustomUser):
     """
@@ -56,6 +55,9 @@ class RegisteredUser(CustomUser):
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email', 'name', 'registry']
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class Period(models.Model):
     """
