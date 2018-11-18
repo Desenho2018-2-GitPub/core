@@ -23,7 +23,7 @@ class AnonymousUser(CustomUser):
 
     def save(self, *args, **kwargs):
         self.pk = 0
-        self.name = "Anonymous User"
+        self.name = "Usuário Anônimo"
         try:
             super(AnonymousUser, self).save(*args, **kwargs)
         except BaseException:

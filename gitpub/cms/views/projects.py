@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from gitpub.logging import debug
-from cms.models import Classroom, Project, Course
+from cms.models import Classroom, Project, Course, AnonymousUser, Comment
 from django.contrib.auth.decorators import login_required
 
 @debug
@@ -67,5 +67,22 @@ def delete(request, course_id, classroom_id, project_id):
     project.delete()
 
     redirect_url = '/courses/{0}/classrooms/{1}/'.format(course_id, classroom_id)
+
+    return redirect(redirect_url)
+
+@debug
+def comment(request, course_id, classroom_id, project_id):
+    project = Project.objects.get(id=project_id)
+    
+    text = request.POST.get('comment_text')
+    
+    if request.user.is_authenticated:
+        user = request.user
+    else:
+        user = AnonymousUser.objects.create(name='Anonymous User')
+
+    comment = Comment.objects.create(text=text, user=user, project=project)
+
+    redirect_url = '/courses/{0}/classrooms/{1}/projects/{2}'.format(course_id, classroom_id, project_id)
 
     return redirect(redirect_url)

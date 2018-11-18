@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^update/$', projects.update, name='projects_update'),
     url(r'^edit/(?P<project_id>\d+)/$', projects.edit, name='projects_edit'),
     url(r'^delete/(?P<project_id>\d+)/$', projects.delete, name='projects_delete'),
+    url(r'^comment/(?P<project_id>\d+)/$', projects.comment, name='projects_delete'),
     url(r'^(?P<project_id>\d+)/$', projects.show, name='projects_show'),
 ]

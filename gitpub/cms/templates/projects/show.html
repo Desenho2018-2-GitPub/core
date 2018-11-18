@@ -1,7 +1,7 @@
 {% extends 'layouts/base.html' %} {% block content %}
 <div class="container pt-lg-md">
   <div class="justify-content-center">
-    <div class=" card-body px-lg-3 py-lg-3">
+    <div class="card-body px-lg-3 py-lg-3">
       <div>
         <form role="form" class="card bg-secondary shadow p-4">
           <h1 class="display-3">{{ project.name }}</h1>
@@ -17,6 +17,25 @@
         </form>
       </div>
     </div>
+    <div class="card-body px-lg-3 py-lg-3">
+        <h1>Comentários</h1>
+        {% for comment in project.comments.all %}
+        <div class="card shadow p-4">
+            <p>{{ comment.user.name }} comentou:</p>
+            <p>{{ comment.text }}</p>
+        </div>
+        {% endfor %}
+        <form role="form" class="card bg-secondary shadow p-4" action="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/comment/{{project.id}}/"
+          method="post">
+          {% csrf_token %}
+          <div class="form-group mb-3">
+            <div class="input-group input-group-alternative">
+              <input class="form-control" name="comment_text" type="text" placeholder="Comentário">
+            </div>
+          </div>
+          <input class="btn btn-default" type="submit" value="Comentar">
+        </form>
+      </div>
   </div>
 </div>
 {% endblock %}
