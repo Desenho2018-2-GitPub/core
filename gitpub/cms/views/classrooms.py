@@ -27,7 +27,7 @@ def index(request, course_id):
 def show(request, course_id, classroom_id):
     classroom = get_object_or_404(Classroom, id=classroom_id)
     data = {
-        'course_id': course_id,
+        'course': Course.objects.get(id=course_id),
         'classroom': classroom,
         'enrolled_users': classroom.enrolled_users.all()
     }
