@@ -1,6 +1,10 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bfada28f24f3411d918b3ac2456db21a)](https://www.codacy.com/app/vitorfhc/GitPub?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Desenho2018-2/GitPub&amp;utm_campaign=Badge_Grade)
+<br>
 ![logo](https://user-images.githubusercontent.com/18054053/44956569-63f60980-ae9c-11e8-88c3-b67ba48f4693.png)
 
 ## About the Project
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b930bb71cffa4d019538df2940b9fac2)](https://app.codacy.com/app/vitorfhc/GitPub?utm_source=github.com&utm_medium=referral&utm_content=Desenho2018-2/GitPub&utm_campaign=Badge_Grade_Dashboard)
 
 GitPub is an web application developed by Software Engineering students of Universidade de Brasilia - UnB, that aims to aid the management of software projects within university disciplines.
 The application consists of a repository for projects that are developed in the course of the disciplines of the UnB and that most of the time are lost for lack of an appropriate place to expose what has been developed by the students and as a result the University loses the opportunity to own a portfolio with quality projects.

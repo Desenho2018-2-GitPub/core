@@ -1,8 +1,10 @@
-from django.test import TestCase, TransactionTestCase 
+from django.test import TestCase, TransactionTestCase
 from cms.models import AnonymousUser, RegisteredUser
 from django.db import transaction
 
 # Create your tests here.
+
+
 class UserCreationTestCase(TransactionTestCase):
     # Anonymous User
     def test_anonymous_user_creation(self):

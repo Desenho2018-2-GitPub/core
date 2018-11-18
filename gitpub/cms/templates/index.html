@@ -4,11 +4,8 @@
   <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
     <div class="container">
       <a class="navbar-brand mr-lg-5" href="/">
-        <img src="../static/assets/img/brand/gitpub.png">
+        <img src="/static/assets/img/brand/gitpub.png">
       </a>
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
       <div class="navbar-collapse collapse" id="navbar_global">
         <div class="navbar-collapse-header">
             <div class="col-6 collapse-close">
@@ -79,6 +76,24 @@
               <span class="nav-link-inner--text d-lg-none">Github</span>
             </a>
           </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item d-none d-lg-block ml-lg-4">
+            <a href="dashboard" target="" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+                <i class="fa fa-address-card"></i>
+              </span>
+              <span class="nav-link-inner--text">My Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item d-none d-lg-block ml-lg-4">
+            <a href="logout" target="" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+                <i class="fa fa-sign-out"></i>
+              </span>
+              <span class="nav-link-inner--text">Logout</span>
+            </a>
+          </li>
+          {% else %}
           <li class="nav-item d-none d-lg-block ml-lg-4">
             <a href="login" target="" class="btn btn-neutral btn-icon">
               <span class="btn-inner--icon">
@@ -95,6 +110,7 @@
               <span class="nav-link-inner--text">Sign up</span>
             </a>
           </li>
+          {% endif %}
         </ul>
       </div>
     </div>
@@ -119,10 +135,10 @@
         <div class="col px-0">
           <div class="row">
             <div class="col-lg-6">
-              <h1 class="display-3  text-white">Built for developers of the University of Brasilia
+              <h1 class="display-3 text-white">Built for developers of the University of Brasilia
                 <span></span>
               </h1>
-              <p class="lead  text-white">GitPub is an web application developed by Software Engineering students of Universidade de Brasilia - UnB, that aims to aid the management of software projects within university disciplines.</p>
+              <p class="lead text-white">GitPub is an web application developed by Software Engineering students of Universidade de Brasilia - UnB, that aims to aid the management of software projects within university disciplines.</p>
             </div>
           </div>
         </div>
@@ -151,21 +167,22 @@
               <div class="text-center text-muted mb-2">
                 <small>Or sign up with credentials</small>
               </div>
-              <form role="form">
+              <form role="form" action="/create_user" method="post">
+                {% csrf_token %}
                 <div class="form-group">
                   <div class="input-group input-group-alternative mb-0">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                      <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Name" type="text">
+                    <input class="form-control" name="name" placeholder="Name" type="text">
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="input-group input-group-alternative mb-0">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                      <span class="input-group-text"><i class="ni ni-badge"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Username" type="text">
+                    <input class="form-control" name="username" placeholder="Username" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -173,7 +190,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" type="email">
+                    <input class="form-control" name="email" placeholder="Email" type="email">
                   </div>
                 </div>
                 <div class="form-group">
@@ -181,7 +198,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Registration" type="text">
+                    <input class="form-control" name="registry" placeholder="Registration" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -189,7 +206,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password" type="password">
+                    <input class="form-control" name="password" placeholder="Password" type="password">
                   </div>
                 </div>
                 <div class="form-group">
@@ -213,7 +230,7 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary mt-3">Create account</button>
+                  <button type="submit" class="btn btn-primary mt-3">Create account</button>
                 </div>
               </form>
             </div>
@@ -234,7 +251,7 @@
         <div class="col-lg-12">
           <div class="row row-grid">
             <div class="col-lg-4">
-              <div class="card card-lift--hover shadow border-0">
+              <div class="card shadow border-0">
                 <div class="card-body py-5">
                   <div class="icon icon-shape icon-shape-info rounded-circle mb-4">
                     <i class="ni ni-laptop"></i>
@@ -251,7 +268,7 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="card card-lift--hover shadow border-0">
+              <div class="card shadow border-0">
                 <div class="card-body py-5">
                   <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
                     <i class="ni ni-istanbul"></i>
@@ -268,7 +285,7 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="card card-lift--hover shadow border-0">
+              <div class="card shadow border-0">
                 <div class="card-body py-5">
                   <div class="icon icon-shape icon-shape-dark rounded-circle mb-4">
                     <i class="ni ni-spaceship"></i>

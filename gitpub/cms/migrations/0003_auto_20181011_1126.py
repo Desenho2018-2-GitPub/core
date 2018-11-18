@@ -23,36 +23,55 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='classroom',
             name='enrolled_users',
-            field=models.ManyToManyField(related_name='enrolled_classrooms', to=settings.AUTH_USER_MODEL),
+            field=models.ManyToManyField(
+                related_name='enrolled_classrooms',
+                to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='classroom',
             name='course',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='classrooms', to='cms.Course'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name='classrooms',
+                to='cms.Course'),
         ),
         migrations.AlterField(
             model_name='classroom',
             name='owner',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='owned_classrooms', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name='owned_classrooms',
+                to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='classroom',
             name='period',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='classrooms', to='cms.Period'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name='classrooms',
+                to='cms.Period'),
         ),
         migrations.AlterField(
             model_name='comment',
             name='project',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='cms.Project'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name='comments',
+                to='cms.Project'),
         ),
         migrations.AlterField(
             model_name='comment',
             name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='cms.CustomUser'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name='comments',
+                to='cms.CustomUser'),
         ),
         migrations.AlterField(
             model_name='project',
             name='classroom',
-            field=models.ManyToManyField(related_name='projects', to='cms.Classroom'),
+            field=models.ManyToManyField(
+                related_name='projects',
+                to='cms.Classroom'),
         ),
     ]

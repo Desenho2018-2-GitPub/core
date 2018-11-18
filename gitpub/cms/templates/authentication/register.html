@@ -1,7 +1,7 @@
 {% extends 'layouts/base.html' %} {% block content %}
 
 <main>
-  <section class="section section-shaped">
+  <section class="section-shaped">
     <div class="shape shape-style-1 bg-gradient-default">
       <span></span>
       <span></span>
@@ -12,86 +12,107 @@
       <span></span>
       <span></span>
     </div>
-    <div class="container pt-lg-md">
-      <div class="row justify-content-center">
-        <div class="col-lg-5">
-          <div class="card bg-secondary shadow border-0">
-            <div class="card-header bg-white pb-3">
-              <div class="text-muted text-center mb-3">
-                <small>Sign up with</small>
-              </div>
-              <div class="text-center">
-                <a href="#" class="btn btn-neutral btn-icon mr-4">
-                  <span class="btn-inner--icon">
-                    <img src="../static/assets/img/icons/common/github.svg">
-                  </span>
-                  <span class="btn-inner--text">Github</span>
-                </a>
-                <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon">
-                    <img src="../static/assets/img/icons/common/google.svg">
-                  </span>
-                  <span class="btn-inner--text">Google</span>
-                </a>
-              </div>
-            </div>
-            <div class="card-body px-lg-3 py-lg-3">
-              <div class="text-center text-muted mb-4">
-                <small>Or sign up with credentials</small>
-              </div>
-              <form role="form">
-                <div class="form-group">
-                  <div class="input-group input-group-alternative mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
-                    </div>
-                    <input class="form-control" placeholder="Name" type="text">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="input-group input-group-alternative mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                    </div>
-                    <input class="form-control" placeholder="Email" type="email">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                    </div>
-                    <input class="form-control" placeholder="Password" type="password">
-                  </div>
-                </div>
-                <div class="text-muted font-italic">
-                  <small>password strength:
-                    <span class="text-success font-weight-700">strong</span>
-                  </small>
-                </div>
-                <div class="row my-4">
-                  <div class="col-12">
-                    <div class="custom-control custom-control-alternative custom-checkbox">
-                      <input class="custom-control-input" id="customCheckRegister" type="checkbox">
-                      <label class="custom-control-label" for="customCheckRegister">
-                        <span>I agree with the
-                          <a href="#">Privacy Policy</a>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
+    <div class="signup p-4">
+      <div class="container pt-lg-md">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="card bg-secondary shadow border-0">
+              <div class="card-header bg-white pb-2">
+                <div class="text-muted text-center mb-0">
+                  <small>Sign up with</small>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-primary mt-4">Create account</button>
+                  <a href="#" class="btn btn-neutral btn-icon mr-0">
+                    <span class="btn-inner--icon">
+                      <img src="../static/assets/img/icons/common/github.svg">
+                    </span>
+                    <span class="btn-inner--text">Github</span>
+                  </a>
+                  <a href="#" class="btn btn-neutral btn-icon">
+                    <span class="btn-inner--icon">
+                      <img src="../static/assets/img/icons/common/google.svg">
+                    </span>
+                    <span class="btn-inner--text">Google</span>
+                  </a>
                 </div>
-              </form>
+              </div>
+              <div class="card-body px-lg-5 py-lg-2">
+                <div class="text-center text-muted mb-2">
+                  <small>Or sign up with credentials</small>
+                </div>
+                <form role="form" action="/create_user" method="post">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-0">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-single-02"></i></span>
+                      </div>
+                      <input class="form-control" name="name" placeholder="Name" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-0">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-badge"></i></span>
+                      </div>
+                      <input class="form-control" name="username" placeholder="Username" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      </div>
+                      <input class="form-control" name="email" placeholder="Email" type="email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative mb-0">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                      </div>
+                      <input class="form-control" name="registry" placeholder="Registration" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                      </div>
+                      <input class="form-control" name="password" placeholder="Password" type="password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="Password confirmation" type="password">
+                    </div>
+                  </div>
+                  <div class="row my-0">
+                    <div class="col-8">
+                      <div class="custom-control custom-control-alternative custom-checkbox">
+                        <input class="custom-control-input" id="customCheckRegister" type="checkbox">
+                        <label class="custom-control-label" for="customCheckRegister">
+                          <span>I agree with the
+                            <a href="#">Privacy Policy</a>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary mt-3">Create account</button>
+                  </div>
+                </form>
+              </div>
             </div>
-          </div>
-          <div class="row mt-3">
+            <div class="row mt-3">
               <div class="col-6">
-                <!-- <a href="#" class="text-light">
-                  <small>Forgot password?</small>
-                </a> -->
+                  <a href="forgot_password" class="text-light">
+                  <small>Esqueceu a senha?</small>
+                </a> 
               </div>
               <div class="col-6 text-right">
                 <a href="login" class="text-light">
@@ -99,6 +120,7 @@
                 </a>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>

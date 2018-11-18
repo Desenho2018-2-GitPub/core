@@ -1,19 +1,40 @@
 {% extends 'layouts/base.html' %} {% block content %}
-<div>
-    <h1>Courses:</h1>
-    <div>
-        <ul>
+        
+<section class="section section-lg pt-lg-0 mt-200">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+          <h1 class="display-3 mt-4">Disciplinas</h1>
+          {% if user.is_superuser %}
+          <a href="/courses/new" class="btn btn-primary btn-lg btn-block m-4">Criar Disciplina</a>
+          {% endif %}
+          <div class="row row-grid">
             {% for each in courses %}
-            <li>
-                <h4>{{each.id }} - {{ each.name }}</h4>
-                <p>{{each.description}}</p>
-                <a href="/courses/{{each.id}}" class="nav-link nav-link-icon">Show</a>
-                <a href="/courses/edit/{{each.id}}" class="nav-link nav-link-icon">Edit</a>
-                <a href="/courses/delete/{{each.id}}"class="nav-link nav-link-icon">Delete</a>
-            </li>
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow border-0">
+                  <div class="card-body py-3">
+                      <h6 class="text-primary text-uppercase">{{ each.name }}</h6>
+                      <p class="description mt-3">{{each.description}}</p>
+                      <div>
+                      <span class="badge badge-pill badge-primary">GCES</span>
+                      <span class="badge badge-pill badge-primary">UnB</span>
+                      <span class="badge badge-pill badge-primary">DEG</span>
+                      </div>
+                      <a href="/courses/{{each.id}}"  class="btn btn-primary btn-sm mt-4">Explorar</a>
+                      <!-- <a href="/courses/edit/{{each.id}}"  class="btn btn-primary btn-sm mt-4">Editar</a> -->
+                      <!-- <a href="/courses/delete/{{each.id}}"  class="btn btn-danger btn-sm mt-4">Deletar</a>     -->
+                  </div>
+                </div>
+            </div>
             {% endfor %}
-        </ul>
+          </div>
+      </div>
     </div>
-    <a href="/courses/new" class="nav-link nav-link-icon">New</a>
-</div>
+  </div>
+</section>
+
+
 {% endblock %}
+
+
+

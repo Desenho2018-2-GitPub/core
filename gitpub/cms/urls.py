@@ -10,6 +10,14 @@ from cms.views.users import signup
 
 urlpatterns = [
     url(r'^$', cms.index, name='index'),
-    url(r'^courses/', include(courses)),
-    url(r'^signup/$', signup, name='signup')
+    url(r'^login', cms.login, name='login'),
+    url(r'^register', cms.register, name='register'),
+    url(r'^forgot_password', cms.forgot_password, name='forgot_password'),
+    url(r'^dashboard', cms.dashboard, name='dashboard'),
+    url(r'^authenticate', cms.authenticate, name='authenticate'),
+    url(r'^logout', cms.logout, name='logout'),
+    url(r'^create_user', cms.create_user, name='create_user'),
+    url(r'^update_user', cms.update_user, name='update_user'),
+    url(r'^signup/$', signup, name='signup'),
+    url(r'^courses/', include(courses))
 ]
