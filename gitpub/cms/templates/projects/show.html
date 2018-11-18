@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %} {% block content %}
+<div class="container pt-lg-md">
+  <div class="justify-content-center">
+    <div class=" card-body px-lg-3 py-lg-3">
+      <div>
+        <form role="form" class="card bg-secondary shadow p-4">
+          <h1 class="display-3">{{ project.name }}</h1>
+          <p>{{ project.description }}</p>
+          <div class="row">
+            <div class="col-sm">
+              {% if user.id == classroom.owner.id %}
+              <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/edit/{{project.id}}">Editar</a>
+              {% endif %}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

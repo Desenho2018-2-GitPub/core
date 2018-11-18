@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from gitpub.logging import debug
-from cms.models import Classroom, Project
+from cms.models import Classroom, Project, Course
 from django.contrib.auth.decorators import login_required
 
 @debug
@@ -34,8 +34,11 @@ def create(request, course_id, classroom_id):
 
 @debug
 @login_required(login_url='/login')
-def show(request, course_id, classroom_id):
-    return HttpResponse("SHOW")
+def show(request, course_id, classroom_id, project_id):
+    project = Project.objects.get(id=project_id)
+    classroom = Classroom.objects.get(id=classroom_id)
+    course = Course.objects.get(id=course_id)
+    return render(request, 'projects/show.html', {'project': project, 'classroom': classroom, 'course': course})
 
 @debug
 @login_required(login_url='/login')
