@@ -14,37 +14,23 @@
     </div>
     <div class="container pt-lg-md p-4">
       <div class="row justify-content-center">
-        <div class="col-lg-5">
+        <div class="col-lg-5">''
           <div class="row justify-content-center session-brand">
             <img class="session-brand" src="../static/assets/img/brand/gitpub.png">
           </div>
           <div class="row justify-content-center session-brand">
             <h2 class="text-light">Sign in to GitPub</h2>
           </div>
+          {% if errors is not None %}
+            {% for error in errors %}
+              <div class="alert alert-danger" role="alert">
+                <strong>Ops!</strong> {{ error }}
+              </div>
+            {% endfor %}
+          {% endif %}
           <div class="card bg-secondary shadow border-0">
-            <div class="card-header bg-white pb-3">
-              <div class="text-muted text-center mb-3">
-                <small>Sign in with</small>
-              </div>
-              <div class="btn-wrapper text-center">
-                <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon">
-                    <img src="../static/assets/img/icons/common/github.svg">
-                  </span>
-                  <span class="btn-inner--text">Github</span>
-                </a>
-                <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon">
-                    <img src="../static/assets/img/icons/common/google.svg">
-                  </span>
-                  <span class="btn-inner--text">Google</span>
-                </a>
-              </div>
-            </div>
             <div class="card-body px-lg-3 py-lg-3">
-              <div class="text-center text-muted mb-4">
-                <small>Or sign in with credentials</small>
-              </div>
+
               <form role="form" action="/authenticate" method="post">
                 {% csrf_token %}
                 <input name="next" value="{{ next }}" type="hidden">

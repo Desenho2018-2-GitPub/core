@@ -6,6 +6,8 @@ from django.http import HttpResponseNotFound
 from django.contrib import auth
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import signals
+from django.dispatch import receiver
 
 from cms.models import Course, Classroom
 
@@ -17,20 +19,23 @@ def index(request):
 
 @debug
 def login(request):
+    print(request)
+
     redirect_url = '/dashboard'
 
     if request.GET.get('next') is not None:
         redirect_url = request.GET.get('next')
 
+    errors = request.session.get('errors', [])
+    request.session['errors'] = []
+
     if not request.user.is_authenticated:
         return render(request,
                       'authentication/login.html',
-                      {'next': redirect_url})
+                      {'next': redirect_url, 'errors': errors})
     else:
         return redirect(redirect_url)
 
-
-@debug
 def authenticate(request):
     username = request.POST['username']
     password = request.POST['password']
@@ -46,8 +51,9 @@ def authenticate(request):
         auth.login(request, user)
         return redirect(redirect_url)
     else:
-        return redirect('/login', {'next': redirect_url})
+        request.session['errors'] = ['Login não efetuado. Verifique suas credenciais.']
 
+        return redirect('/login?next={0}'.format(redirect_url))
 
 @debug
 def create_user(request):
