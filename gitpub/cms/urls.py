@@ -6,8 +6,6 @@ from django.urls import include
 from django.conf.urls import url, include
 from django.contrib.auth import views as auth_views
 
-from cms.views.users import signup
-
 urlpatterns = [
     url(r'^$', cms.index, name='index'),
     url(r'^login', cms.login, name='login'),
@@ -18,6 +16,5 @@ urlpatterns = [
     url(r'^logout', cms.logout, name='logout'),
     url(r'^create_user', cms.create_user, name='create_user'),
     url(r'^update_user', cms.update_user, name='update_user'),
-    url(r'^signup/$', signup, name='signup'),
     url(r'^courses/', include(courses))
 ]
