@@ -73,6 +73,9 @@ class Period(models.Model):
     def __str__(self):
         return ", ".join([self.semester, self.year])
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
 class Course(models.Model):
     """
@@ -99,6 +102,9 @@ class Course(models.Model):
         return total
 
     number_of_projects = property(number_of_projects)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
 class Classroom(models.Model):
@@ -138,13 +144,17 @@ class Classroom(models.Model):
     class Meta:
         ordering = ('course', 'period', 'name')
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
 class Project(models.Model):
     """
     A project belongs to a classroom, has comments and material
     """
     name = models.CharField(max_length=50)
-    description = models.CharField(max_length=140)
+    short_description = models.CharField(max_length=280)
+    description = models.CharField(max_length=10000)
     views = models.IntegerField(default=0)
     classroom = models.ManyToManyField(
         Classroom,
@@ -154,12 +164,15 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
 class Comment(models.Model):
     """
     A comment is written by an user to a project.
     """
-    text = models.CharField(max_length=140)
+    text = models.CharField(max_length=500)
     user = models.ForeignKey(
         CustomUser,
         on_delete=models.CASCADE,
@@ -174,14 +187,20 @@ class Comment(models.Model):
     def __str__(self):
         return self.text
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 class Material(models.Model):
     """
     Materials belong to projects
     """
-    url = models.CharField(max_length=140)
+    url = models.CharField(max_length=1000)
     
     project = models.ForeignKey(
         Project,
         on_delete=models.CASCADE,
         related_name='materials'
     )
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
