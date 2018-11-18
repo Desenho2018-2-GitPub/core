@@ -42,18 +42,30 @@ def show(request, course_id, classroom_id, project_id):
 
 @debug
 @login_required(login_url='/login')
-def index(request, course_id, classroom_id):
-    return HttpResponse("OK")
+def edit(request, course_id, classroom_id, project_id):
+    project = Project.objects.get(id=project_id)
+    classroom = Classroom.objects.get(id=classroom_id)
+    course = Course.objects.get(id=course_id)
+    return render(request, 'projects/edit.html', {'project': project, 'classroom': classroom, 'course': course})
 
-@debug
-@login_required(login_url='/login')
-def edit(request, course_id, classroom_id):
-    return HttpResponse("EDIT")
 
 @debug
 @login_required(login_url='/login')
 def update(request, course_id, classroom_id):
-    pass
+    project_data = {
+        'name': request.POST.get('name'),
+        'description': request.POST.get('description')
+    }
+
+    project = Project.objects.get(id=request.POST.get('id'))
+
+    project.__dict__.update(**project_data)
+
+    project.save()
+
+    redirect_url = '/courses/{0}/classrooms/{1}/projects/{2}'.format(course_id, classroom_id, project.id)
+
+    return redirect(redirect_url)
 
 @debug
 @login_required(login_url='/login')
