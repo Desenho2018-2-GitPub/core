@@ -22,7 +22,7 @@
       <div class="card bg-secondary shadow p-4 mt-4">
         <h1 class="display-3">Turmas</h1>
         {% for classroom in course.classrooms.all %}
-        <div class="card bg-secondary shadow p-4 mt-4">
+        <div class="card bg-secondary border-success p-4 mt-4">
           <h5>
             {{ classroom.name }} - {{ classroom.owner.name }}
             <small class="text-muted">{{ classroom.period.semester }}/{{ classroom.period.year }}</small>
@@ -30,10 +30,10 @@
           <div class="row">
             <div class="col-sm">
               <a class="btn btn-info btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}">Explorar</a>
-              {% if user in classroom.enrolled_users.all %}
+              {% if user in classroom.enrolled_users.all and user.is_authenticated %}
               <a class="btn btn-danger btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/unsubscribe">Desmatricular</a>
-              {% else %}
-              <a class="btn btn-success btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/subscribe">Matriular</a>
+              {% elif user.is_authenticated %}
+              <a class="btn btn-success btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/subscribe">Matricular</a>
               {% endif %}
             </div>
           </div>
