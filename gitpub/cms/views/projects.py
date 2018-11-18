@@ -14,18 +14,15 @@ def new(request, course_id, classroom_id):
 def create(request, course_id, classroom_id):
     name = request.POST.get('name')
     description = request.POST.get('description')
-
     classroom = Classroom.objects.get(id=classroom_id)
 
     project = Project(
         name=name,
         description=description,
     )
-
     project.save()
 
     project.classroom.set([classroom])
-
     project.save()
 
     redirect_url = '/courses/{0}/classrooms/{1}'.format(course_id, classroom_id)
@@ -33,7 +30,6 @@ def create(request, course_id, classroom_id):
     return redirect(redirect_url)
 
 @debug
-@login_required(login_url='/login')
 def show(request, course_id, classroom_id, project_id):
     project = Project.objects.get(id=project_id)
     classroom = Classroom.objects.get(id=classroom_id)
@@ -48,7 +44,6 @@ def edit(request, course_id, classroom_id, project_id):
     course = Course.objects.get(id=course_id)
     return render(request, 'projects/edit.html', {'project': project, 'classroom': classroom, 'course': course})
 
-
 @debug
 @login_required(login_url='/login')
 def update(request, course_id, classroom_id):
@@ -58,9 +53,7 @@ def update(request, course_id, classroom_id):
     }
 
     project = Project.objects.get(id=request.POST.get('id'))
-
     project.__dict__.update(**project_data)
-
     project.save()
 
     redirect_url = '/courses/{0}/classrooms/{1}/projects/{2}'.format(course_id, classroom_id, project.id)
