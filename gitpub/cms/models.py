@@ -15,7 +15,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.name
 
-
 class AnonymousUser(CustomUser):
     """
     AnonymousUser
@@ -23,7 +22,7 @@ class AnonymousUser(CustomUser):
 
     def save(self, *args, **kwargs):
         self.pk = 0
-        self.name = "Anonymous User"
+        self.name = "Usuário Anônimo"
         try:
             super(AnonymousUser, self).save(*args, **kwargs)
         except BaseException:
@@ -36,6 +35,9 @@ class AnonymousUser(CustomUser):
     def load(cls):
         obj, created = cls.objects.get_or_create(pk=0, name="Anonymous User")
         return obj
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
 class RegisteredUser(CustomUser):
@@ -54,13 +56,8 @@ class RegisteredUser(CustomUser):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email', 'name', 'registry']
 
-
-class Material(models.Model):
-    """
-    Materials belong to projects
-    """
-    url = models.CharField(max_length=140)
-
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class Period(models.Model):
     """
@@ -78,6 +75,9 @@ class Period(models.Model):
     def __str__(self):
         return ", ".join([self.semester, self.year])
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
 class Course(models.Model):
     """
@@ -88,6 +88,25 @@ class Course(models.Model):
 
     def __str__(self):
         return self.name
+
+    def number_of_classrooms(self):
+        return len(self.classrooms.all())
+
+    number_of_classrooms = property(number_of_classrooms)
+
+    def number_of_projects(self):
+        classrooms = self.classrooms.all()
+        total = 0
+
+        for classroom in classrooms:
+            total += classroom.number_of_projects
+
+        return total
+
+    number_of_projects = property(number_of_projects)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
 class Classroom(models.Model):
@@ -119,8 +138,16 @@ class Classroom(models.Model):
     def __str___(self):
         return self.name
 
+    def number_of_projects(self):
+        return len(self.projects.all())
+
+    number_of_projects = property(number_of_projects)
+
     class Meta:
         ordering = ('course', 'period', 'name')
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
 class Project(models.Model):
@@ -128,7 +155,8 @@ class Project(models.Model):
     A project belongs to a classroom, has comments and material
     """
     name = models.CharField(max_length=50)
-    description = models.CharField(max_length=140)
+    short_description = models.CharField(max_length=280)
+    description = models.CharField(max_length=10000)
     views = models.IntegerField(default=0)
     classroom = models.ManyToManyField(
         Classroom,
@@ -138,12 +166,15 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
 class Comment(models.Model):
     """
     A comment is written by an user to a project.
     """
-    text = models.CharField(max_length=140)
+    text = models.CharField(max_length=500)
     user = models.ForeignKey(
         CustomUser,
         on_delete=models.CASCADE,
@@ -157,3 +188,21 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class Material(models.Model):
+    """
+    Materials belong to projects
+    """
+    url = models.CharField(max_length=1000)
+    
+    project = models.ForeignKey(
+        Project,
+        on_delete=models.CASCADE,
+        related_name='materials'
+    )
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

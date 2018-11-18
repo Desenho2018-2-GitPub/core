@@ -8,111 +8,117 @@
       </a>
       <div class="navbar-collapse collapse" id="navbar_global">
         <div class="navbar-collapse-header">
-            <div class="col-6 collapse-close">
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-              </button>
-            </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </div>
-        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-          <li class="nav-item dropdown">
-            <div class="dropdown-menu dropdown-menu-xl">
-              <div class="dropdown-menu-inner">
-                <a href="https://demos.creative-tim.com/argon-design-system/docs/getting-started/overview.html" class="media d-flex align-items-center">
-                  <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                    <i class="ni ni-spaceship"></i>
-                  </div>
-                  <div class="media-body ml-3">
-                    <h6 class="heading text-primary mb-md-1">Getting started</h6>
-                    <p class="description d-none d-md-inline-block mb-0">Learn how to use Argon compiling Scss, change brand colors and more.</p>
-                  </div>
-                </a>
-                <a href="https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html" class="media d-flex align-items-center">
-                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
-                    <i class="ni ni-palette"></i>
-                  </div>
-                  <div class="media-body ml-3">
-                    <h6 class="heading text-primary mb-md-1">Foundation</h6>
-                    <p class="description d-none d-md-inline-block mb-0">Learn more about colors, typography, icons and the grid system we used for Argon.</p>
-                  </div>
-                </a>
-                <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
-                  <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                    <i class="ni ni-ui-04"></i>
-                  </div>
-                  <div class="media-body ml-3">
-                    <h5 class="heading text-warning mb-md-1">Components</h5>
-                    <p class="description d-none d-md-inline-block mb-0">Browse our 50 beautiful handcrafted components offered in the Free version.</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-          <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
-              <i class="fa fa-facebook-square"></i>
-              <span class="nav-link-inner--text d-lg-none">Facebook</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
-              <i class="fa fa-instagram"></i>
-              <span class="nav-link-inner--text d-lg-none">Instagram</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
-              <i class="fa fa-twitter-square"></i>
-              <span class="nav-link-inner--text d-lg-none">Twitter</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://github.com/creativetimofficial/argon-design-system" target="_blank" data-toggle="tooltip" title="Star us on Github">
-              <i class="fa fa-github"></i>
-              <span class="nav-link-inner--text d-lg-none">Github</span>
-            </a>
-          </li>
-          {% if user.is_authenticated %}
-          <li class="nav-item d-none d-lg-block ml-lg-4">
-            <a href="dashboard" target="" class="btn btn-neutral btn-icon">
-              <span class="btn-inner--icon">
-                <i class="fa fa-address-card"></i>
-              </span>
-              <span class="nav-link-inner--text">My Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item d-none d-lg-block ml-lg-4">
-            <a href="logout" target="" class="btn btn-neutral btn-icon">
-              <span class="btn-inner--icon">
-                <i class="fa fa-sign-out"></i>
-              </span>
-              <span class="nav-link-inner--text">Logout</span>
-            </a>
-          </li>
-          {% else %}
-          <li class="nav-item d-none d-lg-block ml-lg-4">
-            <a href="login" target="" class="btn btn-neutral btn-icon">
-              <span class="btn-inner--icon">
-                <i class="fa fa-user mr-2"></i>
-              </span>
-              <span class="nav-link-inner--text">Sign in</span>
-            </a>
-          </li>
-          <li class="nav-item d-none d-lg-block ml-lg-4">
-            <a href="register" target="" class="btn btn-neutral btn-icon">
-              <span class="btn-inner--icon">
-                <i class="fa fa-user-plus mr-2"></i>
-              </span>
-              <span class="nav-link-inner--text">Sign up</span>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
       </div>
+      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+        <li class="nav-item dropdown">
+          <div class="dropdown-menu dropdown-menu-xl">
+            <div class="dropdown-menu-inner">
+              <a href="https://demos.creative-tim.com/argon-design-system/docs/getting-started/overview.html" class="media d-flex align-items-center">
+                <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                  <i class="ni ni-spaceship"></i>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="heading text-primary mb-md-1">Getting started</h6>
+                  <p class="description d-none d-md-inline-block mb-0">Learn how to use Argon compiling Scss, change brand
+                    colors and more.</p>
+                </div>
+              </a>
+              <a href="https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html" class="media d-flex align-items-center">
+                <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                  <i class="ni ni-palette"></i>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="heading text-primary mb-md-1">Foundation</h6>
+                  <p class="description d-none d-md-inline-block mb-0">Learn more about colors, typography, icons and the
+                    grid system we used for Argon.</p>
+                </div>
+              </a>
+              <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
+                <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                  <i class="ni ni-ui-04"></i>
+                </div>
+                <div class="media-body ml-3">
+                  <h5 class="heading text-warning mb-md-1">Components</h5>
+                  <p class="description d-none d-md-inline-block mb-0">Browse our 50 beautiful handcrafted components offered
+                    in the Free version.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" title="Like us on Facebook">
+            <i class="fa fa-facebook-square"></i>
+            <span class="nav-link-inner--text d-lg-none">Facebook</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip"
+            title="Follow us on Instagram">
+            <i class="fa fa-instagram"></i>
+            <span class="nav-link-inner--text d-lg-none">Instagram</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
+            <i class="fa fa-twitter-square"></i>
+            <span class="nav-link-inner--text d-lg-none">Twitter</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" href="https://github.com/creativetimofficial/argon-design-system" target="_blank" data-toggle="tooltip"
+            title="Star us on Github">
+            <i class="fa fa-github"></i>
+            <span class="nav-link-inner--text d-lg-none">Github</span>
+          </a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item d-none d-lg-block ml-lg-4">
+          <a href="dashboard" target="" class="btn btn-neutral btn-icon">
+            <span class="btn-inner--icon">
+              <i class="fa fa-address-card"></i>
+            </span>
+            <span class="nav-link-inner--text">My Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item d-none d-lg-block ml-lg-4">
+          <a href="logout" target="" class="btn btn-neutral btn-icon">
+            <span class="btn-inner--icon">
+              <i class="fa fa-sign-out"></i>
+            </span>
+            <span class="nav-link-inner--text">Logout</span>
+          </a>
+        </li>
+        {% else %}
+        <li class="nav-item d-none d-lg-block ml-lg-4">
+          <a href="login" target="" class="btn btn-neutral btn-icon">
+            <span class="btn-inner--icon">
+              <i class="fa fa-user mr-2"></i>
+            </span>
+            <span class="nav-link-inner--text">Sign in</span>
+          </a>
+        </li>
+        <li class="nav-item d-none d-lg-block ml-lg-4">
+          <a href="register" target="" class="btn btn-neutral btn-icon">
+            <span class="btn-inner--icon">
+              <i class="fa fa-user-plus mr-2"></i>
+            </span>
+            <span class="nav-link-inner--text">Sign up</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
     </div>
   </nav>
 </header>
@@ -135,16 +141,17 @@
         <div class="col px-0">
           <div class="row">
             <div class="col-lg-6">
-              <h1 class="display-3 text-white">Built for developers of the University of Brasilia
+              <h1 class="display-3 text-white">Construído por desenvolvedores para desenvolvedores da Universidade de Brasília
                 <span></span>
               </h1>
-              <p class="lead text-white">GitPub is an web application developed by Software Engineering students of Universidade de Brasilia - UnB, that aims to aid the management of software projects within university disciplines.</p>
+              <p class="lead text-white">O GitPub é uma aplicação web desenvolvida por estudantes de Engenharia de Software da Universidade de Brasília - UnB, que visa auxiliar o gerenciamento de projetos de software dentro das disciplinas da universidade.</p>
+              <a href="/courses" class="btn btn-lg btn-secondary btn-block mt-4">Explorar</a>
             </div>
           </div>
         </div>
         <div class="signup">
           <div class="card bg-secondary shadow border-0">
-            <div class="card-header bg-white pb-2">
+            <!-- <div class="card-header bg-white pb-2">
               <div class="text-muted text-center mb-0">
                 <small>Sign up with</small>
               </div>
@@ -162,10 +169,11 @@
                   <span class="btn-inner--text">Google</span>
                 </a>
               </div>
-            </div>
+            </div> -->
+            {% if not user.is_authenticated %}
             <div class="card-body px-lg-5 py-lg-2">
               <div class="text-center text-muted mb-2">
-                <small>Or sign up with credentials</small>
+                <small>Inscreva-se</small>
               </div>
               <form role="form" action="/create_user" method="post">
                 {% csrf_token %}
@@ -174,7 +182,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                     </div>
-                    <input class="form-control" name="name" placeholder="Name" type="text">
+                    <input class="form-control" name="name" placeholder="Nome" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -198,7 +206,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                     </div>
-                    <input class="form-control" name="registry" placeholder="Registration" type="text">
+                    <input class="form-control" name="registry" placeholder="Matrícula" type="text">
                   </div>
                 </div>
                 <div class="form-group">
@@ -206,7 +214,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" name="password" placeholder="Password" type="password">
+                    <input class="form-control" name="password" placeholder="Senha" type="password">
                   </div>
                 </div>
                 <div class="form-group">
@@ -214,7 +222,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password confirmation" type="password">
+                    <input class="form-control" placeholder="Confirmação da Senha" type="password">
                   </div>
                 </div>
                 <div class="row my-0">
@@ -222,90 +230,93 @@
                     <div class="custom-control custom-control-alternative custom-checkbox">
                       <input class="custom-control-input" id="customCheckRegister" type="checkbox">
                       <label class="custom-control-label" for="customCheckRegister">
-                        <span>I agree with the
-                          <a href="#">Privacy Policy</a>
+                        <span>Eu concordo com a
+                          <a href="#">Política de Privacidade</a>
                         </span>
                       </label>
                     </div>
                   </div>
                 </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary mt-3">Create account</button>
+                  <button type="submit" class="btn btn-primary mt-3">Criar conta</button>
                 </div>
               </form>
             </div>
+            {% endif %}
           </div>
         </div>
-      <!-- SVG separator -->
-      <div class="separator separator-bottom separator-skew">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
+        <!-- SVG separator -->
+        <div class="separator separator-bottom separator-skew">
+          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
     </section>
     <!-- 1st Hero Variation -->
-  </div>
-  <section class="section section-lg pt-lg-0 mt--200">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <div class="row row-grid">
-            <div class="col-lg-4">
-              <div class="card shadow border-0">
-                <div class="card-body py-5">
-                  <div class="icon icon-shape icon-shape-info rounded-circle mb-4">
-                    <i class="ni ni-laptop"></i>
+    </div>
+    <section class="section section-lg pt-lg-0 mt--200">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="row row-grid">
+              <div class="col-lg-4">
+                <div class="card card-lift--hover shadow border-0">
+                  <div class="card-body py-5">
+                    <div class="icon icon-shape icon-shape-info rounded-circle mb-4">
+                      <i class="ni ni-laptop"></i>
+                    </div>
+                    <h6 class="text-info text-uppercase">Sobre o repositório</h6>
+                    <p class="description mt-3">A aplicação consiste em um repositório para projetos que são desenvolvidos no decorrer das disciplinas da UnB e que na maioria das vezes são perdidos por falta de um local apropriado para expor o que foi desenvolvido pelos alunos e como resultado a Universidade perde a oportunidade de possuir um portfólio com projetos de qualidade.</p>
+                    <div>
+                      <span class="badge badge-pill badge-info">UnB</span>
+                      <span class="badge badge-pill badge-info">projects</span>
+                      <span class="badge badge-pill badge-info">Students</span>
+                    </div>
+                    <a href="#" class="btn btn-info mt-4">Learn more</a>
                   </div>
-                  <h6 class="text-info text-uppercase">About the repository</h6>
-                  <p class="description mt-3">The application consists of a repository for projects that are developed in the course of the disciplines of the UnB and that most of the time are lost for lack of an appropriate place to expose what has been developed by the students and as a result the University loses the opportunity to own a portfolio with quality projects.</p>
-                  <div>
-                    <span class="badge badge-pill badge-info">UnB</span>
-                    <span class="badge badge-pill badge-info">projects</span>
-                    <span class="badge badge-pill badge-info">Students</span>
-                  </div>
-                  <a href="#" class="btn btn-info mt-4">Learn more</a>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card shadow border-0">
-                <div class="card-body py-5">
-                  <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
-                    <i class="ni ni-istanbul"></i>
+              <div class="col-lg-4">
+                <div class="card card-lift--hover shadow border-0">
+                  <div class="card-body py-5">
+                    <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
+                      <i class="ni ni-istanbul"></i>
+                    </div>
+                    <h6 class="text-success text-uppercase">Compartilhe projetos universitários</h6>
+                    <p class="description mt-3">O GitPub é um ótimo repositório para versionamento de projetos desenvolvidos na Universidade de Brasília que oferece maior confiabilidade para que os alunos possam enviar e arquivar seus projetos desenvolvidos em disciplinas ministradas na universidade inseridas em disciplinas criadas pelos professores responsáveis.
+                    </p>
+                    <div>
+                      <span class="badge badge-pill badge-success">Repository</span>
+                      <span class="badge badge-pill badge-success">Disciplines</span>
+                      <span class="badge badge-pill badge-success">University</span>
+                    </div>
+                    <a href="#" class="btn btn-success mt-4">Learn more</a>
                   </div>
-                  <h6 class="text-success text-uppercase">Share university projects</h6>
-                  <p class="description mt-3">GitPub is a great repository for versioning of projects developed at the University of Brasilia that offers greater reliability so that students can submit and archive their projects developed in disciplines taught at the university inserted in disciplines created by the responsible teachers.</p>
-                  <div>
-                    <span class="badge badge-pill badge-success">Repository</span>
-                    <span class="badge badge-pill badge-success">Disciplines</span>
-                    <span class="badge badge-pill badge-success">University</span>
-                  </div>
-                  <a href="#" class="btn btn-success mt-4">Learn more</a>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card shadow border-0">
-                <div class="card-body py-5">
-                  <div class="icon icon-shape icon-shape-dark rounded-circle mb-4">
-                    <i class="ni ni-spaceship"></i>
+              <div class="col-lg-4">
+                  <div class="card card-lift--hover shadow border-0">
+                    <div class="card-body py-5">
+                      <div class="icon icon-shape icon-shape-warning rounded-circle mb-4">
+                        <i class="ni ni-spaceship"></i>
+                      </div>
+                      <h6 class="text-warning text-uppercase">Contribua conosco</h6>
+                      <p class="description mt-3">e você é um estudante da Universidade de Brasília e está iniciando um novo projeto inserido no contexto de uma disciplina ministrada na universidade não perca tempo e comece já a contribuir com nosso repositório. Você é parte disso!</p>
+                      <div>
+                        <span class="badge badge-pill badge-warning">marketing</span>
+                        <span class="badge badge-pill badge-warning">product</span>
+                        <span class="badge badge-pill badge-warning">launch</span>
+                      </div>
+                      <a href="#" class="btn btn-warning mt-4">Learn more</a>
+                    </div>
                   </div>
-                  <h6 class="text-dark text-uppercase">Contribute with us</h6>
-                  <p class="description mt-3">If you are a student of the University of Brasilia and are starting a new project inserted in the context of a discipline taught at the university do not waste time and start already contributing with our repository. You're part of it!.</p>
-                  <div>
-                    <span class="badge badge-pill badge-secondary">FGA</span>
-                    <span class="badge badge-pill badge-secondary">Brasília</span>
-                  </div>
-                  <a href="#" class="btn btn-secondary mt-4">Learn more</a>
                 </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="section bg-secondary">
+    </section>
+    <section class="section bg-secondary">
       <div class="container">
         <div class="row row-grid align-items-center">
           <div class="col-md-6">
@@ -318,316 +329,218 @@
               <div class="icon icon-lg icon-shape icon-shape-secondary shadow rounded-circle mb-5">
                 <i class="ni ni-settings"></i>
               </div>
-              <h3>Welcome home, developers of the University of Brasilia</h3>
-              <p class="lead">Gitpub offers greater convenience to search for projects and/or disciplines taught at the institution as well as the visualization of projects of other students who were submitted to the repository and sending messages to other users.</p>
+              <h3>Bem vindo ao lar, desenvolvedores da Universidade de Brasília</h3>
+              <p class="lead">O Gitpub oferece maior conveniência para buscar projetos e / ou disciplinas ministradas na instituição, bem como a visualização de projetos de outros alunos que foram submetidos ao repositório e envio de mensagens para outros usuários.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  <section class="section pb-0 bg-gradient-info">
-    <div class="container">
-      <div class="row row-grid align-items-center">
-        <div class="col-md-6 order-lg-2 ml-lg-auto">
-          <div class="position-relative pl-md-5">
-            <img src="../static/assets/img/ill/ill-2.svg" class="img-center img-fluid">
-          </div>
-        </div>
-    <!-- SVG separator -->
-    <div class="separator separator-bottom separator-skew zindex-100">
-      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-      </svg>
-    </div>
-  </section>
-  <section class="section section-lg">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-lg">
-        <div class="col-lg-8">
-          <h2 class="display-3">Development time</h2>
-          <p class="lead text-muted">The Gitpub platform is developed by undergraduate students of the University of Brasilia of Gama College regarding the product delivery of the discipline of Software design taught by Professor Milene Serrano.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div class="px-4">
-            <img src="../static/assets/img/theme/arthur.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
-            <div class="pt-4 text-center">
-              <h5 class="title">
-                <span class="d-block mb-1">Arthur Diniz</span>
-                <small class="h6 text-muted">-</small>
-              </h5>
-              <div class="mt-3">
-                <a href="#" class="btn btn-warning btn-icon-only rounded-circle">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-warning btn-icon-only rounded-circle">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="btn btn-warning btn-icon-only rounded-circle">
-                  <i class="fa fa-dribbble"></i>
-                </a>
-              </div>
+    <section class="section pb-0 bg-gradient-info">
+      <div class="container">
+        <div class="row row-grid align-items-center">
+          <div class="col-md-6 order-lg-2 ml-lg-auto">
+            <div class="position-relative pl-md-5">
+              <img src="../static/assets/img/ill/ill-2.svg" class="img-center img-fluid">
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div class="px-4">
-            <img src="../static/assets/img/theme/diego.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
-            <div class="pt-4 text-center">
-              <h5 class="title">
-                <span class="d-block mb-1">Diego</span>
-                <small class="h6 text-muted">-</small>
-              </h5>
-              <div class="mt-3">
-                <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
-                  <i class="fa fa-dribbble"></i>
-                </a>
-              </div>
-            </div>
+          <!-- SVG separator -->
+          <div class="separator separator-bottom separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+          </div>
+    </section>
+    <section class="section section-lg">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-lg">
+          <div class="col-lg-8">
+            <h2 class="display-3">Development team</h2>
+            <p class="lead text-muted">A plataforma Gitpub é desenvolvida por alunos de graduação da Universidade de Brasília do Gama College, no que se refere à entrega do produto da disciplina de design de software ministrada pelo professor Milene Serrano.
+            </p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div class="px-4">
-            <img src="../static/assets/img/theme/ziegler.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
-            <div class="pt-4 text-center">
-              <h5 class="title">
-                <span class="d-block mb-1">Gabriel Ziegler</span>
-                <small class="h6 text-muted">-</small>
-              </h5>
-              <div class="mt-3">
-                <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
-                  <i class="fa fa-dribbble"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div class="px-4">
-            <img src="../static/assets/img/theme/joao.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
-            <div class="pt-4 text-center">
-              <h5 class="title">
-                <span class="d-block mb-1">João</span>
-                <small class="h6 text-muted">-</small>
-              </h5>
-              <div class="mt-3">
-                <a href="#" class="btn btn-info btn-icon-only rounded-circle">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-info btn-icon-only rounded-circle">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="btn btn-info btn-icon-only rounded-circle">
-                  <i class="fa fa-dribbble"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div class="px-4">
-            <img src="../static/assets/img/theme/victor.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
-            <div class="pt-4 text-center">
-              <h5 class="title">
-                <span class="d-block mb-1">Victor Moura</span>
-                <small class="h6 text-muted">-</small>
-              </h5>
-              <div class="mt-3">
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-dribbble"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div class="px-4">
-            <img src="../static/assets/img/theme/vitor.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
-            <div class="pt-4 text-center">
-              <h5 class="title">
-                <span class="d-block mb-1">Vitor Falcão</span>
-                <small class="h6 text-muted">-</small>
-              </h5>
-              <div class="mt-3">
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-dribbble"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div class="px-4">
-            <img src="../static/assets/img/theme/kamilla.png" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
-            <div class="pt-4 text-center">
-              <h5 class="title">
-                <span class="d-block mb-1">Kamilla Costa</span>
-                <small class="h6 text-muted">-</small>
-              </h5>
-              <div class="mt-3">
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-dribbble"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-          <div class="px-4">
-            <img src="../static/assets/img/theme/romeu.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
-            <div class="pt-4 text-center">
-              <h5 class="title">
-                <span class="d-block mb-1">Romeu Carvalho</span>
-                <small class="h6 text-muted">-</small>
-              </h5>
-              <div class="mt-3">
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href="#" class="btn btn-success btn-icon-only rounded-circle">
-                  <i class="fa fa-dribbble"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section section-lg bg-gradient-default">
-    <div class="container pt-lg pb-300">
-      <div class="row text-center justify-content-center">
-        <div class="col-lg-10">
-          <h2 class="display-3 text-white">Contact us</h2>
-        </div>
-      </div>
-      <div class="row row-grid mt-5">
-        <div class="col-lg-4">
-          <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-secondary">
-            <i class="ni ni-settings text-primary"></i>
-          </div>
-          <h5 class="text-white mt-3">Portal UnB Gama</h5>
-            <div class="d-flex align-items-center">
-              <div>
-                <h6 class="mb-0">About</h6>
-              </div>
-            </div>
-              <div class="d-flex align-items-center">
-                <div>
-                  <h6 class="mb-0">Graduation</h6>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="../static/assets/img/theme/arthur.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Arthur Diniz</span>
+                  <small class="h6 text-muted">-</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="#" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-warning btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
                 </div>
               </div>
-                <div class="d-flex align-items-center">
-                  <div>
-                    <h6 class="mb-0">Graduate</h6>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="../static/assets/img/theme/ziegler.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Gabriel Ziegler</span>
+                  <small class="h6 text-muted">-</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="../static/assets/img/theme/joao.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">João</span>
+                  <small class="h6 text-muted">-</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-info btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="#" class="btn btn-info btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-info btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="../static/assets/img/theme/victor.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Victor Moura</span>
+                  <small class="h6 text-muted">-</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+                <div class="px-4">
+                  <img src="../static/assets/img/theme/titi.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+                  <div class="pt-4 text-center">
+                    <h5 class="title">
+                      <span class="d-block mb-1">Thiago Araujo</span>
+                      <small class="h6 text-muted">-</small>
+                    </h5>
+                    <div class="mt-3">
+                      <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                      <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                      <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                        <i class="fa fa-dribbble"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              <div class="d-flex align-items-center">
-                <div>
-                   <h6 class="mb-0">Terms of Use</h6>
+              </div>
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="../static/assets/img/theme/vitor.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Vitor Falcão</span>
+                  <small class="h6 text-muted">-</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
                 </div>
               </div>
-            <div class="d-flex align-items-center">
-              <div>
-                <h6 class="mb-0">Contact</h6>
-              </div>
             </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-secondary">
-            <i class="ni ni-settings text-primary"></i>
           </div>
-          <h5 class="text-white mt-3">Useful Links</h5>
-            <div class="d-flex align-items-center">
-              <div>
-                <h6 class="mb-0">UNB Portal</h6>
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="../static/assets/img/theme/kamilla.png" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Kamilla Costa</span>
+                  <small class="h6 text-muted">-</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
+                </div>
               </div>
             </div>
-              <div class="d-flex align-items-center">
-                <div>
-                  <h6 class="mb-0">Enrollsweb</h6>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="px-4">
+              <img src="../static/assets/img/theme/romeu.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+              <div class="pt-4 text-center">
+                <h5 class="title">
+                  <span class="d-block mb-1">Romeu Carvalho</span>
+                  <small class="h6 text-muted">-</small>
+                </h5>
+                <div class="mt-3">
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                    <i class="fa fa-dribbble"></i>
+                  </a>
                 </div>
-              </div>
-                <div class="d-flex align-items-center">
-                  <div>
-                    <h6 class="mb-0">Saeweb Property</h6>
-                  </div>
-                </div>
-              <div class="d-flex align-items-center">
-                <div>
-                   <h6 class="mb-0">Moodle UNB</h6>
-                </div>
-              </div>
-            <div class="d-flex align-items-center">
-              <div>
-                <h6 class="mb-0">Moodle FGA</h6>
               </div>
             </div>
-       </div>
-       <div class="col-lg-4">
-         <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-secondary">
-           <i class="ni ni-settings text-primary"></i>
-         </div>
-         <h5 class="text-white mt-3">Social networks</h5>
-           <div class="d-flex align-items-center">
-             <div>
-               <h6 class="mb-0">Facebook</h6>
-             </div>
-           </div>
-             <div class="d-flex align-items-center">
-               <div>
-                 <h6 class="mb-0">Instagram</h6>
-               </div>
-             </div>
-               <div class="d-flex align-items-center">
-                 <div>
-                   <h6 class="mb-0">Twitter</h6>
-                 </div>
-               </div>
-           </div>
+          </div>
         </div>
-      <!-- SVG separator -->
-    <div class="separator separator-bottom separator-skew zindex-100">
-      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-      </svg>
-    </div>
-  </section>
+      </div>
+    </section>
 </main>
 {% endblock %}

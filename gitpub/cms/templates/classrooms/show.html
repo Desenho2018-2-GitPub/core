@@ -1,33 +1,44 @@
 {% extends 'layouts/base.html' %} {% block content %}
-<!-- <div>
-    <h1>{{ classroom.name }}</h1>
-    <p>{{ classroom.period.semester }} / {{ classroom.period.year }}</p>
-    <h2>Enrolled users</h2>
-    {% for each in enrolled_users %}
-        <p>User: {{each.username}}</p>
-    {% endfor %}
-    <a href="/courses/{{course_id}}/classrooms/edit/{{classroom.id}}">Edit</a>
-    <a href="/courses/{{course_id}}/classrooms/delete/{{classroom.id}}">Delete</a>
-</div> -->
-
 <div class="container pt-lg-md">
   <div class="justify-content-center">
     <div class=" card-body px-lg-3 py-lg-3">
       <div>
         <form role="form" class="card bg-secondary shadow p-4">
-          <h1>{{ classroom.name }}</h1>
-          <p>{{ classroom.period.semester }} / {{ classroom.period.year }}</p>
-          <h2>Enrolled users</h2>
-          {% for each in enrolled_users %}
-              <p>User: {{each.username}}</p>
-          {% endfor %}
+          <h1 class="display-3">{{ classroom.name }}</h1>
+          <p>{{ classroom.period.semester }}/{{ classroom.period.year }}</p>
           <div class="row">
             <div class="col-sm">
-              <a href="/courses/{{course_id}}/classrooms/edit/{{classroom.id}}">Editar</a>
-              <a href="/courses/{{course_id}}/classrooms/delete/{{classroom.id}}">Deletar</a>
+              {% if user.is_superuser or user is classroom.owner %}
+              <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/edit/{{classroom.id}}">Editar</a>
+              {% endif %} {% if user in classroom.enrolled_users.all or user.is_superuser or user.id == classroom.owner.id %}
+              <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/new/">Adicionar
+                Projeto
+              </a>
+              {% endif %} {% if user in classroom.enrolled_users.all %}
+              <a class="btn btn-danger btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/unsubscribe">Desmatricular</a>
+              {% elif user.is_authenticated %}
+              <a class="btn btn-success btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/subscribe">Matricular</a>
+              {% endif %} {% if user.is_superuser and user.is_authenticated %}
+              <a class="btn btn-danger btn-sm mt-4" href="/courses/{{course.id}}/classrooms/delete/{{classroom.id}}">Deletar</a>
+              {% endif %}
             </div>
           </div>
-        </form>       
+        </form>
+      </div>
+      <div class="card bg-secondary shadow p-4 mt-4">
+        <h1 class="display-3">Projetos</h1>
+        {% for project in classroom.projects.all %}
+        <div class="card bg-secondary shadow p-4 mt-4">
+          <h5>
+            {{ project.name }}
+          </h5>
+          <div class="row">
+            <div class="col-sm">
+              <a class="btn btn-info btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/{{project.id}}">Explorar</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
       </div>
     </div>
   </div>

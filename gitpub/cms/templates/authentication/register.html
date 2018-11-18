@@ -1,7 +1,7 @@
 {% extends 'layouts/base.html' %} {% block content %}
 
 <main>
-  <section class="section-shaped">
+  <section class="section-shaped section-fill">
     <div class="shape shape-style-1 bg-gradient-default">
       <span></span>
       <span></span>
@@ -12,33 +12,22 @@
       <span></span>
       <span></span>
     </div>
-    <div class="signup p-4">
+    <div class="container pt-lg-md p-4">
       <div class="container pt-lg-md">
         <div class="row justify-content-center">
-          <div class="col-lg-12">
+          <div class="col-lg-5">
+            <div class="row justify-content-center session-brand">
+              <a href="/"> 
+                <img class="session-brand" src="/static/assets/img/brand/gitpub.png">
+              </a>
+            </div>
+            <div class="row justify-content-center session-brand">
+              <h2 class="text-light">GitPub</h2>
+            </div>
             <div class="card bg-secondary shadow border-0">
-              <div class="card-header bg-white pb-2">
-                <div class="text-muted text-center mb-0">
-                  <small>Sign up with</small>
-                </div>
-                <div class="text-center">
-                  <a href="#" class="btn btn-neutral btn-icon mr-0">
-                    <span class="btn-inner--icon">
-                      <img src="../static/assets/img/icons/common/github.svg">
-                    </span>
-                    <span class="btn-inner--text">Github</span>
-                  </a>
-                  <a href="#" class="btn btn-neutral btn-icon">
-                    <span class="btn-inner--icon">
-                      <img src="../static/assets/img/icons/common/google.svg">
-                    </span>
-                    <span class="btn-inner--text">Google</span>
-                  </a>
-                </div>
-              </div>
-              <div class="card-body px-lg-5 py-lg-2">
+              <div class="card-body px-lg-3 py-lg-3">
                 <div class="text-center text-muted mb-2">
-                  <small>Or sign up with credentials</small>
+                  <small>Inscreva-se com seus dados</small>
                 </div>
                 <form role="form" action="/create_user" method="post">
                   {% csrf_token %}
@@ -47,7 +36,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                       </div>
-                      <input class="form-control" name="name" placeholder="Name" type="text">
+                      <input class="form-control" name="name" placeholder="Nome" type="text">
                     </div>
                   </div>
                   <div class="form-group">
@@ -71,7 +60,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                       </div>
-                      <input class="form-control" name="registry" placeholder="Registration" type="text">
+                      <input class="form-control" name="registry" placeholder="Matrícula" type="text">
                     </div>
                   </div>
                   <div class="form-group">
@@ -79,7 +68,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                       </div>
-                      <input class="form-control" name="password" placeholder="Password" type="password">
+                      <input class="form-control" name="password" placeholder="Senha" type="password">
                     </div>
                   </div>
                   <div class="form-group">
@@ -87,7 +76,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                       </div>
-                      <input class="form-control" placeholder="Password confirmation" type="password">
+                      <input class="form-control" placeholder="Confirmação da Senha" type="password">
                     </div>
                   </div>
                   <div class="row my-0">
