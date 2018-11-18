@@ -8,8 +8,8 @@
           <p>{{ classroom.period.semester }}/{{ classroom.period.year }}</p>
           <div class="row">
             <div class="col-sm">
-              {% if user.is_superuser %}
-              <a class="btn btn-primary btn-sm mt-4" href="/courses/edit/{{course.id}}/classrooms/{{classroom.id}}">Editar</a>
+              {% if user.is_superuser or user is classroom.owner %}
+              <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/edit/{{classroom.id}}">Editar</a>
               {% endif %} {% if user in classroom.enrolled_users.all %}
               <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/new/">Adicionar
                 Projeto</a>
@@ -17,7 +17,7 @@
               {% else %}
               <a class="btn btn-success btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/subscribe">Matricular</a>
               {% endif %} {% if user.is_superuser %}
-              <a class="btn btn-danger btn-sm mt-4" href="/courses/delete/{{course.id}}/classrooms/delete/{{classroom.id}}">Deletar</a>
+              <a class="btn btn-danger btn-sm mt-4" href="/courses/{{course.id}}/classrooms/delete/{{classroom.id}}">Deletar</a>
               {% endif %}
             </div>
           </div>
