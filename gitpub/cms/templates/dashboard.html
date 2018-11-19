@@ -137,10 +137,24 @@
                           <span class="mb-4">Matrícula</span>
                           <input type="text" class="form-control" placeholder="" name="registry" value="{{ user.registry }}">
                         </div>
+
+                        {% if user.is_superuser %}
+                        <div class="form-group">
+                          <span class="mb-4">Cargo</span>
+                          <input type="text" class="form-control" placeholder="Administador" disabled="">
+                        </div>
+                        {% elif user.is_staff %}
                         <div class="form-group">
                           <span class="mb-4">Cargo</span>
                           <input type="text" class="form-control" placeholder="Professor" disabled="">
-                        </div>
+                        </div>   
+                        {% else %}
+                        <div class="form-group">
+                          <span class="mb-4">Cargo</span>
+                          <input type="text" class="form-control" placeholder="Aluno" disabled="">
+                        </div>           
+                        {% endif %}
+
                         <span class="mb-4">Biografia</span>
                         <div class="form-group"></div>
                         <textarea class="form-control" id="" rows="6" name="bio" placeholder="Escreva sua biografia aqui ...">{{ user.bio }}</textarea>
