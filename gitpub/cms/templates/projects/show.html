@@ -20,7 +20,6 @@
         <span class="badge badge-pill badge-primary mt-4">Visualizações: {{ project.views }}</span>
         <div class="mt-2">
           <h1>Comentários</h1>
-          <div class="card shadow bg-white px-lg-3 py-lg-3">
             {% for comment in project.comments.all %}
             <div class="my-2 border-bottom p-2 bg-white">
                 <span>{{ comment.user.name }}</span>
