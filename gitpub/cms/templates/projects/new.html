@@ -1,13 +1,4 @@
 {% extends 'layouts/base.html' %} {% block content %}
-<!-- <h1>Nova Sala</h1>
-<form action="/courses/{{course_id}}/classrooms/create/" method="post">
-    {% csrf_token %}
-    Name:<br>
-    <input type="text" name="classroom_name" placeholder="Name"><br> 
-    <input type="text" name="period_year" placeholder="2000">
-    <input type="text" name="period_semester" placeholder="1 or 2">
-    <input type="submit" value="Submit">
-</form> -->
 
 <div class="container pt-lg-md">
   <div class="justify-content-center">
@@ -25,13 +16,11 @@
         </div>
         <div class="form-group mb-3">
           <div class="input-group input-group-alternative">
-            <!-- <input class="form-control" name="description"  type="text" placeholder="Descrição" > -->
             <textarea class="form-control" name="short_description" placeholder="Pequena Descrição" rows="3" ></textarea>
           </div>
         </div>
         <div class="form-group mb-3">
           <div class="input-group input-group-alternative">
-            <!-- <input class="form-control" name="description"  type="text" placeholder="Descrição" > -->
             <textarea class="form-control" name="description" placeholder="Corpo do projeto" rows="10" ></textarea>
           </div>
         </div>

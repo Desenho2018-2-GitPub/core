@@ -21,137 +21,135 @@
     <link type="text/css" href="/static/assets/css/docs.min.css" rel="stylesheet">
 </head>
 
-    {% if user.is_authenticated and request.path != '/' %}
-
-    <body class="bg-secondary">
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-default">
-        <div class="container">
-            <a class="navbar-brand mr-lg-5" href="/">
-                <img src="/static/assets/img/brand/gitpub.png">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-default">
-                <div class="navbar-collapse-header">
-                    <div class="row">
-                        <div class="col-6 collapse-brand">
-                            <a href="index.html">
-                                <img src="assets/img/brand/blue.png">
-                            </a>
-                        </div>
-                        <div class="col-6 collapse-close">
-                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span></span>
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-                    <li class="nav-item d-none d-lg-block ml-lg-4">
-                        <a href="/dashboard" target="" class="btn btn-neutral btn-icon">
-                            <span class="btn-inner--icon">
-                                <i class="fa fa-address-card"></i>
-                            </span>
-                            <span class="nav-link-inner--text">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown d-lg-block ml-lg-4">
-                        <a href="#" class="btn btn-neutral btn-icon" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown">
-                            <span class="btn-inner--icon">
-                                <i class="ni ni-settings-gear-65"></i>
-                            </span>
-                            <span class="nav-link-inner--text">Configurações</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                            <a class="dropdown-item" href="#">Editar perfil</a>
-                            <a class="dropdown-item" href="#">Projetos</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Logout</a>
-                        </div>
-                    </li>
-                    <li class="nav-item d-none d-lg-block ml-lg-4">
-                        <a href="/logout" target="" class="btn btn-neutral btn-icon">
-                            <span class="btn-inner--icon">
-                                <i class="fa fa-sign-out"></i>
-                            </span>
-                            <span class="nav-link-inner--text">Logout</span>
-                        </a>
-                    </li>
-                </ul>
+{% if user.is_authenticated and request.path != '/' %}
+<body class="bg-secondary">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-default">
+    <div class="container">
+      <a class="navbar-brand mr-lg-5" href="/">
+          <img src="/static/assets/img/brand/gitpub.png">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-default">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="index.html">
+                <img src="assets/img/brand/blue.png">
+              </a>
             </div>
-        </div>
-    </nav>
-    {% elif request.path != '/login' and request.path != '/register' and request.path != '/forgot_password' and request.path != '/' %}
-    <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-default">
-        <div class="container">
-            <a class="navbar-brand mr-lg-5" href="/">
-                <img src="/static/assets/img/brand/gitpub.png">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default"
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default"
                 aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-default">
-                <div class="navbar-collapse-header">
-                    <div class="row">
-                        <div class="col-6 collapse-brand">
-                            <a href="index.html">
-                                <img src="assets/img/brand/blue.png">
-                            </a>
-                        </div>
-                        <div class="col-6 collapse-close">
-                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span></span>
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-                    <li class="nav-item d-none d-lg-block ml-lg-4">
-                        <a href="/courses" target="" class="btn btn-neutral btn-icon">
-                            <span class="btn-inner--icon">
-                                <i class="fa fa-address-card"></i>
-                            </span>
-                            <span class="nav-link-inner--text">Disciplinas</span>
-                        </a>
-                    </li>
-                    <li class="nav-item d-none d-lg-block ml-lg-4">
-                        <a href="/login" target="" class="btn btn-neutral btn-icon">
-                            <span class="btn-inner--icon">
-                                <i class="fa fa-user mr-2"></i>
-                            </span>
-                            <span class="nav-link-inner--text">Login</span>
-                        </a>
-                    </li>
-                    <li class="nav-item d-none d-lg-block ml-lg-4">
-                        <a href="/register" target="" class="btn btn-neutral btn-icon">
-                            <span class="btn-inner--icon">
-                                <i class="fa fa-user-plus mr-2"></i>
-                            </span>
-                            <span class="nav-link-inner--text">Registrar</span>
-                        </a>
-                    </li>
-                </ul>
+                <span></span>
+                <span></span>
+              </button>
             </div>
+          </div>
         </div>
-    </nav>
-    {% endif %} {% block content %} {% endblock %}
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item d-none d-lg-block ml-lg-4">
+              <a href="/dashboard" target="" class="btn btn-neutral btn-icon">
+                <span class="btn-inner--icon">
+                  <i class="fa fa-address-card"></i>
+                </span>
+                <span class="nav-link-inner--text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown d-lg-block ml-lg-4">
+              <a href="#" class="btn btn-neutral btn-icon" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown">
+                <span class="btn-inner--icon">
+                  <i class="ni ni-settings-gear-65"></i>
+                </span>
+                <span class="nav-link-inner--text">Configurações</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
+                <a class="dropdown-item" href="#">Editar perfil</a>
+                <a class="dropdown-item" href="#">Projetos</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
+            <li class="nav-item d-none d-lg-block ml-lg-4">
+              <a href="/logout" target="" class="btn btn-neutral btn-icon">
+                <span class="btn-inner--icon">
+                  <i class="fa fa-sign-out"></i>
+                </span>
+                <span class="nav-link-inner--text">Logout</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+{% elif request.path != '/login' and request.path != '/register' and request.path != '/forgot_password' and request.path != '/' %}
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-default">
+      <div class="container">
+          <a class="navbar-brand mr-lg-5" href="/">
+              <img src="/static/assets/img/brand/gitpub.png">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-default">
+              <div class="navbar-collapse-header">
+                  <div class="row">
+                      <div class="col-6 collapse-brand">
+                          <a href="index.html">
+                              <img src="assets/img/brand/blue.png">
+                          </a>
+                      </div>
+                      <div class="col-6 collapse-close">
+                          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default"
+                              aria-expanded="false" aria-label="Toggle navigation">
+                              <span></span>
+                              <span></span>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                  <li class="nav-item d-none d-lg-block ml-lg-4">
+                      <a href="/courses" target="" class="btn btn-neutral btn-icon">
+                          <span class="btn-inner--icon">
+                              <i class="fa fa-address-card"></i>
+                          </span>
+                          <span class="nav-link-inner--text">Disciplinas</span>
+                      </a>
+                  </li>
+                  <li class="nav-item d-none d-lg-block ml-lg-4">
+                      <a href="/login" target="" class="btn btn-neutral btn-icon">
+                          <span class="btn-inner--icon">
+                              <i class="fa fa-user mr-2"></i>
+                          </span>
+                          <span class="nav-link-inner--text">Login</span>
+                      </a>
+                  </li>
+                  <li class="nav-item d-none d-lg-block ml-lg-4">
+                      <a href="/register" target="" class="btn btn-neutral btn-icon">
+                          <span class="btn-inner--icon">
+                              <i class="fa fa-user-plus mr-2"></i>
+                          </span>
+                          <span class="nav-link-inner--text">Registrar</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  {% endif %} {% block content %} {% endblock %}
 
-    <!-- Core -->
-    <script src="/static/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="/static/assets/vendor/popper/popper.min.js"></script>
-    <script src="/static/assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="/static/assets/vendor/headroom/headroom.min.js"></script>
-    <!-- Argon JS -->
-    <script src="/static/assets/js/argon.js?v=1.0.1"></script>
+  <!-- Core -->
+  <script src="/static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/assets/vendor/popper/popper.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="/static/assets/vendor/headroom/headroom.min.js"></script>
+  <!-- GitPub JS -->
+  <script src="/static/assets/js/argon.js?v=1.0.1"></script>
 </body>
 
 </html>

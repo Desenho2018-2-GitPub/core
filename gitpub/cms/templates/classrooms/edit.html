@@ -1,59 +1,47 @@
 {% extends 'layouts/base.html' %} {% block content %}
-<!-- <h1>Editing {{ classroom.name }}</h1>
-<form action="/courses/{{course_id}}/classrooms/update" method="post">
-    {% csrf_token %}
-    Name:<br>
-    <input type="text" name="classroom_name" value={{ classroom.name }}><br> 
-    Period:<br>
-    <input type="text" name="year" value={{ classroom.period.year }}><br><br>
-    <input type="text" name="semester" value={{ classroom.period.semester }}><br><br>
-    <input type="hidden" name="classroom_id" value="{{ classroom.id }}">
-    <input type="submit" value="Save">
-</form> -->
 
 <div class="container pt-lg-md">
-        <div class="justify-content-center">
-          <div class=" card-body px-lg-3 py-lg-3">
-            <h1>Editando {{ classroom.name }}</h1>
-            <form action="/courses/{{course_id}}/classrooms/update/" class="card bg-secondary shadow p-4" method="post">
-                
-                {% csrf_token %}
-                <div class="form-group mb-3">
-                  <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="ni ni-tag pr-2"></i> Id:</span>
-                    </div>
-                    <input class="form-control" name="classroom_id" value={{ classroom.id }} placeholder="Id" type="text">
-                  </div>
-                </div>
-                <div class="form-group mb-3">
-                  <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="ni ni-hat-3 pr-2"></i> Nome:</span>
-                    </div>
-                    <input class="form-control" name="classroom_name" value="{{ classroom.name }}" placeholder="Nome" type="text">
-                  </div>
-                </div>
-                <div class="form-group mb-3">
-                  <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="ni ni-calendar-grid-58 pr-2"></i> Ano:</span>
-                    </div>
-                    <input class="form-control" name="year" value={{ classroom.period.year }} placeholder="Ano" type="text">
-                  </div>
-                </div>
-                <div class="form-group mb-3">
-                  <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="ni ni-tag pr-2"></i> Período:</span>
-                    </div>
-                    <input class="form-control" name="semester" value={{ classroom.period.semester }} placeholder="Semestre" type="text">
-                  </div>
-                </div>
-                
-                <input class="btn btn-default" type="submit" value="Salvar">
-            </form>
+  <div class="justify-content-center">
+    <div class=" card-body px-lg-3 py-lg-3">
+      <h1>Editando {{ classroom.name }}</h1>
+      <form action="/courses/{{course_id}}/classrooms/update/" class="card bg-secondary shadow p-4" method="post">
+          {% csrf_token %}
+          <div class="form-group mb-3">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-tag pr-2"></i> Id:</span>
+              </div>
+              <input class="form-control" name="classroom_id" value={{ classroom.id }} placeholder="Id" type="text">
+            </div>
           </div>
-        </div>
-      </div>
+          <div class="form-group mb-3">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-hat-3 pr-2"></i> Nome:</span>
+              </div>
+              <input class="form-control" name="classroom_name" value="{{ classroom.name }}" placeholder="Nome" type="text">
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-calendar-grid-58 pr-2"></i> Ano:</span>
+              </div>
+              <input class="form-control" name="year" value={{ classroom.period.year }} placeholder="Ano" type="text">
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ni-tag pr-2"></i> Período:</span>
+              </div>
+              <input class="form-control" name="semester" value={{ classroom.period.semester }} placeholder="Semestre" type="text">
+            </div>
+          </div>
+          <input class="btn btn-default" type="submit" value="Salvar">
+      </form>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
