@@ -3,7 +3,7 @@
   <div class="justify-content-center">
     <div class=" card-body px-lg-3 py-lg-3">
       <div>
-        <form role="form" class="card bg-secondary shadow p-4">
+        <form role="form" class="card shadow p-4">
           <h1 class="display-3">{{ classroom.name }}</h1>
           <p>{{ classroom.period.semester }}/{{ classroom.period.year }}</p>
           <div class="row">
@@ -25,7 +25,7 @@
           </div>
         </form>
       </div>
-      <div class="card bg-secondary shadow p-4 mt-4">
+      <div class="card shadow p-4 mt-4">
         <h1 class="display-3">Projetos</h1>
         {% for project in classroom.projects.all %}
         <div class="card bg-secondary shadow p-4 mt-4">
