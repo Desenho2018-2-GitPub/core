@@ -85,32 +85,20 @@
             </div>
           </div>
           <div class="tab-pane fade mt-3" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
-            <ul class=" list-unstyled">
-              <li class="media border-bottom">
-                <div class="media-body text-justify mb-3">
-                  <h5 class="mt-1 mb-1">PED 1</h5>
-                  Noções de Métodos Experimentais Circuitos Lógicos MSI Sistemas de Numeração e Códigos Princípios de Sistemas Sequenciais
-                  Portas Lógicas e Álgebra Booleana Circuitos Lógicos Combinacionais VHDL Aritmética Digital: Operações e
-                  Circuitos
-                </div>
-              </li>
-              <li class="media my-4 border-bottom">
-                <div class="media-body text-justify mb-3">
-                  <h5 class="mt-1 mb-1">Prática de Eletronica Digital 1</h5>
-                  Noções de Métodos Experimentais Circuitos Lógicos MSI Sistemas de Numeração e Códigos Princípios de Sistemas Sequenciais
-                  Portas Lógicas e Álgebra Booleana Circuitos Lógicos Combinacionais VHDL Aritmética Digital: Operações e
-                  Circuitos
-                </div>
-              </li>
-              <li class="media border-bottom">
-                <div class="media-body text-justify mb-3">
-                  <h5 class="mt-1 mb-1">Prática de Eletronica Digital 1</h5>
-                  Noções de Métodos Experimentais Circuitos Lógicos MSI Sistemas de Numeração e Códigos Princípios de Sistemas Sequenciais
-                  Portas Lógicas e Álgebra Booleana Circuitos Lógicos Combinacionais VHDL Aritmética Digital: Operações e
-                  Circuitos
-                </div>
-              </li>
-            </ul>
+            <ul class=" list-unstyled"></ul>
+              {% for classroom in classrooms %}
+                {% if user in classroom.enrolled_users.all %}                  
+                  {% for project in classroom.projects.all %}
+                    <li class="media border-bottom">
+                      <div class="media-body text-justify mb-3">
+                        <h5 class="mt-1 mb-1">{{ project.name }} </h5>
+                          {{ project.description }}
+                      </div>
+                    </li>
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            </ul> 
           </div>
           <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
             <div class="container">
@@ -137,10 +125,24 @@
                           <span class="mb-4">Matrícula</span>
                           <input type="text" class="form-control" placeholder="" name="registry" value="{{ user.registry }}">
                         </div>
+
+                        {% if user.is_superuser %}
+                        <div class="form-group">
+                          <span class="mb-4">Cargo</span>
+                          <input type="text" class="form-control" placeholder="Administador" disabled="">
+                        </div>
+                        {% elif user.is_staff %}
                         <div class="form-group">
                           <span class="mb-4">Cargo</span>
                           <input type="text" class="form-control" placeholder="Professor" disabled="">
-                        </div>
+                        </div>   
+                        {% else %}
+                        <div class="form-group">
+                          <span class="mb-4">Cargo</span>
+                          <input type="text" class="form-control" placeholder="Aluno" disabled="">
+                        </div>           
+                        {% endif %}
+
                         <span class="mb-4">Biografia</span>
                         <div class="form-group"></div>
                         <textarea class="form-control" id="" rows="6" name="bio" placeholder="Escreva sua biografia aqui ...">{{ user.bio }}</textarea>

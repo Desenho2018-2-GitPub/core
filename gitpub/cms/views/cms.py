@@ -106,7 +106,9 @@ def forgot_password(request):
 def dashboard(request):
     courses = Course.objects.all()
     courses = sorted(courses, key=lambda x: x.id)
-    return render(request, 'dashboard.html', {'courses': courses})
+    classrooms = Classroom.objects.all()
+    classrooms = sorted(classrooms, key=lambda x: x.id)
+    return render(request, 'dashboard.html', {'courses': courses, 'classrooms': classrooms})
 
 
 @debug
