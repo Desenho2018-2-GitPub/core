@@ -7,6 +7,7 @@ from django.contrib.auth.models import AbstractBaseUser, UserManager, Permission
 from notifyr.agents import observer, observed
 from notifyr.functions import target
 from cms.utils.email import EmailSender
+import os
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
@@ -65,13 +66,20 @@ class RegisteredUser(CustomUser):
     updated_at = models.DateTimeField(auto_now=True)
 
     def send_email(self, *args, **kwargs):
-        project = args[0]
-        email_body = "Olá, {0}!\n\nUm usuário adicionou um novo projeto à disciplina {1}, turma {2}. \
-         Verifique a plataforma GitPub para mais informações".format(
-                self.name,
-                project.classroom.all().last().course.name,
-                project.classroom.all().last().name,
-            )
+        should_send_email = os.getenv('SHOULD_SEND_EMAIL', False)
+
+        if should_send_email:
+            project = args[0]
+            email_body = "Olá, {0}!\n\nUm usuário adicionou um novo projeto à disciplina {1}, turma {2}. \
+            \nVerifique a plataforma GitPub para mais informações".format(
+                self.name, project.classroom.all().last().course.name, project.classroom.all().last().name, )
+
+            sender = EmailSender()
+            sender.send_email(self.email, email_body)
+        else:
+            print(
+                "An email would notify {0} about the new project.".format(
+                    self.name))
 
 
 class Period(models.Model):
