@@ -108,7 +108,9 @@ def dashboard(request):
     courses = sorted(courses, key=lambda x: x.id)
     classrooms = Classroom.objects.all()
     classrooms = sorted(classrooms, key=lambda x: x.id)
-    return render(request, 'dashboard.html', {'courses': courses, 'classrooms': classrooms})
+    return render(
+        request, 'dashboard.html', {
+            'courses': courses, 'classrooms': classrooms})
 
 
 @debug

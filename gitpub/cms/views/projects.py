@@ -17,11 +17,13 @@ def new(request, course_id, classroom_id):
 @login_required(login_url='/login')
 def create(request, course_id, classroom_id):
     name = request.POST.get('name')
+    short_description = request.POST.get('short_description')
     description = request.POST.get('description')
     classroom = Classroom.objects.get(id=classroom_id)
 
     project = Project(
         name=name,
+        short_description=short_description,
         description=description
     )
 
@@ -79,6 +81,7 @@ def edit(request, course_id, classroom_id, project_id):
 def update(request, course_id, classroom_id):
     project_data = {
         'name': request.POST.get('name'),
+        'short_description': request.POST.get('short_description'),
         'description': request.POST.get('description')
     }
 

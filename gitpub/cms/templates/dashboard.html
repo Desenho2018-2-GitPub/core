@@ -84,15 +84,15 @@
               </div> <!--  End Row -->
             </div>
           </div>
-          <div class="tab-pane fade mt-3" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
-            <ul class=" list-unstyled"></ul>
+          <div class="tab-pane fade mt-3 bg-white shadow card p-3" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+            <ul class="list-unstyled">
               {% for classroom in classrooms %}
                 {% if user in classroom.enrolled_users.all %}                  
                   {% for project in classroom.projects.all %}
                     <li class="media border-bottom">
                       <div class="media-body text-justify mb-3">
                         <h5 class="mt-1 mb-1">{{ project.name }} </h5>
-                          {{ project.description }}
+                          {{ project.short_description }}
                       </div>
                     </li>
                   {% endfor %}

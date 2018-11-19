@@ -12,7 +12,8 @@
           </div>
         </div>
         <form role="form" class="card shadow p-4">
-          <h1 class="display-3 border-bottom border-default">{{ project.name }}</h1>
+          <h1 class="display-3">{{ project.name }}</h1>
+          <span class="border-bottom border-default">{{ project.short_description }}</span>
           <p>{{ markdown_description | safe }}</p>
           </div>
         </form>

@@ -6,6 +6,9 @@
             <form action="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/update/" class="card bg-secondary shadow p-4" method="post">
                 {% csrf_token %}
                 <div class="form-group mb-3">
+                    <div class="mb-2">
+                        <span>Nome</span>
+                      </div>
                     <div class="input-group input-group-alternative">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
@@ -15,12 +18,21 @@
                     </div>
                 </div>
                 <div class="form-group mb-3">
+                  <div class="mb-2">
+                    <span>Descrição</span>
+                  </div>
+                  <div class="input-group input-group-alternative">
+                    <!-- <input class="form-control" name="description"  type="text" placeholder="Descrição" > -->
+                    <textarea class="form-control" name="short_description" placeholder="Pequena Descrição" rows="3" ></textarea>
+                  </div>
+                </div>
+                <div class="form-group mb-3">
                     <div class="mb-2">
-                      <span>Descrição</span>
+                      <span>Corpo</span>
                     </div>
                     <div class="input-group input-group-alternative">
                     <!-- <input class="form-control" name="description" value={{ project.description }} placeholder="Descrição" type="text"> -->
-                    <textarea class="form-control" name="description" placeholder="Descrição do projeto" rows="20" >{{ project.description }}</textarea>
+                    <textarea class="form-control" name="description" placeholder="Corpo do projeto" rows="16" >{{ project.description }}</textarea>
                     </div>
                 </div>
                 <input class="btn btn-default" type="submit" value="Salvar">
