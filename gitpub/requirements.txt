@@ -14,3 +14,4 @@ six==1.11.0
 typed-ast==1.1.0
 wrapt==1.10.11
 notifyr==1.1
+django-markdownx==2.0.27

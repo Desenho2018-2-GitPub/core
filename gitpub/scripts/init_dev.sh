@@ -7,8 +7,11 @@ chmod +x /gitpub/scripts/*
 sleep 2
 echo "** Checking if migrations to do **"
 python3 manage.py makemigrations
+
 echo "** Migrating changes if existent **"
 python3 manage.py migrate
+
+python3 manage.py collectstatic
 
 echo "** Running autopep8 **"
 autopep8 -r --in-place --aggressive --aggressive /gitpub

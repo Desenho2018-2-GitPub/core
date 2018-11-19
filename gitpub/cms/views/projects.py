@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from gitpub.logging import debug
 from cms.models import Classroom, Project, Course, AnonymousUser, Comment
 from django.contrib.auth.decorators import login_required
+from markdownx.utils import markdownify
 
 
 @debug
@@ -50,9 +51,12 @@ def show(request, course_id, classroom_id, project_id):
     project.views += 1
     project.save()
 
+    markdown_description = markdownify(project.description)
+
     return render(request,
                   'projects/show.html',
                   {'project': project,
+                   'markdown_description': markdown_description,
                    'classroom': classroom,
                    'course': course})
 

@@ -7,6 +7,7 @@ from django.contrib.auth.models import AbstractBaseUser, UserManager, Permission
 from notifyr.agents import observer, observed
 from notifyr.functions import target
 from cms.utils.email import EmailSender
+from markdownx.models import MarkdownxField
 import os
 
 
@@ -236,3 +237,6 @@ class Material(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+class MyModel(models.Model):
+    myfield = MarkdownxField()

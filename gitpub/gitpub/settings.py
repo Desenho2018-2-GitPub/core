@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cms.apps.CmsConfig',
+    'markdownx',
 ]
 
 AUTH_USER_MODEL = 'cms.RegisteredUser'

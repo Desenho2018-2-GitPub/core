@@ -3,40 +3,44 @@
   <div class="justify-content-center">
     <div class="card-body px-lg-3 py-lg-3">
       <div>
-        <form role="form" class="card bg-secondary shadow p-4">
-          <h1 class="display-3">{{ project.name }}</h1>
-          <p>{{ project.description }}</p>
-          <div class="row">
-            <div class="col-sm">
-              {% if user.id == classroom.owner.id or user.is_superuser %}
-              <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/edit/{{project.id}}">Editar</a>
-              <a class="btn btn-danger btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/delete/{{project.id}}">Deletar</a>
-              {% endif %}
-            </div>
+        <div class="row mb-3">
+          <div class="col-sm">
+            {% if user.id == classroom.owner.id or user.is_superuser %}
+            <a class="btn btn-primary btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/edit/{{project.id}}">Editar</a>
+            <a class="btn btn-danger btn-sm mt-4" href="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/delete/{{project.id}}">Deletar</a>
+            {% endif %}
+          </div>
+        </div>
+        <form role="form" class="card shadow p-4">
+          <h1 class="display-3 border-bottom border-default">{{ project.name }}</h1>
+          <p>{{ markdown_description | safe }}</p>
           </div>
         </form>
         <span class="badge badge-pill badge-primary mt-4">Visualizações: {{ project.views }}</span>
+        <div class="mt-2">
+          <h1>Comentários</h1>
+          <div class="card shadow bg-white px-lg-3 py-lg-3">
+            {% for comment in project.comments.all %}
+            <div class="my-2 border-bottom p-2 bg-white">
+                <span>{{ comment.user.name }}</span>
+                <p>{{ comment.text }}</p>
+            </div>
+            {% endfor %}
+          </div>
+          <form role="form" class="card shadow p-4 mt-4" action="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/comment/{{project.id}}/"
+            method="post">
+            {% csrf_token %}
+            <div class="form-group mb-4">
+              <div class="input-group input-group-alternative">
+                <!-- <input class="form-control bg-secondary" name="comment_text" type="text" placeholder="Comentário"> -->
+                <textarea class="form-control bg-secondary" name="comment_text" placeholder="Comentário" rows="5" ></textarea>
+              </div>
+            </div>
+            <input class="btn btn-default" type="submit" value="Comentar">
+          </form>
+        </div>
       </div>
     </div>
-    <div class="card-body px-lg-3 py-lg-3">
-        <h1>Comentários</h1>
-        {% for comment in project.comments.all %}
-        <div class="card shadow p-4">
-            <p>{{ comment.user.name }} comentou:</p>
-            <p>{{ comment.text }}</p>
-        </div>
-        {% endfor %}
-        <form role="form" class="card bg-secondary shadow p-4" action="/courses/{{course.id}}/classrooms/{{classroom.id}}/projects/comment/{{project.id}}/"
-          method="post">
-          {% csrf_token %}
-          <div class="form-group mb-3">
-            <div class="input-group input-group-alternative">
-              <input class="form-control" name="comment_text" type="text" placeholder="Comentário">
-            </div>
-          </div>
-          <input class="btn btn-default" type="submit" value="Comentar">
-        </form>
-      </div>
   </div>
 </div>
 {% endblock %}

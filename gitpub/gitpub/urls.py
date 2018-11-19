@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
+from markdownx import urls as markdownx
 
 urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'', include(('cms.urls', 'cms'), namespace='cms')),
+    url(r'^markdownx/', include(markdownx)),
+
 ]
