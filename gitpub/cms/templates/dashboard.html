@@ -59,21 +59,20 @@
                 <div class="col-12">
                   <a href="/courses/new" class="btn btn-success btn-lg btn-block mt-4">Criar Disciplina</a>
                 </div>
-                {% endif %} {% for each in courses %}
+                {% endif %} {% for course in courses %}
                 <div class="col-6">
                   <div class="card shadow my-3">
                     <div class="card-body ">
-                      <h6 class="text-primary text-uppercase">{{ each.name }}</h6>
-                      <p class="description mt-3">{{each.description}}</p>
+                      <h6 class="text-primary text-uppercase">{{ course.name }}</h6>
+                      <p class="description mt-3">{{course.description}}</p>
                       <div>
-                        <span class="badge badge-pill badge-primary">GCES</span>
-                        <span class="badge badge-pill badge-primary">UnB</span>
-                        <span class="badge badge-pill badge-primary">DEG</span>
+                        <span class="badge badge-pill badge-primary">Ofertas: {{ course.number_of_classrooms }}</span>
+                        <span class="badge badge-pill badge-primary">Projetos: {{ course.number_of_projects }}</span>
                       </div>
-                      <a href="/courses/{{each.id}}" class="btn btn-primary btn-sm mt-4">Explorar</a>
+                      <a href="/courses/{{course.id}}" class="btn btn-primary btn-sm mt-4">Explorar</a>
                       {% if user.is_staff %}
-                      <a href="/courses/edit/{{each.id}}" class="btn btn-primary btn-sm mt-4">Editar</a>
-                      <a href="/courses/delete/{{each.id}}" class="btn btn-danger btn-sm mt-4">Deletar</a>
+                      <a href="/courses/edit/{{course.id}}" class="btn btn-primary btn-sm mt-4">Editar</a>
+                      <a href="/courses/delete/{{course.id}}" class="btn btn-danger btn-sm mt-4">Deletar</a>
                       {% endif %}
 
                     </div>
@@ -135,43 +134,57 @@
                           <input type="email" class="form-control" placeholder="name@example.com" name="email" value="{{ user.email }}">
                         </div>
                         <div class="form-group">
-                            <span class="mb-4">Matrícula</span>
-                            <input type="text" class="form-control" placeholder="" name="registry" value="{{ user.registry }}">
-                          </div>
+                          <span class="mb-4">Matrícula</span>
+                          <input type="text" class="form-control" placeholder="" name="registry" value="{{ user.registry }}">
+                        </div>
+
+                        {% if user.is_superuser %}
+                        <div class="form-group">
+                          <span class="mb-4">Cargo</span>
+                          <input type="text" class="form-control" placeholder="Administador" disabled="">
+                        </div>
+                        {% elif user.is_staff %}
                         <div class="form-group">
                           <span class="mb-4">Cargo</span>
                           <input type="text" class="form-control" placeholder="Professor" disabled="">
-                        </div>
+                        </div>   
+                        {% else %}
+                        <div class="form-group">
+                          <span class="mb-4">Cargo</span>
+                          <input type="text" class="form-control" placeholder="Aluno" disabled="">
+                        </div>           
+                        {% endif %}
+
                         <span class="mb-4">Biografia</span>
                         <div class="form-group"></div>
-                          <textarea class="form-control" id="" rows="6" name="bio" placeholder="Escreva sua biografia aqui ...">{{ user.bio }}</textarea>
-                        </div>
-                        <button type="button" class="btn btn-block btn-primary mt-4" data-toggle="modal" data-target="#modal-default">Salvar</button>
-                        <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-                        <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="modal-title-default">Edição de Perfil</h6>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Deseja realmente salvar as alterações sobre o seu perfil?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Salvar</button>
-                                <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Fechar</button>
-                            </div>
+                        <textarea class="form-control" id="" rows="6" name="bio" placeholder="Escreva sua biografia aqui ...">{{ user.bio }}</textarea>
+                    </div>
+                    <button type="button" class="btn btn-block btn-primary mt-4" data-toggle="modal" data-target="#modal-default">Salvar</button>
+                    <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+                      <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h6 class="modal-title" id="modal-title-default">Edição de Perfil</h6>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Deseja realmente salvar as alterações sobre o seu perfil?</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                            <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Fechar</button>
                           </div>
                         </div>
                       </div>
-                      <div class="mt-5 py-5 border-top text-center">
-                        <div class="row justify-content-center">
-                          <div class="col-lg-12">
-                          </div>
+                    </div>
+                    <div class="mt-5 py-5 border-top text-center">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-12">
                         </div>
                       </div>
+                    </div>
                     </form>
                   </div>
                 </div>

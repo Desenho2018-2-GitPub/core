@@ -19,3 +19,4 @@ services:
       - db
     environment:
       - "PYTHONUNBUFFERED=1"
+      # - "SHOULD_SEND_EMAIL=True"
