@@ -85,7 +85,27 @@
             </div>
           </div>
           <div class="tab-pane fade mt-3" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
-            <ul class=" list-unstyled">
+              {% for classroom in classrooms %}
+              {% if user in classroom.enrolled_users.all %}                  
+              {% for project in classroom.projects.all %}
+              <div class="col-6">
+                <div class="card shadow my-3">
+                  <div class="card-body "> 
+                      <div class="card bg-secondary shadow p-4 mt-4">
+                        <h5>
+                          {{ project.name }}
+                          {{ project.description }}
+                        </h5>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+              <!-- <h4>{{each.id }} - {{ each.name }}</h4> -->
+              {% endfor %}
+            <!-- <ul class=" list-unstyled">
               <li class="media border-bottom">
                 <div class="media-body text-justify mb-3">
                   <h5 class="mt-1 mb-1">PED 1</h5>
@@ -110,7 +130,7 @@
                   Circuitos
                 </div>
               </li>
-            </ul>
+            </ul> -->
           </div>
           <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
             <div class="container">
