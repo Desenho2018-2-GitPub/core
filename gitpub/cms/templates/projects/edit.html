@@ -15,11 +15,12 @@
                     </div>
                 </div>
                 <div class="form-group mb-3">
-                    <div class="input-group input-group-alternative">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="ni ni-tag"></i></span>
+                    <div class="mb-2">
+                      <span>Descrição</span>
                     </div>
-                    <input class="form-control" name="description" value={{ project.description }} placeholder="Descrição" type="text">
+                    <div class="input-group input-group-alternative">
+                    <!-- <input class="form-control" name="description" value={{ project.description }} placeholder="Descrição" type="text"> -->
+                    <textarea class="form-control" name="description" placeholder="Descrição do projeto" rows="10" >{{ project.description }}</textarea>
                     </div>
                 </div>
                 <input class="btn btn-default" type="submit" value="Salvar">
