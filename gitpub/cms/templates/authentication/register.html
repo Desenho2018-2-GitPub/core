@@ -29,6 +29,13 @@
                 <div class="text-center text-muted mb-2">
                   <small>Inscreva-se com seus dados</small>
                 </div>
+                {% if errors is not None %}
+            {% for error in errors %}
+              <div class="alert alert-danger" role="alert">
+                <strong>Ops!</strong> {{ error }}
+              </div>
+            {% endfor %}
+          {% endif %}
                 <form role="form" action="/create_user" method="post">
                   {% csrf_token %}
                   <div class="form-group">

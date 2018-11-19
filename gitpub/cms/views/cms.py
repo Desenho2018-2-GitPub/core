@@ -65,24 +65,35 @@ def create_user(request):
     email = request.POST['email']
     registry = request.POST['registry']
     name = request.POST['name']
+    
+    redirect_url = '/dashboard'
 
     User = auth.get_user_model()
 
-    User.objects.create_user(
+    try:   
+        User.objects.create_user(
         name=name,
         username=username,
         email=email,
         registry=registry,
         password=password
-    )
+    ) 
+    
+    except Exception as e:         
+        request.session['errors'] = [
+            'cadastro não efetuado. Verifique suas credenciais.']
+        return redirect('/register?next={0}'.format(redirect_url)) 
 
-    user = auth.authenticate(request, username=username, password=password)
 
     if user is not None:
         auth.login(request, user)
         return redirect('/dashboard')
+        user = auth.authenticate(request, username=username, password=password)
     else:
-        return redirect('/')
+        request.session['errors'] = [
+            'cadastro não efetuado. Verifique suas credenciais.']
+
+        return redirect('/register?next={0}'.format(redirect_url))
 
 
 @debug
@@ -93,7 +104,20 @@ def logout(request):
 
 @debug
 def register(request):
-    return render(request, 'authentication/register.html')
+    redirect_url = '/dashboard'
+
+    if request.GET.get('next') is not None:
+        redirect_url = request.GET.get('next')
+
+    errors = request.session.get('errors', [])
+    request.session['errors'] = []
+
+    if not request.user.is_authenticated:
+        return render(request,
+                      'authentication/register.html',
+                      {'next': redirect_url, 'errors': errors})
+    else:
+        return redirect(redirect_url)
 
 
 @debug
@@ -108,9 +132,7 @@ def dashboard(request):
     courses = sorted(courses, key=lambda x: x.id)
     classrooms = Classroom.objects.all()
     classrooms = sorted(classrooms, key=lambda x: x.id)
-    return render(
-        request, 'dashboard.html', {
-            'courses': courses, 'classrooms': classrooms})
+    return render(request, 'dashboard.html', {'courses': courses, 'classrooms': classrooms})
 
 
 @debug
