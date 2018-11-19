@@ -33,6 +33,8 @@ def create(request, course_id, classroom_id):
     project.observers = list(classroom.enrolled_users.all())
     project.save()
 
+    project.observers = []
+
     redirect_url = '/courses/{0}/classrooms/{1}'.format(
         course_id, classroom_id)
 
@@ -44,6 +46,10 @@ def show(request, course_id, classroom_id, project_id):
     project = Project.objects.get(id=project_id)
     classroom = Classroom.objects.get(id=classroom_id)
     course = Course.objects.get(id=course_id)
+
+    project.views += 1
+    project.save()
+
     return render(request,
                   'projects/show.html',
                   {'project': project,
