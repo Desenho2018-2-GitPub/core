@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from gitpub.logging import debug
 from django.core.exceptions import ObjectDoesNotExist
+from django.db import IntegrityError
 from django.http import HttpResponseNotFound
 from django.contrib import auth
 from django.shortcuts import redirect
@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import signals
 from django.dispatch import receiver
 
+from gitpub.logging import debug
 from cms.models import Course, Classroom
 
 
@@ -77,9 +78,15 @@ def create_user(request):
             email=email,
             registry=registry,
             password=password)
+
+    except IntegrityError as e:
+        request.session['errors'] = [
+            'Email ou usuário já cadastrado, entre com sua conta.']
+        return redirect('/login?next={0}'.format(redirect_url))
+
     except ValueError as e:
         request.session['errors'] = [
-            'cadastro não efetuado. Verifique suas credenciais.']
+            'Cadastro não efetuado. Verifique suas credenciais.']
         return redirect('/register?next={0}'.format(redirect_url))
 
     # log user
