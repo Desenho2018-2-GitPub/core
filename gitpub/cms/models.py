@@ -4,6 +4,9 @@ Models module
 import datetime
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, UserManager, PermissionsMixin
+from notifyr.agents import observer, observed
+from notifyr.functions import target
+from cms.utils.email import EmailSender
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
@@ -14,6 +17,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.name
+
 
 class AnonymousUser(CustomUser):
     """
@@ -40,6 +44,7 @@ class AnonymousUser(CustomUser):
     updated_at = models.DateTimeField(auto_now=True)
 
 
+@observer('send_email')
 class RegisteredUser(CustomUser):
     """
     Abstract class for Admin and Student
@@ -58,6 +63,16 @@ class RegisteredUser(CustomUser):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def send_email(self, *args, **kwargs):
+        project = args[0]
+        email_body = "Olá, {0}!\n\nUm usuário adicionou um novo projeto à disciplina {1}, turma {2}. \
+         Verifique a plataforma GitPub para mais informações".format(
+                self.name,
+                project.classroom.all().last().course.name,
+                project.classroom.all().last().name,
+            )
+
 
 class Period(models.Model):
     """
@@ -150,6 +165,7 @@ class Classroom(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 
+@observed
 class Project(models.Model):
     """
     A project belongs to a classroom, has comments and material
@@ -165,6 +181,11 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+    @target
+    def save(self, *args, **kwargs):
+        print("Saving instance of project")
+        super(Project, self).save(*args, **kwargs)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -192,12 +213,13 @@ class Comment(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+
 class Material(models.Model):
     """
     Materials belong to projects
     """
     url = models.CharField(max_length=1000)
-    
+
     project = models.ForeignKey(
         Project,
         on_delete=models.CASCADE,

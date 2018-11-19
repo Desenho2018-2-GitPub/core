@@ -36,6 +36,7 @@ def login(request):
     else:
         return redirect(redirect_url)
 
+
 def authenticate(request):
     username = request.POST['username']
     password = request.POST['password']
@@ -51,9 +52,11 @@ def authenticate(request):
         auth.login(request, user)
         return redirect(redirect_url)
     else:
-        request.session['errors'] = ['Login não efetuado. Verifique suas credenciais.']
+        request.session['errors'] = [
+            'Login não efetuado. Verifique suas credenciais.']
 
         return redirect('/login?next={0}'.format(redirect_url))
+
 
 @debug
 def create_user(request):
@@ -104,6 +107,7 @@ def dashboard(request):
     courses = Course.objects.all()
     courses = sorted(courses, key=lambda x: x.id)
     return render(request, 'dashboard.html', {'courses': courses})
+
 
 @debug
 @login_required(login_url='/login')
