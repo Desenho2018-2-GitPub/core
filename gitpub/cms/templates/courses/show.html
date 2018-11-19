@@ -22,7 +22,7 @@
       <div class="card bg-secondary shadow p-4 mt-4">
         <h1 class="display-3">Turmas</h1>
         {% for classroom in course.classrooms.all %}
-        <div class="card bg-secondary shadow p-4 mt-4">
+        <div class="card bg-secondary border-success p-4 mt-4">
           <h5>
             {{ classroom.name }} - {{ classroom.owner.name }}
             <small class="text-muted">{{ classroom.period.semester }}/{{ classroom.period.year }}</small>

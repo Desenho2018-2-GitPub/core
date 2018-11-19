@@ -1,18 +1,18 @@
 {% extends 'layouts/base.html' %} {% block content %}
 <div>
-    <h1>Classrooms:</h1>
-    <div>
-        <ul>
-            {% for each in classrooms %}
-            <li>
-                <h4>{{ each.id }} - {{ each.name }}</h4>
-                <a href="/courses/{{course_id}}/classrooms/{{each.id}}" class="nav-link nav-link-icon">Show</a>
-                <a href="/courses/{{course_id}}/classrooms/edit/{{each.id}}" class="nav-link nav-link-icon">Edit</a>
-                <a href="/courses/{{course_id}}/classrooms/delete/{{each.id}}"class="nav-link nav-link-icon">Delete</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <a href="/courses/{{course_id}}/classrooms/new" class="nav-link nav-link-icon">New</a>
+  <h1>Classrooms:</h1>
+  <div>
+    <ul>
+      {% for each in classrooms %}
+      <li>
+        <h4>{{ each.id }} - {{ each.name }}</h4>
+        <a href="/courses/{{course_id}}/classrooms/{{each.id}}" class="nav-link nav-link-icon">Show</a>
+        <a href="/courses/{{course_id}}/classrooms/edit/{{each.id}}" class="nav-link nav-link-icon">Edit</a>
+        <a href="/courses/{{course_id}}/classrooms/delete/{{each.id}}"class="nav-link nav-link-icon">Delete</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <a href="/courses/{{course_id}}/classrooms/new" class="nav-link nav-link-icon">New</a>
 </div>
 {% endblock %}

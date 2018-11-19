@@ -170,6 +170,7 @@
                 </a>
               </div>
             </div> -->
+            {% if not user.is_authenticated %}
             <div class="card-body px-lg-5 py-lg-2">
               <div class="text-center text-muted mb-2">
                 <small>Inscreva-se</small>
@@ -241,6 +242,7 @@
                 </div>
               </form>
             </div>
+            {% endif %}
           </div>
         </div>
         <!-- SVG separator -->
@@ -383,28 +385,6 @@
           </div>
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="px-4">
-              <img src="../static/assets/img/theme/diego.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
-              <div class="pt-4 text-center">
-                <h5 class="title">
-                  <span class="d-block mb-1">Diego</span>
-                  <small class="h6 text-muted">-</small>
-                </h5>
-                <div class="mt-3">
-                  <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                  <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a href="#" class="btn btn-primary btn-icon-only rounded-circle">
-                    <i class="fa fa-dribbble"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <div class="px-4">
               <img src="../static/assets/img/theme/ziegler.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
               <div class="pt-4 text-center">
                 <h5 class="title">
@@ -447,8 +427,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row mt-5">
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="px-4">
               <img src="../static/assets/img/theme/victor.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
@@ -471,6 +449,30 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+                <div class="px-4">
+                  <img src="../static/assets/img/theme/titi.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
+                  <div class="pt-4 text-center">
+                    <h5 class="title">
+                      <span class="d-block mb-1">Thiago Araujo</span>
+                      <small class="h6 text-muted">-</small>
+                    </h5>
+                    <div class="mt-3">
+                      <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                      <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                      <a href="#" class="btn btn-success btn-icon-only rounded-circle">
+                        <i class="fa fa-dribbble"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
           <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="px-4">
               <img src="../static/assets/img/theme/vitor.jpeg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
