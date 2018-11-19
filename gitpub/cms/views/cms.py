@@ -60,41 +60,37 @@ def authenticate(request):
 
 @debug
 def create_user(request):
+    name = request.POST['name']
     username = request.POST['username']
-    password = request.POST['password']
     email = request.POST['email']
     registry = request.POST['registry']
-    name = request.POST['name']
-    
+    password = request.POST['password']
+
     redirect_url = '/dashboard'
 
     User = auth.get_user_model()
 
-    try:   
+    try:
         User.objects.create_user(
-        name=name,
-        username=username,
-        email=email,
-        registry=registry,
-        password=password
-    ) 
-    
-    except Exception as e:         
+            name=name,
+            username=username,
+            email=email,
+            registry=registry,
+            password=password)
+    except ValueError as e:
         request.session['errors'] = [
             'cadastro não efetuado. Verifique suas credenciais.']
-        return redirect('/register?next={0}'.format(redirect_url)) 
-
-
-    if user is not None:
-        auth.login(request, user)
-        return redirect('/dashboard')
-        user = auth.authenticate(request, username=username, password=password)
-    else:
-        request.session['errors'] = [
-            'cadastro não efetuado. Verifique suas credenciais.']
-
         return redirect('/register?next={0}'.format(redirect_url))
 
+    # log user
+    try:
+        user = auth.authenticate(request, username=username, password=password)
+        auth.login(request, user)
+        return redirect('/dashboard')
+    except Exception as e:
+        request.session['errors'] = [
+            'Usuário não pode ser autenticado.']
+        return redirect('/register?next={0}'.format(redirect_url))
 
 @debug
 def logout(request):

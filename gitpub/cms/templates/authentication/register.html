@@ -17,7 +17,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-5">
             <div class="row justify-content-center session-brand">
-              <a href="/"> 
+              <a href="/">
                 <img class="session-brand" src="/static/assets/img/brand/gitpub.png">
               </a>
             </div>
@@ -29,13 +29,13 @@
                 <div class="text-center text-muted mb-2">
                   <small>Inscreva-se com seus dados</small>
                 </div>
-                {% if errors is not None %}
-            {% for error in errors %}
-              <div class="alert alert-danger" role="alert">
-                <strong>Ops!</strong> {{ error }}
-              </div>
-            {% endfor %}
-          {% endif %}
+                {% if errors %}
+            		{% for error in errors %}
+              			<div class="alert alert-danger" role="alert">
+               				<strong>Ops!</strong> {{ error }}
+              			</div>
+            		{% endfor %}
+          	{% endif %}
                 <form role="form" action="/create_user" method="post">
                   {% csrf_token %}
                   <div class="form-group">
@@ -91,7 +91,7 @@
                       <div class="custom-control custom-control-alternative custom-checkbox">
                         <input class="custom-control-input" id="customCheckRegister" type="checkbox">
                         <label class="custom-control-label" for="customCheckRegister">
-                          <span>Eu concordo com a 
+                          <span>Eu concordo com a
                             <a href="#">Política de Privacidade</a>
                           </span>
                         </label>
@@ -108,7 +108,7 @@
               <div class="col-6">
                   <a href="forgot_password" class="text-light">
                   <small>Esqueceu a senha?</small>
-                </a> 
+                </a>
               </div>
               <div class="col-6 text-right">
                 <a href="login" class="text-light">
