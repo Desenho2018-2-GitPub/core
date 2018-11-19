@@ -69,15 +69,20 @@ def create_user(request):
 
     redirect_url = '/dashboard'
 
+    if not password:
+        request.session['errors'] = [
+            'A senha não pode ser vazia.']
+        return redirect('/register?next={0}'.format(redirect_url))
+
     User = auth.get_user_model()
 
     try:
-        User.objects.create_user(
-            name=name,
-            username=username,
-            email=email,
-            registry=registry,
-            password=password)
+        u = User.objects.create_user(
+                name=name,
+                username=username,
+                email=email,
+                registry=registry,
+                password=password)
 
     except IntegrityError as e:
         request.session['errors'] = [
