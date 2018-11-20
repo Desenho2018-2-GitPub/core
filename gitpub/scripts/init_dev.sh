@@ -11,7 +11,8 @@ python3 manage.py makemigrations
 echo "** Migrating changes if existent **"
 python3 manage.py migrate
 
-python3 manage.py collectstatic
+echo "** Collecting Static **"
+python3 manage.py collectstatic <<< "yes\n"
 
 echo "** Running autopep8 **"
 autopep8 -r --in-place --aggressive --aggressive /gitpub

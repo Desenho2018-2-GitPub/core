@@ -4,14 +4,14 @@
   <div class="justify-content-center">
     <div class=" card-body px-lg-3 py-lg-3">
       <h1>Editing {{ course.name }}</h1>
-      <form action="/courses/update/" class="card bg-secondary shadow p-4" method="post">    
+      <form action="/courses/update/" class="card shadow p-4" method="post">    
         {% csrf_token %}
         <div class="form-group mb-3">
           <div class="input-group input-group-alternative">
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class="ni ni-tag pr-2"></i> Id:</span>
             </div>
-            <input class="form-control pl-2" name="course_id" value={{ course.id }} placeholder="Id" disabled type="text">
+            <input class="form-control pl-2 bg-secondary" name="course_id" value={{ course.id }} placeholder="Id" disabled type="text">
           </div>
         </div>
         <div class="form-group mb-3">
@@ -19,7 +19,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class="ni ni-hat-3 pr-2"></i> Nome:</span>
             </div>
-            <input class="form-control" name="course_name" value={{ course.name }} placeholder="Nome" type="text">
+            <input class="form-control pl-2 bg-secondary" name="course_name" value={{ course.name }} placeholder="Nome" type="text">
           </div>
         </div>
         <div class="form-group mb-3">
@@ -27,7 +27,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text"></i> Descrição:</span>
             </div>
-            <textarea class="form-control pl-2" name="course_description" placeholder="Descrição" rows="3" >{{ course.description }}</textarea>
+            <textarea class="form-control pl-2 bg-secondary" name="course_description" placeholder="Descrição" rows="3" >{{ course.description }}</textarea>
           </div>
         </div>
         <input class="btn btn-default" type="submit" value="Salvar">
