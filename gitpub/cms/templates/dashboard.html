@@ -83,18 +83,16 @@
           <div class="tab-pane fade mt-3 bg-white shadow card p-3" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
             <ul class="list-unstyled">
               {% for classroom in classrooms %}
-                {% if user in classroom.enrolled_users.all %}                  
+                {% if user in classroom.enrolled_users.all %}
                   {% for project in classroom.projects.all %}
-                    <li class="media border-bottom">
                       <div class="media-body text-justify mb-3">
                         <h5 class="mt-1 mb-1">{{ project.name }} </h5>
                           {{ project.short_description }}
                       </div>
-                    </li>
                   {% endfor %}
                 {% endif %}
               {% endfor %}
-            </ul> 
+            </ul>
           </div>
           <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
             <div class="container">
@@ -131,12 +129,12 @@
                           <div class="form-group">
                             <span class="mb-4">Cargo</span>
                             <input type="text" class="form-control" placeholder="Professor" disabled="">
-                          </div>   
+                          </div>
                         {% else %}
                           <div class="form-group">
                             <span class="mb-4">Cargo</span>
                             <input type="text" class="form-control" placeholder="Aluno" disabled="">
-                          </div>           
+                          </div>
                         {% endif %}
 
                         <span class="mb-4">Biografia</span>
@@ -158,7 +156,7 @@
                             <p>Deseja realmente salvar as alterações sobre o seu perfil?</p>
                           </div>
                           <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Salvar</button>
+                            <button type="submit" class="btn btn-primary ml-auto" data-dismiss="modal">Salvar</button>
                             <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Fechar</button>
                           </div>
                         </div>
