@@ -1,6 +1,11 @@
 {% extends 'layouts/base.html' %} {% block content %}
 <div class="container pt-lg-md">
   <div class="justify-content-center">
+    <span class="px-lg-3 py-lg-3">
+        <a class="text-default" href="/dashboard">Dashboard / </a>
+        <a href="/courses/{{course.id}}" class="text-default">{{ course.name }} /</a>
+        <a href="/courses/{{ course.id }}/classrooms/{{ classroom.id }}" class="font-weight-bold text-default">{{ classroom.name }}</a>
+    </span>
     <div class=" card-body px-lg-3 py-lg-3">
       <div>
         <form role="form" class="card shadow p-4">
