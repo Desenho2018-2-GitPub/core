@@ -104,6 +104,7 @@ def create_user(request):
             'Usuário não pode ser autenticado.']
         return redirect('/register?next={0}'.format(redirect_url))
 
+
 @debug
 def logout(request):
     auth.logout(request)
