@@ -78,11 +78,11 @@ def create_user(request):
 
     try:
         u = User.objects.create_user(
-                name=name,
-                username=username,
-                email=email,
-                registry=registry,
-                password=password)
+            name=name,
+            username=username,
+            email=email,
+            registry=registry,
+            password=password)
 
     except IntegrityError as e:
         request.session['errors'] = [
@@ -103,6 +103,7 @@ def create_user(request):
         request.session['errors'] = [
             'Usuário não pode ser autenticado.']
         return redirect('/register?next={0}'.format(redirect_url))
+
 
 @debug
 def logout(request):
@@ -140,7 +141,9 @@ def dashboard(request):
     courses = sorted(courses, key=lambda x: x.id)
     classrooms = Classroom.objects.all()
     classrooms = sorted(classrooms, key=lambda x: x.id)
-    return render(request, 'dashboard.html', {'courses': courses, 'classrooms': classrooms})
+    return render(
+        request, 'dashboard.html', {
+            'courses': courses, 'classrooms': classrooms})
 
 
 @debug
