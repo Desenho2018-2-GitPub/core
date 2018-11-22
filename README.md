@@ -14,7 +14,7 @@ The repository will be connected with the platforms of source code hosting with 
 
 ## Installation
 
-OS X & Linux:
+#### Docker
 
 It is required to have Docker and Docker Compose installed.
 Navigate to the project folder and run the Docker Compose command.
@@ -23,6 +23,18 @@ Navigate to the project folder and run the Docker Compose command.
 cd core/gitpub
 docker-compose up
 ```
+
+#### Manual 
+
+OS X & Linux:
+
+It is required to have Python 3 and Django installed.
+Navigate to the project folder, run migrations and then the server.
+ ```
+cd GitPub/
+python3 ./manage.py migrate
+python3 ./manage.py runserver 0.0.0.0:8000
+ ```
 
 ## Main functionalities
 
