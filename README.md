@@ -24,8 +24,6 @@ cd core/gitpub
 docker-compose up
 ```
 
-Docker:
-
 ## Main functionalities
 
 - View Disciplines / Semesters / Projects
