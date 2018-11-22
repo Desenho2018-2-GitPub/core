@@ -44,7 +44,6 @@ Docker:
 |         Nome          |               Email               |                 GitHub                                              |
 |:---------------------:|:---------------------------------:|:-------------------------------------------------------------------:|
 |  Arthur Diniz         |  [arthurbdiniz@gmail.com]()       |   [@arthurbdiniz](https://github.com/arthurbdiniz)                  |
-|  Diego Resende        |  [diegowdrl@gmail.com]()          |   [@wdresende](https://github.com/wdresende)                        |
 |  Gabriel Ziegler      |  [gabrielziegler3@gmail.com]()    |   [@gabrielziegler3](https://github.com/gabrielziegler3)            |
 |  Joao Carlos          |  [joao4018@gmail.com]()           |   [@joao4018](https://github.com/joao4018)                          |
 |  Kamila Costa         |  [kamillacosta.unb@gmail.com]()   |   [@KahCosta](https://github.com/KahCosta)                          |
@@ -52,40 +51,4 @@ Docker:
 |  Vitor Falcão         |  [vitorfhcosta@gmail.com]()       |   [@vitorfhc](https://github.com/vitorfhc)                          |
 |  Vitor Moura          |  [victor_cmoura@hotmail.com]()    |   [@victorcmoura](https://github.com/victorcmoura)                  |
 
-## Documents
-
-* **Políticas**
-* [Folha de Estilo](https://github.com/Desenho2018-2/GitPub/blob/master/docs/policies/Folha%20de%20Estilo.md)
-* [Branches](https://github.com/Desenho2018-2/GitPub/blob/master/docs/policies/Branches.md)
-* [Commits](https://github.com/Desenho2018-2/GitPub/blob/master/docs/policies/Commits.md)
-* [Issue](https://github.com/Desenho2018-2/GitPub/blob/master/docs/policies/Issues.md)
-* [Pull Request](https://github.com/Desenho2018-2/GitPub/blob/master/docs/policies/Pull%20Request.md)
-
-* **Dinâmica 1**
-  * [Priorização Documentos](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Priorizacao-Documentos.md)
-  * [Rich Picture](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Richpicture.md)
-  * [Argumentação](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Argumentacao.md)
-  * [Brainstorm](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Brainstorm.md)
-  * [Questionário](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Questionario.md)
-  * [Moscow](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Moscow.md)
-  * [Storytelling](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Storytelling.md)
-  * [Cenários](https://github.com/Desenho2018-2/GitPub/blob/master/docs/cenarios.md)
-  * [Lexicos](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Lexicos.md)
-  * [Protótipo Baixa Fidelidade](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Prototipo-Baixa-Fidelidade.md)
-
-* **Dinâmica 2**
-  * [Metodologia](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Metodologia.md)
-
-* **Dinâmica 3**
-  * [Product Backlog](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Product-Backlog.md)
-  * [Diagrama de Casos de Uso](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Diagrama-caso-de-uso.md)
-  * [Diagrama de Classe](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Diagrama-de-Classe.md)
-  * [Diagrama Sequencial](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Diagrama-Sequencial.md)
-  * [Diagrama de Pacotes](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Diagrama-Pacotes.md)
-  * [iStar](https://github.com/Desenho2018-2/GitPub/blob/master/docs/iStar.md)
-    * [Strategic Dependency](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Dependency.md)
-    * [Strategic Rationale](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Strategic-Rationale.md)
-  * [NFR Framework](https://github.com/Desenho2018-2/GitPub/blob/master/docs/NFRFramework.md)
-  * [Banco de Dados](https://github.com/Desenho2018-2/GitPub/blob/master/docs/banco-de-dados.md)
-  * [Matrizes de Rastreabilidade](https://github.com/Desenho2018-2/GitPub/blob/master/docs/Matrizes-de-rastreabilidade.md)
-  * [Checklist](https://github.com/Desenho2018-2/GitPub/blob/master/docs/checklist.md)
+## [Documentos](https://desenho2018-2-gitpub.github.io/docs/)
